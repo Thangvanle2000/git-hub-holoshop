@@ -4638,7 +4638,10 @@ input[type="button"].btn-block {
 .card-text:last-child {
   margin-bottom: 0;
 }
-
+.price-product	{
+	font-size: 25px;
+	font-weight: 500;
+}
 
 
 .card-link:hover {
@@ -5361,7 +5364,9 @@ a.badge-dark:focus, a.badge-dark.focus {
 .media-body {
   -ms-flex: 1;
   flex: 1;
+  color: black;
 }
+
 
 .list-group {
   display: -ms-flexbox;
@@ -8051,6 +8056,10 @@ button.bg-dark:focus {
 .mr-3,
 .mx-3 {
   margin-right: 1rem !important;
+}
+.media img{
+	width: 100px;
+	height: 125px;
 }
 
 .mb-3,

@@ -18,6 +18,7 @@
 	cursor: url("http://www.rw-designer.com/cursor-extern.php?id=144504"), all-scroll;
 	
 }
+
 #right {
 	background: #EEDFDE;
 	
@@ -55,6 +56,3 @@ col img{
 	.navbar .nav-item .dropdown-menu{ margin-top:0; }
 }	
 .carousel-caption  {background-color: rgba(0, 0, 0, .7);}
-.container a {
-	width: 90%;
-}

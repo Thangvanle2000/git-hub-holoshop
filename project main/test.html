@@ -71,8 +71,75 @@
     </nav>
 	  
   <div class="row">
-  <div name ="left" id="left" class="col-2" >Left</div>
-  <div name = "content" class="col-9 ">Content
+  <div name ="left" id="left" class="col-2 text-center ml-3/* 
+Define this in your CSS 
+.bgColor = Replace it by the name you want to give your animation
+.bgAnimObj = Assign this class to the object you want to apply the effect
+*/
+
+.bgAnimObj {
+	background: #1abc9c;
+	/* Chrome, Safari */
+	-webkit-animation: bgColor 5s;
+	/* Firefox */
+	-moz-animation: bgColor 5s;
+	/* Standard Syntax */
+	animation: bgColor 5s;
+}
+
+/* 
+Define the keyframe and changes
+*/
+
+/* Chrome, Safari */
+@-webkit-keyframes bgColor {
+	from {
+ 		background: #1abc9c;
+	} 
+	to {
+ 		background: #ebebeb;
+	}
+}
+
+/* Firefox */
+@-moz-keyframes bgColor {
+    from {
+        background: #1abc9c;
+    }
+    to {
+        background: #ebebeb;
+    }
+}
+
+/* Standard syntax */
+@keyframes bgColor {
+	from {
+		background: #1abc9c;
+	}
+	to {
+		background: #ebebeb;
+	}
+}
+" >
+	  
+	  			<a target="_blank" href="https://genshin.mihoyo.com/en/download">
+					<img class="w-100 h-auto mt-xl-2" src="images/Ad-0.jpg" alt=""></a>
+				<a target="_blank" href="https://genshin.mihoyo.com/en/character/mondstadt?char=8">
+					<img class=" w-100 h-auto mt-xl-5" src="images/Ad-1.jpg" alt=""></a>
+				<a target="_blank" href="https://genshin.mihoyo.com/en/character/mondstadt?char=17">
+					<img class="w-100 h-auto mt-xl-5" src="images/Ad-2.png" alt=""></a>
+		  		<a target="_blank" href="https://genshin.mihoyo.com/en/character/mondstadt?char=11">
+					<img class="w-100 h-auto mt-xl-5" src="images/Ad-3.jpg" alt=""></a>
+		  		<a target="_blank" href="https://genshin.mihoyo.com/en/character/mondstadt?char=14">
+					<img class="w-100 h-auto mt-xl-5" src="images/Ad-4.png" alt=""></a>
+			
+			
+			
+			
+			
+	  </div>
+	  
+  <div name = "content" class="col-9 ">
 		<div class="container mt-3">
       <div class="row">
         <div class="col-12">
@@ -91,7 +158,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="images/banner-camera.jpg" alt="Second slide">
+                <img class="w-100" src="images/banner-camera.jpg" alt="Second slide">
                 <div class="carousel-caption d-block">
                   <h5>Sony Alpha A7 Kit 28-70mm</h5>
                   <p>Removable Lens</p>

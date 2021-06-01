@@ -18,6 +18,10 @@
 	cursor: url("http://www.rw-designer.com/cursor-extern.php?id=144504"), all-scroll;
 	
 }
+#right {
+	background: #EEDFDE;
+	
+}
 #left a {
 	width: 100%;
 }

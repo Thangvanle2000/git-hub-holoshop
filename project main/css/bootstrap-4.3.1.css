@@ -10148,3 +10148,133 @@ a.text-dark:hover, a.text-dark:focus {
     list-style: none;
 	text-align: center;
 }
+
+/*Login-Register-Subcribe*/
+.card0 {
+    box-shadow: 0px 4px 8px 0px #757575;
+    border-radius: 2px;
+	margin-top: 15px ;
+}
+
+.card2 {
+    margin: 30px 60px
+}
+
+
+
+.border-line {
+    border-right: 1px solid #EEEEEE
+}
+
+.text-sm {
+	margin-top: -20px;
+    font-size: 14px !important;
+	line-height: 2rem;
+}
+
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+    font-weight: 400;
+}
+
+:-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+::-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300;
+}
+.custom-control-label{
+	margin-top: 10px;
+}
+input,
+textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 400px;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px
+}
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+a {
+    color: inherit;
+    cursor: pointer
+}
+
+.btn-blue {
+    background-color:	#B8860B;
+    width: 150px;
+    color: #fff;
+    border-radius: 2px
+}
+
+.btn-blue:hover {
+    background-color: #BC8F8F;
+    cursor: pointer;
+}
+
+.bg-blue {
+    color: black;
+    background-color: #B8860B;
+	text-align: center;
+}
+.lo-go{
+	margin-top: 20px;
+	margin-left: 30px;
+	
+}
+.lo-go h4{
+	font-family: "Segoe UI",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	font-weight: 400;
+	font-size: 30px;
+}
+.backto-home{
+	margin-top: 0px;
+}
+.backto-home:hover{
+    text-decoration: dashed;
+	color: #BC8F8F;
+}
+@media screen and (max-width: 991px) {
+    .logo {
+        margin-left: 0px
+    }
+
+    .image {
+        width: 300px;
+        height: 220px
+    }
+
+    .border-line {
+        border-right: none
+    }
+
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin:20px 15px;
+    }
+}

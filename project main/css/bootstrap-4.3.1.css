@@ -10344,3 +10344,185 @@ a {
         margin:20px 15px;
     }
 }
+
+/* Carrer job */
+.carrer-opp{
+	margin: 0px;
+	padding: auto;
+	height: 2100px;
+	line-height: 2.3rem;
+}
+.carrer-opp h2{
+	font-size: 2.1875rem;
+	font-weight: normal;
+    line-height: 80px;
+}
+.carrer-opp p{
+	font-size: 1.125rem;
+	line-height: 30px;
+}
+#faq-form{
+	margin-top: 40px;
+	font-family: "Inter", sans-serif;
+	line-height: 2;
+	min-height: 100vh;
+	font-size: 1.35rem;
+	width: 800px;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+
+}
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+.answer-question {
+	border-left: 2px solid #000;
+	border-right: 2px solid #000;
+	border-bottom: 2px solid #000;
+	padding: 1.5em;
+}
+#faq-form summary{
+    list-style: none;
+	border: 2px solid #000;
+	padding: 0.75em 1em;
+	cursor: pointer;
+	position: relative;
+	padding-left: calc(1.75rem + .75rem + .75rem);
+}
+#faq-form summary::-webkit-details-marker {
+	display: none;
+}
+#faq-form summary::before{
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0.75em;
+	content:"↓";
+	width: 1.75rem;
+	height: 1.75rem;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	background-color: #343a40 !important;
+	flex-shrink: 0;
+}
+#faq-form details[open] summary{
+	background-color: #eee;
+}
+#faq-form details[open] summary:before{
+    content: "↑";
+}
+
+/*policy */
+.term-holoshop{
+	margin: 0px;
+	padding: auto;
+	height: 1750px;
+	text-align: left;
+}
+.term-holoshop h1{
+	font-weight: 550;
+	line-height: 2.5;
+	opacity: 0.7;
+	font-size: 2.2rem;
+	font-family: Arial, Meiryo, sans-serif;
+	text-align: center;
+}
+.term-holoshop p{
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 2.5rem;
+}
+.term-holoshop address{
+	font-style: italic;
+	display: block;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.875rem;
+}
+
+/*Return and Shipping*/
+.return-shipping{
+	margin: 0px;
+	padding: auto;
+	height: 1970px;
+	text-align: left;
+}
+.return-shipping img{
+	margin-left: 50px;
+}
+.return-shipping h1{
+	line-height: 2.5;
+	font-weight: 550;
+	opacity: 0.9;
+	font-size: 2.1rem;
+	font-family: Arial, Meiryo, sans-serif;
+	text-align: center;
+}
+.freeshipping{
+	margin-top: 30px;
+}
+.freeshipping h4{
+    font-weight: 400;
+	font-size: 26px;
+}
+.return-shipping p{
+	font-size: 18px;
+	line-height: 1.8rem;
+	display: block;
+}
+.policy-shipping{
+	 font-size: 18px;
+	 line-height: 1.8rem;
+	 display: block;
+}
+.policy-shipping strong{
+	font-weight: 500;
+}
+.return-shipping a{
+	color: green;
+	text-decoration: none;
+}
+.return-shipping a:hover{
+	color: blueviolet !important;
+
+}
+.free-return h4{
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 2.3rem;
+}
+.free-return p{
+	line-height: 2rem;
+}
+
+/*Policy Holoshop*/
+.policy-holo{
+	margin: 0px;
+	padding: auto;
+	height: 1970px;
+	text-align: left;
+}
+.policy-holo h1{
+	font-size: 40px;
+	line-height: 3rem;
+	font-weight: 550;
+	text-align: center;
+	margin-bottom: 25px;
+}
+.policy-holo p{
+	font-size: 18px;
+	line-height: 2.5rem;
+}
+.policy-holo img{
+	margin-left: 50px;
+	margin-bottom: 20px;
+}
+.policy-holo h4{
+	font-weight: 500;
+	font-size: 25px;	
+	line-height: 2rem;
+}

@@ -10103,7 +10103,7 @@ a.text-dark:hover, a.text-dark:focus {
 .feedback-google{
 	margin: 0px;
 	padding: auto;
-	height: 1120px;
+	height: 1750px;
 	line-height: 2.3rem;
 }
 .feedback-google h2{
@@ -10130,12 +10130,70 @@ a.text-dark:hover, a.text-dark:focus {
 .about-us{
 	margin: 0px;
 	padding: auto;
-	height: 1800px;
+	height: 2300px;
 	line-height: 2.3rem;
 }
 .about-us p{
 	font-size: 22px;
 	font-weight: 450;
+}
+.how-work{
+	display: inline-flex;
+	height: 410px;
+	width: 1000px;
+}
+.select-device{
+	flex-basis: 350px;
+}
+.select-device h4{
+	margin-top: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 22px;
+}
+.select-device p{
+	font-size: 16px;
+	line-height: 1.3rem;
+	font-family: SohoGothicStd-Light;
+	word-spacing: 0.2rem;
+	width: 80%;
+	margin-left: 30px;
+}
+.give-detail{
+	flex-basis: 350px;
+	margin-left: 10px;
+}
+.give-detail h4{
+	margin-top: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 22px;
+}
+.give-detail p{
+	font-size: 16px;
+	line-height: 1.3rem;
+	font-family: SohoGothicStd-Light;
+	word-spacing: 0.2rem;
+	width: 80%;
+	margin-left: 30px;
+}
+.ship-ping {
+	flex-basis: 350px;
+	margin-left: 10px;
+}
+.ship-ping h4{
+    margin-top: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 22px;
+}
+.ship-ping p{
+	font-size: 16px;
+	line-height: 1.3rem;
+	font-family: SohoGothicStd-Light;
+	word-spacing: 0.2rem;
+	width: 80%;
+	margin-left: 30px;
 }
 .free-ship{
 	margin-top: 30px;
@@ -10157,9 +10215,17 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .card2 {
-    margin: 30px 60px
+    margin: 30px 60px;
 }
-
+.card2 a{
+	color: var(--yellow);
+    cursor: pointer;
+}
+.card2 a:hover{
+	text-decoration: none;
+	opacity: 0.8;
+	text-shadow:30px;
+}
 
 
 .border-line {
@@ -10167,7 +10233,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-sm {
-	margin-top: -20px;
+	margin-top: -30px;
     font-size: 14px !important;
 	line-height: 2rem;
 }
@@ -10197,7 +10263,7 @@ textarea {
     border-radius: 2px;
     margin-bottom: 5px;
     margin-top: 2px;
-    width: 400px;
+    width: 500px;
     box-sizing: border-box;
     color: #2C3E50;
     font-size: 14px;

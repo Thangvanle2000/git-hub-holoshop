@@ -10526,3 +10526,175 @@ a {
 	font-size: 25px;	
 	line-height: 2rem;
 }
+
+
+
+/*Contact us */
+.contactus-holoshop{
+	margin: 0px;
+    padding: auto;
+	height: 1650px;
+	text-align: left;
+}
+.contactus-holoshop h1{
+	font-size: 35px;
+	line-height: 3rem;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 25px;
+	font-family: Human BBY,Arial,sans-serif;
+	color: initial;
+	overflow-x: hidden;
+}
+.contactus-holoshop h3{
+	font-size: 29px;
+	font-weight: 700;
+	font-family:  Human BBY,Arial,sans-serif;
+}
+.describe-contact {
+    font-size: 20px;
+    font-weight: 400;
+	text-align: left;
+	font-family: Human BBY,Arial,sans-serif;
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+}
+.eficient-ways li{
+    font-size: 20px;
+	line-height: 28px;
+	margin-bottom: 8px;
+	margin-left: 8px;
+	list-style: disc;
+	display: list-item;
+}
+.contactus-holoshop h4{
+	font-weight: 700;
+	font-size: 25px;
+	margin-top: 30px;
+	margin-left: 10px;
+
+}
+.information-contact{
+	display: inline-flex;
+}
+.information-contact h5{
+	font-size: 23px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	margin-left: 10px;
+	
+}
+.contact-mail p{
+	font-size: 17px;
+	flex-basis: 50%;
+	margin-left: 10px;
+}
+.contact-mail a{
+	color: blue;
+	font-weight: 400;
+}
+.contact-mail a:hover{
+	text-decoration: none;
+	color: purple;
+}
+.contact-store p{
+	font-size: 17px;
+	flex-basis: 50%;
+	margin-left: 10px;
+}
+.still-looking {
+	font-size: 29px;
+	font-weight: 700;
+	font-family:  Human BBY,Arial,sans-serif;
+	margin-top: 60px;
+}
+.still-contact p{
+	font-size: 20px;
+    font-weight: 400;
+	text-align: left;
+	font-family: Human BBY,Arial,sans-serif;
+	margin-top: 45px;
+	margin-bottom: 40px;
+}
+.contact-box{
+	display: -webkit-box;
+	display: -webkit-flex;
+	-webkit-box-flex: row;
+}
+.contact-box img{
+	background-color: white;
+	list-style: none;
+	text-decoration: none;
+	text-align: center;
+	width: 100px;
+	height: 100px;
+}
+.contact-boxp p{
+	text-align: center;
+	font-size: 23px;
+}
+.contact-box h5{
+    color: blue;
+	font-size: 28px;
+    
+}
+.contact-call{
+	width: 30%;
+	margin-right: 20px;
+	background-color:#fff;
+	box-shadow: 0 8px 16px 0 rgb(0 0 0 / 16%);
+	padding: 38px 24px 16px;
+	box-sizing: border-box;
+	border: 2px solid #e0e6ef;
+	border-radius: 4px;
+	margin: 12px 0px;
+	display: block;
+	height: 300px;
+	text-align: center;
+}
+.contact-call:hover{
+	background-color: beige;
+	cursor: pointer;
+}
+
+.contact-email{
+	width: 30%;
+	margin-left: 200px;
+	background-color:#fff;
+	box-shadow: 0 8px 16px 0 rgb(0 0 0 / 16%);
+	padding: 38px 24px 16px;
+	box-sizing: border-box;
+	border: 2px solid #e0e6ef;
+	border-radius: 4px;
+	margin: 12px 40px;
+	display: block;
+	height: 300px;
+	text-align: center;
+}
+.contact-email:hover{
+	background-color: beige;
+	cursor: pointer;
+}
+.contact-chat{
+	width: 30%;
+	margin-left: 200px;
+	background-color:#fff;
+	box-shadow: 0 8px 16px 0 rgb(0 0 0 / 16%);
+	padding: 38px 24px 16px;
+	box-sizing: border-box;
+	border: 2px solid #e0e6ef;
+	border-radius: 4px;
+	margin: 12px 5px;
+	display: block;
+	height: 300px;
+	text-align: center;
+}
+.contact-chat img{
+	width: 150px;
+	height: 100px;
+}
+.contact-chat:hover{
+	background-color: beige;
+	cursor: pointer;
+}

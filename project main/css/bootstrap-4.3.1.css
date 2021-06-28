@@ -10885,3 +10885,28 @@ a {
 	width: 100%;	
 	opacity: 0.2;
 }
+.event-news{
+	margin-top: 30px;
+	display: inline-flex;
+	margin-bottom: 30px;
+
+}
+.detail-news{
+	display: block;
+	margin-left: 20px;
+}
+.detail-news h2{
+	font-size: 28px;
+}
+.detail-news a:hover{
+	color: var(--purple);
+	text-decoration: none;
+}
+.event-news img:hover{
+	cursor: pointer;
+	background-color: gray;
+}
+.more-detail{
+	width: 400px;
+	margin-top: 50px;
+}

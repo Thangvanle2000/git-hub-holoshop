@@ -14,7 +14,7 @@
   </head>
 <body>
 <div name="header-LOGO" style ="height: 100px; width: 100%">
-  <div id ="logo"><a href="test.html" ><img src="images/main logo.png" alt="sample logo" ></a></div>
+  <div id ="logo"><a href="index.php" ><img src="images/main logo.png" alt="sample logo" ></a></div>
   <div id ="headerLinks"><a href="Login-Register.php" title="Register-login">Register/Login</a><a href="#" title="Cart">Cart</a></div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">

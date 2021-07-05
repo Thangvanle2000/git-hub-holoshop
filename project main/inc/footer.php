@@ -1,5 +1,5 @@
-
-<div class="container text-white bg-dark p-4">
+<footer class="text-center">
+		<div class="container text-white bg-dark p-4">
     <div class="row">
       <div class="col-6 col-md-8 col-lg-7">
         <div class="row text-center">
@@ -14,23 +14,23 @@
           <div class="col-sm-6 col-md-4 col-lg-4 col-12">
             <ul class="list-unstyled">
               <h3>Menu</h3>
-              <li class="btn-link"> <a href="test.php">Home</a></li>
-			  <li class="btn-link"> <a href="news.php">News</a></li>
+              <li class="btn-link"> <a href="test.html">Home</a></li>
+			  <li class="btn-link"> <a href="news.html">News</a></li>
               <li class="btn-link"> <a>Camera</a></li>
               <li class="btn-link"> <a>Computer</a></li>
-			  <li class="btn-link"><a href="Shipping.php">Shipping and return</a></li>
+			  <li class="btn-link"><a href="Shipping.html">Shipping and return</a></li>
               <li class="btn-link"> <a>Device</a></li>
             </ul>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-12">
             <ul class="list-unstyled">
               <h3>Company</h3>
-			  <li class="btn-link"> <a href="Carrer.php">Career</a></li>
-              <li class="btn-link"> <a href="About us.php">About us</a></li>
-			  <li class="btn-link"> <a href="Term.php">Term</a></li>
-              <li class="btn-link"> <a href="policy.php">Policy</a></li>
-              <li class="btn-link"> <a href="Contactus.php">Contact us</a></li>
-              <li class="btn-link"> <a href="Feedback.php">Feedbacks</a></li>
+			  <li class="btn-link"> <a href="Carrer.html">Career</a></li>
+              <li class="btn-link"> <a href="About us.html">About us</a></li>
+			  <li class="btn-link"> <a href="Term.html">Term</a></li>
+              <li class="btn-link"> <a href="policy.html">Policy</a></li>
+              <li class="btn-link"> <a href="Contactus.html">Contact us</a></li>
+              <li class="btn-link"> <a href="Feedback.html">Feedbacks</a></li>
             </ul>
           </div>
         </div>
@@ -77,6 +77,24 @@
 		</address>
 		<!-- End Social link -->
 	</div>
-</div>
-    </div>
       
+      </div>
+    </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © HOLOSHOP. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.3.1.js"></script>
+	<script type="text/javascript" src="js/faceted-filtering.js"></script>
+	  
+	  <script src="http://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
+  </body>
+</html>

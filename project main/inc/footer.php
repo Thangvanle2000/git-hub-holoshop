@@ -14,23 +14,23 @@
           <div class="col-sm-6 col-md-4 col-lg-4 col-12">
             <ul class="list-unstyled">
               <h3>Menu</h3>
-              <li class="btn-link"> <a href="test.html">Home</a></li>
-			  <li class="btn-link"> <a href="news.html">News</a></li>
+              <li class="btn-link"> <a href="index.php">Home</a></li>
+			  <li class="btn-link"> <a href="news.php">News</a></li>
               <li class="btn-link"> <a>Camera</a></li>
               <li class="btn-link"> <a>Computer</a></li>
-			  <li class="btn-link"><a href="Shipping.html">Shipping and return</a></li>
+			  <li class="btn-link"><a href="Shipping.php">Shipping and return</a></li>
               <li class="btn-link"> <a>Device</a></li>
             </ul>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-12">
             <ul class="list-unstyled">
               <h3>Company</h3>
-			  <li class="btn-link"> <a href="Carrer.html">Career</a></li>
-              <li class="btn-link"> <a href="About us.html">About us</a></li>
-			  <li class="btn-link"> <a href="Term.html">Term</a></li>
-              <li class="btn-link"> <a href="policy.html">Policy</a></li>
-              <li class="btn-link"> <a href="Contactus.html">Contact us</a></li>
-              <li class="btn-link"> <a href="Feedback.html">Feedbacks</a></li>
+			  <li class="btn-link"> <a href="Carrer.php">Career</a></li>
+              <li class="btn-link"> <a href="About us.php">About us</a></li>
+			  <li class="btn-link"> <a href="Term.php">Term</a></li>
+              <li class="btn-link"> <a href="policy.php">Policy</a></li>
+              <li class="btn-link"> <a href="Contactus.php">Contact us</a></li>
+              <li class="btn-link"> <a href="Feedback.php">Feedbacks</a></li>
             </ul>
           </div>
         </div>

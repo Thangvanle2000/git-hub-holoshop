@@ -56,7 +56,7 @@
                   <a class="dropdown-item" href="mouse.php">Mouse</a></div>
             </li>
             
-            <li class="nav-item"> <a class="nav-link" href="About us.php">About us</a></li>
+            <li class="nav-item"> <a class="nav-link" href="index.php?page=aboutus">About us</a></li>
 			  
           </ul>
           <form class="form-inline my-2 my-lg-0">

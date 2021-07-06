@@ -55,7 +55,7 @@
       <div class="social-contact ml-4 ml-sm-auto"> <span class="fa fa-facebook mr-4 text-sm"></span> <span class="fa fa-google-plus mr-4 text-sm"></span> <span class="fa fa-linkedin mr-4 text-sm"></span> <span class="fa fa-twitter mr-4 mr-sm-5 text-sm"></span> </div>
     </div>
   </div>
-  <div class="backto-home"><a href="test.html"> >>>Back to home </a></div>
+  <div class="backto-home"><a href="index.php"> >>>Back to home </a></div>
 </div>
 </body>
 </html>

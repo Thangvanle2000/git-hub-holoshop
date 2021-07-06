@@ -1,27 +1,4 @@
-<?php 
-	 include_once('db/connect.php');
-	 include('inc/topbar.php');
-	 include('inc/menu.php');
-?> 
-  <div class="row">
-  <div name ="left" id="left" class="col-2 text-center ml-3" >
-	  
-	  			<a target="_blank" href="https://genshin.mihoyo.com/en/download">
-					<img class="w-100 h-auto mt-xl-2 rounded" src="images/Ad-0.jpg" alt=""></a>
-				<a target="_blank" href="https://genshin.mihoyo.com/en/character/mondstadt?char=8">
-					<img class=" w-100 h-auto mt-xl-5 rounded" src="images/Ad-1.jpg" alt=""></a>
-				<a target="_blank" href="https://genshin.mihoyo.com/en/character/mondstadt?char=17">
-					<img class="w-100 h-auto mt-xl-5 rounded" src="images/Ad-2.png" alt=""></a>
-		  		<a target="_blank" href="https://genshin.mihoyo.com/en/character/mondstadt?char=11">
-					<img class="w-100 h-auto mt-xl-5 rounded" src="images/Ad-3.jpg" alt=""></a>
-		  		<a target="_blank" href="https://genshin.mihoyo.com/en/character/mondstadt?char=14">
-					<img class="w-100 h-auto mt-xl-5 rounded" src="images/Ad-4.png" alt=""></a>
-			
-			
-			
-			
-			
-	  </div>
+
 	  
   <div name = "content" class="col-9 ">
 		<div class="container mt-3">
@@ -124,25 +101,8 @@
 		</div>
 		</div>
 	</div>
+	</div>
+	</div>
 
-	<?php 
-	   include('inc/footer.php'); 
-    ?>
+
 	
-    <footer class="text-center">
-		
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-			<p style="position: absolute; margin-left: 400px;">Copyright © HOLOSHOP. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap-4.3.1.js"></script>
-  </body>
-</html>

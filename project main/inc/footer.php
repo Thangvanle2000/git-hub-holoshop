@@ -28,7 +28,7 @@
               <h3>Company</h3>
 			  <li class="btn-link"> <a href="index.php?page=career.php">Career</a></li>
               <li class="btn-link"> <a href="index.php?page=aboutus">About us</a></li>
-			  <li class="btn-link"> <a href="Term.php">Term</a></li>
+			        <li class="btn-link"> <a href="index.php?page=term">Term</a></li>
               <li class="btn-link"> <a href="index.php?page=policy">Policy</a></li>
               <li class="btn-link"> <a href="index.php?page=contactus">Contact us</a></li>
               <li class="btn-link"> <a href="index.php?page=feedback">Feedbacks</a></li>

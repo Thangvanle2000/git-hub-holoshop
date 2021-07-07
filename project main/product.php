@@ -81,9 +81,7 @@ if (isset($_GET['sort'])) {
 
   </div>
 </div>
-<?php echo $sql;
 
-?>
 <?php 
    include('inc/footer.php') 
    ?>

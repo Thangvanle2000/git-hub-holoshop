@@ -9,6 +9,7 @@ switch ( $c ) {
   case 1:
     ?>
 <form action="http://localhost:8080/php/git-hub-holoshop/project%20main/product.php" method="GET">
+	<input value="1" name="c" type="hidden">
   <div class="input-group mb-3">
     <div class="input-group-prepend"> </div>
     <select class="custom-select" id="brand" name ="br">
@@ -44,6 +45,7 @@ break;
 case 2:
   ?>
 <form action="http://localhost:8080/php/git-hub-holoshop/project%20main/product.php" method="GET">
+	<input value="2" name="c" type="hidden">
   <div class="input-group mb-3">
     <div class="input-group-prepend"> </div>
     <select class="custom-select" id="brand" name ="br">
@@ -83,6 +85,7 @@ break;
 case 3:
   ?>
 <form action="http://localhost:8080/php/git-hub-holoshop/project%20main/product.php" method="GET">
+	<input value="3" name="c" type="hidden">
   <div class="input-group mb-3">
     <div class="input-group-prepend"> </div>
     <select class="custom-select" id="brand" name ="br">

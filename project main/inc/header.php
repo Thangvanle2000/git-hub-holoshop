@@ -33,30 +33,32 @@ session_start();
             </li>
 			
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Computer</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="asus.php">ASUS</a>
-                <a class="dropdown-item" href="macbook.php">Macbook</a>
-                <a class="dropdown-item" href="dell.php">DELL</a>
-				<a class="dropdown-item" href="hp.php">HP</a>
-				<a class="dropdown-item" href="acer.php">Acer</a>
+				<a href="product.php?c=2" >
+					  <a class="nav-link dropdown-toggle" onclick="location.href='product.php?c=2';"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Computer</a>
+					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="product.php?c=2">ASUS</a>
+						<a class="dropdown-item" href="product.php?c=2">Macbook</a>
+						<a class="dropdown-item" href="product.php?c=2">DELL</a>
+						<a class="dropdown-item" href="product.php?c=2">HP</a>
+						<a class="dropdown-item" href="product.php?c=2">Acer</a>
 				 
 				  
               </div>
+				</a>
             </li>
-            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Camera&nbsp;</a>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle"  onclick="location.href='product.php?c=1';" href="product.php?c=1" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Camera&nbsp;</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				  <a class="dropdown-item" href="#">Sony</a>
-				  <a class="dropdown-item" href="#">Kodak</a>
-				  <a class="dropdown-item" href="#">Canon</a>
- 				  <a class="dropdown-item" href="#">Fujifilm</a>
+				  <a class="dropdown-item" href="product.php?c=1">Sony</a>
+				  <a class="dropdown-item" href="product.php?c=1">Kodak</a>
+				  <a class="dropdown-item" href="product.php?c=1">Canon</a>
+ 				  <a class="dropdown-item" href="product.php?c=1">Fujifilm</a>
 			  </div>
             </li>
-            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Device&nbsp;</a>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle"  onclick="location.href='product.php?c=3';" href="product.php?c=3" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Device&nbsp;</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				  <a class="dropdown-item" href="headphone.php">Headphone</a>
-				  <a class="dropdown-item" href="keyboard.php">Keyboard</a>
-                  <a class="dropdown-item" href="mouse.php">Mouse</a></div>
+				  <a class="dropdown-item" href="product.php?c=3">Headphone</a>
+				  <a class="dropdown-item" href="product.php?c=3">Keyboard</a>
+                  <a class="dropdown-item" href="product.php?c=3">Mouse</a></div>
             </li>
             
             <li class="nav-item"> <a class="nav-link" href="index.php?page=aboutus">About us</a></li>

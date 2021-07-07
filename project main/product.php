@@ -2,45 +2,57 @@
 include_once( 'inc/connect.php' );
 include( 'inc/header.php' );
 include( 'inc/left.php' );
+
+if (isset($_GET['c'])) {
+			$c = (int)$_GET['c'];
+			$sqlc = " `category_id` = '$c' ";
+		}else{
+			$sqlc = "1"; 	
+		}
+if (isset($_GET['br'])) {
+			$br = $_GET['br'];
+			$sqlbr = " and `product_type`='$br' ";
+		
+		}else{
+			$sqlbr = ""; 	
+		}
+if (isset($_GET['sc'])) {
+			$sc = $_GET['sc'];
+	
+			$sqlsc	= " and `sub_cataloge`='$sc' ";
+			
+		}else{
+			$sqlsc = ""; 	
+		}
+if (isset($_GET['pr'])) {
+			$pr = $_GET['pr'];
+			$sqlpr = " and `product_price`<='$pr' ";
+		}else{
+			$sqlpr = ""; 	
+		}
+if (isset($_GET['sort'])) {
+			$sort = $_GET['sort'];
+			$sqlsort = "  ORDER BY product_price $sort ";
+		
+		}else{
+			$sqlsort = ""; 	
+		}
+		
 ?>
 <div name = "content" class="col-9 ">
   <div class="container mt-3">
-    <form>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend"> </div>
-        <select class="custom-select" id="brand" name ="brand">
-          <option disabled selected>Brand</option>
-          <option value="1">Apple</option>
-          <option value="2">Acer</option>
-          <option value="3">ASUS</option>
-        </select>
-        <select class="custom-select" id="price" name = "price">
-          <option disabled selected>Price range</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-        <select class="custom-select" id="cpu" name="cpu">
-          <option disabled selected>CPU</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-        <select class="custom-select" id="sort" name="sort">
-          <option disabled selected>Sort</option>
-          <option value="1">By price: Low to High</option>
-          <option value="2">By price: High to Low</option>
-        </select>
-        <button class="btn btn-outline-secondary" type="button">Button</button>
-      </div>
-    </form>
-    <div class="grid-container" id="gridcon"
+    <?php 
+	  	include('inc/facet.php');
+	  ?>
+<div class="grid-container" id="gridcon"
 				 style="display: grid;grid-template-columns: 33% 33% 33%;
 				  background-color: #EDEDED;
 				  padding: 5px;
 						grid-gap: 5px;">
       <?php
-      $sql = "SELECT * FROM `btl_product` WHERE `category_id` = '3'";
+      $sql = "SELECT * FROM `btl_product` WHERE ".$sqlc.$sqlbr.$sqlpr.$sqlsc.$sqlsort." ;" ;
+		
+		
       $result = mysqli_query( $con, $sql );
 
       if ( mysqli_num_rows( $result ) > 0 ) {
@@ -69,7 +81,9 @@ include( 'inc/left.php' );
 
   </div>
 </div>
+<?php echo $sql;
 
+?>
 <?php 
    include('inc/footer.php') 
    ?>

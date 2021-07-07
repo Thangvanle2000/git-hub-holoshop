@@ -16,11 +16,12 @@
             <ul class="list-unstyled">
               <h3>Menu</h3>
               <li class="btn-link"> <a href="index.php">Home</a></li>
-			  <li class="btn-link"> <a href="index.php?page=news">News</a></li>
-              <li class="btn-link"> <a>Camera</a></li>
-              <li class="btn-link"> <a>Computer</a></li>
-			  <li class="btn-link"><a href="index.php?page=shipping">Shipping and return</a></li>
-              <li class="btn-link"> <a>Device</a></li>
+              <li class="btn-link"> <a href="index.php?page=news">News</a></li>
+                    
+              <li class="btn-link"><a href="index.php?page=shipping">Shipping and return</a></li>
+              <li class="btn-link"> <a href="product.php?c=1">Camera</a></li>
+              <li class="btn-link"> <a href="product.php?c=2">Computer</a></li>
+              <li class="btn-link"> <a href="product.php?c=3">Device</a></li>
             </ul>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-12">

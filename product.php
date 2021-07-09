@@ -27,7 +27,10 @@ if ( isset( $_GET[ 'sc' ] ) ) {
 }
 if ( isset( $_GET[ 'pr' ] ) ) {
   $pr = $_GET[ 'pr' ];
-  $sqlpr = " and `product_price`<='$pr' ";
+  if($pr==500){$sqlpr = " and `product_price`<='$pr' ";};
+  if($pr==1000){$sqlpr = " and `product_price`<='$pr' and  `product_price`>=500 ";};
+  if($pr==2500){$sqlpr = " and `product_price`<='$pr' and  `product_price`>=1000 ";};
+
 } else {
   $sqlpr = "";
 }

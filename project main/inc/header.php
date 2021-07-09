@@ -10,10 +10,12 @@ session_start();
     <title>HOLOSHOP</title>
 	  <link rel="icon" href="images/favicon.png" type="image/x-icon"/>
     <!-- Bootstrap -->
+		<link href="css/main.css" rel="stylesheet">
     <link href="css/bootstrap-4.3.1.css" rel="stylesheet">
 	<link href="css/custom.css"  rel="stylesheet"> 
 	<link href="css/eCommerceStyle.css" rel="stylesheet">  
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+		
   </head>
 <body>
 <div name="header-LOGO" style ="height: 100px; width: 100%">

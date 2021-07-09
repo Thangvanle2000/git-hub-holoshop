@@ -70,7 +70,7 @@ if ( isset( $_GET[ 'sort' ] ) ) {
         while ( $row_product = mysqli_fetch_assoc( $result ) ) {
           ?>
       <div class="grid-item">
-        <div class="card"> <img class="card-img-top" src="images/<?php echo $row_product['product_image'] ?>" alt="Card image cap">
+        <div class="card"><a href="dproduct.php?id=<?php echo $row_product['product_id']?>"> <img class="card-img-top" src="images/<?php echo $row_product['product_image'] ?>" alt="Card image cap"></a>
           <div class="card-body">
             <h5 class="card-title">
               <?php  echo $row_product['product_name']?>

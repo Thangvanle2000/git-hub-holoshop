@@ -96,7 +96,7 @@
         while ( $row_product = mysqli_fetch_assoc( $result ) ) {
           ?>
         <div class="grid-item">
-          <div class="card"> <a href="dproduct.php?id=<?php echo $row_product['id']?>" style="    
+          <div class="card"> <a href="dproduct.php?c=2&id=<?php echo $row_product['id']?>" style="    
 										width: 100%;
 										height: 0;
 										padding-bottom: 100%;
@@ -144,7 +144,7 @@
           ?>
         <div class="grid-item">
           <div class="card">
-            <a href="dproduct.php?id=<?php echo $row_product['id']?>" style="    
+            <a href="dproduct.php?c=2&id=<?php echo $row_product['id']?>" style="    
 										width: 100%;
 										height: 0;
 										padding-bottom: 100%;

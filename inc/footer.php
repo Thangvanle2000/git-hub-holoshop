@@ -19,9 +19,9 @@
               <li class="btn-link"> <a href="index.php?page=news">News</a></li>
                     
               <li class="btn-link"><a href="index.php?page=shipping">Shipping and return</a></li>
-              <li class="btn-link"> <a href="product.php?c=1">Camera</a></li>
-              <li class="btn-link"> <a href="product.php?c=2">Computer</a></li>
-              <li class="btn-link"> <a href="product.php?c=3">Device</a></li>
+              <li class="btn-link"> <a href="camera.php?c=1">Camera</a></li>
+              <li class="btn-link"> <a href="laptop.php?c=2">Computer</a></li>
+              <li class="btn-link"> <a href="device.php?c=3">Device</a></li>
             </ul>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-12">

@@ -61,9 +61,9 @@ session_start();
             </li>
             <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle"  onclick="location.href='device.php?c=3';" href="product.php?c=3" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Device&nbsp;</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				  <a class="dropdown-item" href="product.php?c=3&sc=hp">Headphone</a>
-				  <a class="dropdown-item" href="product.php?c=3&sc=kb">Keyboard</a>
-                  <a class="dropdown-item" href="product.php?c=3&sc=m">Mouse</a></div>
+				  <a class="dropdown-item" href="device.php?c=3&sc=hp">Headphone</a>
+				  <a class="dropdown-item" href="device.php?c=3&sc=kb">Keyboard</a>
+                  <a class="dropdown-item" href="device.php?c=3&sc=m">Mouse</a></div>
             </li>
             
             <li class="nav-item"> <a class="nav-link" href="index.php?page=aboutus">About us</a></li>

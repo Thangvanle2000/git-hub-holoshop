@@ -75,8 +75,8 @@ case 2:
       <option disabled selected>CPU</option>
       <option <?php if($SC=='i5'){ echo "selected"; } ?> value="i5">i5</option>
       <option <?php if($SC=='i7'){ echo "selected"; } ?> value="i7">i7</option>
-      <option <?php if($SC=='m1'){ echo "selected"; } ?> value="M1">M1</option>
-      <option <?php if($SC=='r7'){ echo "selected"; } ?> value="AMD">AMD</option>
+      <option <?php if($SC=='M1'){ echo "selected"; } ?> value="M1">M1</option>
+      <option <?php if($SC=='AMD'){ echo "selected"; } ?> value="AMD">AMD</option>
     </select>
     <?php if (isset($_GET['sort'])) { $S = $_GET['sort']; } else {$S="";} ?>
     <select class="custom-select" id="sort" name="sort">

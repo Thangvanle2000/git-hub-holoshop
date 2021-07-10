@@ -75,7 +75,7 @@ if ( isset( $_GET[ 'sort' ] ) ) {
           ?>
       <div class="grid-item">
         <div class="card">
-          <a href="dproduct.php?id=<?php echo $row_product['id']?>" style="    
+          <a href="dproduct.php?c=1&id=<?php echo $row_product['id']?>" style="    
 										width: 100%;
 										height: 0;
 										padding-bottom: 100%;
@@ -83,7 +83,7 @@ if ( isset( $_GET[ 'sort' ] ) ) {
     									align-content: center;								   "> 
           <img class="card-img-top" src="images/<?php echo $row_product['img'] ?>" alt="<?php echo $row_product['name'];?>" style=" display: inline-block;
   margin-bottom: auto ;
-  margin-top:  15%;																									
+ 																								
   width: 100%;">
         </a>
           <div class="card-body">

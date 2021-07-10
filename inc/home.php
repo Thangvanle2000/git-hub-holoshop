@@ -13,24 +13,24 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="images/banner-computer.jpg" alt="First slide">
+                <a href="dproduct.php?c=2&id=117"><img class="d-block w-100" src="images/banner-computer.jpg" alt="First slide"></a>
                 <div class="carousel-caption d-block">
-                  <h5><span>Laptop Asus Lamborghini VX7</span></h5>
+                  <a href="dproduct.php?c=2&id=117"><h5><span>Laptop Asus Lamborghini VX7</span></h5>
                   <p><span>Break All Configurations</span></p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="images/banner-camera.jpg" alt="Second slide">
+                <a href="dproduct.php?c=1&id=29"><img class="d-block w-100" src="images/banner-camera.jpg" alt="Second slide"></a>
                 <div class="carousel-caption d-block">
                   <h5>Sony Alpha A7 Kit 28-70mm</h5>
                   <p>Removable Lens</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="images/banner-combo.jpg" alt="Third slide">
+                <a href="dproduct.php?c=3&id=29" ><img class="d-block w-100" src="images/banner-logitech.jpg" alt="Third slide"></a>
                 <div class="carousel-caption d-block">
-                  <h5>Rampage MEEPO PLUS Combo</h5>
-                  <p>Best Price</p>
+                  <h5>Logitech gaming headphone</h5>
+                  <p>Best Experient</p>
                 </div>
               </div>
             </div>
@@ -79,68 +79,101 @@
     <hr>
     <h2 class="text-center">RECOMMENDED PRODUCTS</h2>
     <hr>
-	<?php $sql_cate_home = mysqli_query($con,'SELECT *FROM btl_category ORDER BY category_id DESC');
-	while($row_cate_home = mysqli_fetch_array($sql_cate_home)){
-		$id_category = $row_cate_home['category_id'];  
-	?>
-    <div class="container">
-      <div class="row text-center">
-		  <?php 
-		  $sql_product = mysqli_query($con,'SELECT *FROM btl_product ORDER BY product_id DESC');
-		  while($row_product = mysqli_fetch_array($sql_product)){
-			if($row_product['category_id']==$id_category && $row_product['product_active']==1){  
-		  ?>
-        <div class="col-md-4 pb-1 pb-md-0">
-          <div class="card">
-            <img class="card-img-top" src="images/<?php echo $row_product['product_image'] ?>" alt="Card image cap">
+    <div class="container mt-3">
+      <div class="grid-container" id="gridcon"
+				 style="display: grid;grid-template-columns: 33% 33% 33%;
+				  background-color: #EDEDED;
+				  padding: 5px;
+						grid-gap: 5px;">
+        <?php
+      $sql = "SELECT * FROM `product2` WHERE 1 LIMIT 6 ;";
+
+
+      $result = mysqli_query( $con, $sql );
+
+      if ( mysqli_num_rows( $result ) > 0 ) {
+        // output data of each row
+        while ( $row_product = mysqli_fetch_assoc( $result ) ) {
+          ?>
+        <div class="grid-item">
+          <div class="card"> <a href="dproduct.php?id=<?php echo $row_product['id']?>" style="    
+										width: 100%;
+										height: 0;
+										padding-bottom: 100%;
+										display: flex;
+    									align-content: center;								   "> <img class="card-img-top" src="images/<?php echo $row_product['img'] ?>" alt="<?php echo $row_product['name'];?>" style=" display: inline-block;
+  margin-bottom: auto ;
+  margin-top:  15%;																									
+  width: 100%;"> </a>
             <div class="card-body">
-              <h5 class="card-title"><?php echo $row_product['product_name'] ?></h5>
-              <p class="card-text"><?php echo $row_product['product_caption']?></p>
-			  <span class="price-product"><?php echo number_format($row_product['product_price']).'$'?></span><br>
-              <a href="productdetail.php?id=<?php echo $row_product['product_id'] ?>" class="btn btn-info">Add to Cart</a>
-            </div>
+              <h5 class="card-title">
+                <?php  echo $row_product['name']?>
+              </h5>
+              <p class="card-text">
+              <ul class="detail-text">
+                <li> <?php echo "CPU: ".$row_product['cpu']."\n  RAM: ".$row_product['ram']."\n Hard Drive: ".$row_product['storage']."\n VGA: ".$row_product['gpu']."\n Screen:  ".$row_product['ss']." ".$row_product['s']; ?> </li>
+              </ul>
+              </p>
+              <span class="price-product"><?php echo number_format($row_product['price']).'$'?></span><br>
+              <a href="#" class="btn btn-info">Add to Cart</a> </div>
           </div>
         </div>
-        <?php } } ?>
-       
-     
-      </div>
-	  	<?php } ?>
+        <?php  }}?>
+        </div>
     </div>
-    <hr>
-    <h2 class="text-center">FEATURED PRODUCTS</h2>
-    <hr>
-	<?php $sql_cate_home = mysqli_query($con,'SELECT *FROM btl_category ORDER BY category_id DESC');
-	while($row_cate_home = mysqli_fetch_array($sql_cate_home)){
-		$id_category = $row_cate_home['category_id'];  
-	?>
-    <div class="container">
-      <div class="row">
-	  <?php 
-		  $sql_product = mysqli_query($con,'SELECT *FROM btl_product ORDER BY product_id DESC');
-		  while($row_product = mysqli_fetch_array($sql_product)){
-			if($row_product['category_id']==$id_category && $row_product['product_active']==2){  
-		  ?>
-        <div class="col-lg-4">
-          <ul class="list-unstyled">
-            <li class="media">
-              <img class="mr-3" src="images/<?php echo $row_product['product_image'] ?>" alt="Generic placeholder image">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1"><?php echo $row_product['product_name'] ?></h5>
-                <?php  echo $row_product['product_caption']?>
-              </div>
-            </li>
-          
-          </ul>
-        </div>
-		<?php } } ?>
-     
-        </div>
-      </div>
-	  <?php } ?>
-	<hr>
+	
     
+    <hr>
+    	<h2 class="text-center">FEARTURED PRODUCT</h2>
+    <hr>
+    <div class="container mt-3">
+      <div class="grid-container" id="gridcon"
+				 style="display: grid;grid-template-columns: 33% 33% 33%;
+				  background-color: #EDEDED;
+				  padding: 5px;
+						grid-gap: 5px;">
+        <?php
+      $sql = "SELECT * FROM `product1` WHERE  1 LIMIT 6;";
+
+		
+      $result = mysqli_query( $con, $sql );
+
+      if ( mysqli_num_rows( $result ) > 0 ) {
+        // output data of each row
+        while ( $row_product = mysqli_fetch_assoc( $result ) ) {
+          ?>
+        <div class="grid-item">
+          <div class="card">
+            <a href="dproduct.php?id=<?php echo $row_product['id']?>" style="    
+										width: 100%;
+										height: 0;
+										padding-bottom: 100%;
+										display: flex;
+    									align-content: center;								   "> 
+            <img class="card-img-top" src="images/<?php echo $row_product['img'] ?>" alt="<?php echo $row_product['name'];?>" style=" display: inline-block;
+  margin-bottom: auto ;
+  margin-top:  15%;																									
+  width: 100%;">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <?php  echo $row_product['name']?>
+              </h5>
+              <p class="card-text">
+              <ul class="detail-text">
+                <li> <?php echo "Max resolusion: ".$row_product['maxreso']." pixel \n  Low resolusion: ".$row_product['lowreso']." pixel \n Weight: ".$row_product['w']."g. \n Zoom wide : ".$row_product['zwide']."mm \n Zoom tele: ".$row_product['ztele'] ?> </li>
+              </ul>
+              </p>
+              <span class="price-product"><?php echo number_format($row_product['pr']).'$'?></span><br>
+              <a href="#" class="btn btn-info">Add to Cart</a> </div>
+          </div>
+        </div>
+        <?php  }}?>
+        </div>
+    </div>
+  <hr>
     
+ </div>   
 </div>
 </div>
 </div>

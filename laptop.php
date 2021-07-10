@@ -58,15 +58,15 @@ if ( isset( $_GET[ 'sort' ] ) ) {
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
         <?php if ( isset( $_GET[ 'c' ] ) ) {?>
-        <li class="breadcrumb-item"><a href="product.php?c=<?php echo $c;?>">
+        <li class="breadcrumb-item"><a href="laptop.php?c=<?php echo $c;?>">
           <?php if ($c==1){ echo "Camera";} if ($c==2){ echo "Computer";}; if ($c==3){ echo "Device";};?>
           </a></li>
         <?php }?>
         <?php if ( (isset( $_GET[ 'br' ]))&&(($c==1)||($c==2)) )  {?>
-        <li class="breadcrumb-item"><a href="product.php?c=<?php echo $c ;?>&br=<?php echo $br;?>" style="text-transform: capitalize"><?php echo $br?></a></li>
+        <li class="breadcrumb-item"><a href="laptop.php?c=<?php echo $c ;?>&br=<?php echo $br;?>" style="text-transform: capitalize"><?php echo $br?></a></li>
         <?php }?>
         <?php if ( (isset( $_GET[ 'sc' ]))&&($c==3 ))  {?>
-        <li class="breadcrumb-item"><a href="product.php?br=<?php echo $br;?>" style="text-transform: capitalize">
+        <li class="breadcrumb-item"><a href="laptop.php?br=<?php echo $br;?>" style="text-transform: capitalize">
           <?php if ($sc=='kb'){ echo "KeyBoard";} if ($sc=='hp'){ echo "Headphone";}; if ($sc=='m'){ echo "Mouse";};?>
           </a></li>
         <?php }?>
@@ -81,7 +81,7 @@ if ( isset( $_GET[ 'sort' ] ) ) {
 				  padding: 5px;
 						grid-gap: 5px;">
       <?php
-      $sql = "SELECT * FROM $sqlc WHERE  " . $sqlbr . $sqlpr . $sqlsort . $sqlsc . " ;";
+      $sql = "SELECT * FROM $sqlc WHERE  " . $sqlbr . $sqlpr . $sqlsc . $sqlsort  . " ;";
 
 
       $result = mysqli_query( $con, $sql );
@@ -91,7 +91,7 @@ if ( isset( $_GET[ 'sort' ] ) ) {
         while ( $row_product = mysqli_fetch_assoc( $result ) ) {
           ?>
       <div class="grid-item">
-        <div class="card"> <a href="dproduct.php?id=<?php echo $row_product['id']?>" style="    
+        <div class="card"> <a href="dproduct.php?c=2&id=<?php echo $row_product['id']?>" style="    
 										width: 100%;
 										height: 0;
 										padding-bottom: 100%;

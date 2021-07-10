@@ -74,7 +74,19 @@ session_start();
 
 					<datalist id="productlist">
 						<?php
-						  $sql = "SELECT * FROM `product` WHERE 1 GROUP BY `name` ";
+						  $sql = "SELECT * FROM `product1` WHERE 1 GROUP BY `name` ";
+
+
+						  $result = mysqli_query( $con, $sql );
+
+						  if ( mysqli_num_rows( $result ) > 0 ) {
+							// output data of each row
+							while ( $row_product = mysqli_fetch_assoc( $result ) ) {
+							  ?>
+					  <option value="<?php echo $row_product['name']; ?>"></option>
+					  			<?php }}?>
+						<?php
+						  $sql = "SELECT * FROM `product2` WHERE 1 GROUP BY `name` ";
 
 
 						  $result = mysqli_query( $con, $sql );

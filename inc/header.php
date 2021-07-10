@@ -36,27 +36,30 @@ session_start();
 			
             <li class="nav-item dropdown">
 				<a href="product.php?c=2" >
-					  <a class="nav-link dropdown-toggle" onclick="location.href='product.php?c=2';"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Computer</a>
+					  <a class="nav-link dropdown-toggle" onclick="location.href='laptop.php?c=2';"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Computer</a>
 					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="product.php?c=2&br=asus">ASUS</a>
-						<a class="dropdown-item" href="product.php?c=2&br=macbook">Macbook</a>
-						<a class="dropdown-item" href="product.php?c=2&br=dell">DELL</a>
-						<a class="dropdown-item" href="product.php?c=2&br=hp">HP</a>
-						<a class="dropdown-item" href="product.php?c=2&br=acer">Acer</a>
+						<a class="dropdown-item" href="laptop.php?c=2&br=asus">ASUS</a>
+						<a class="dropdown-item" href="laptop.php?c=2&br=macbook">Macbook</a>
+						<a class="dropdown-item" href="laptop.php?c=2&br=dell">DELL</a>
+						<a class="dropdown-item" href="laptop.php?c=2&br=hp">HP</a>
+						<a class="dropdown-item" href="laptop.php?c=2&br=acer">Acer</a>
+						  <a class="dropdown-item" href="laptop.php?c=2&br=lenovo">LENOVO</a>
 				 
 				  
               </div>
 				</a>
             </li>
-            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle"  onclick="location.href='product.php?c=1';" href="product.php?c=1" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Camera&nbsp;</a>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle"  onclick="location.href='camera.php?c=1';" href="product.php?c=1" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Camera&nbsp;</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				  <a class="dropdown-item" href="product.php?c=1&br=sony">Sony</a>
-				  <a class="dropdown-item" href="product.php?c=1&br=kodak">Kodak</a>
-				  <a class="dropdown-item" href="product.php?c=1&br=canon">Canon</a>
- 				  <a class="dropdown-item" href="product.php?c=1&br=fujifilm">Fujifilm</a>
+				  <a class="dropdown-item" href="camera.php?c=1&br=sony">Sony</a>
+				  <a class="dropdown-item" href="camera.php?c=1&br=kodak">Kodak</a>
+				  <a class="dropdown-item" href="camera.php?c=1&br=canon">Canon</a>
+ 				  <a class="dropdown-item" href="camera.php?c=1&br=fujifilm">Fujifilm</a>
+				  <a class="dropdown-item" href="camera.php?c=1&br=nikon" >Nikon</a>
+				  <a class="dropdown-item" href="camera.php?c=1&br=leica" >Leica</a>
 			  </div>
             </li>
-            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle"  onclick="location.href='product.php?c=3';" href="product.php?c=3" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Device&nbsp;</a>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle"  onclick="location.href='device.php?c=3';" href="product.php?c=3" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Device&nbsp;</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 				  <a class="dropdown-item" href="product.php?c=3&sc=hp">Headphone</a>
 				  <a class="dropdown-item" href="product.php?c=3&sc=kb">Keyboard</a>
@@ -66,12 +69,12 @@ session_start();
             <li class="nav-item"> <a class="nav-link" href="index.php?page=aboutus">About us</a></li>
 			  
           </ul>
-          <form class="form-inline my-2 my-lg-0" action="detailproduct.php" method="get">
+          <form class="form-inline my-2 my-lg-0" action="dproduct.php" method="get">
 			<input list="productlist" name="name" id="browser" style="width: 300px">
 
 					<datalist id="productlist">
 						<?php
-						  $sql = "SELECT * FROM `btl_product` WHERE 1 ";
+						  $sql = "SELECT * FROM `product` WHERE 1 GROUP BY `name` ";
 
 
 						  $result = mysqli_query( $con, $sql );
@@ -80,7 +83,7 @@ session_start();
 							// output data of each row
 							while ( $row_product = mysqli_fetch_assoc( $result ) ) {
 							  ?>
-					  <option value="<?php echo $row_product['product_name']?>"></option>
+					  <option value="<?php echo $row_product['name']; ?>"></option>
 					  			<?php }}?>
 					</datalist>
             

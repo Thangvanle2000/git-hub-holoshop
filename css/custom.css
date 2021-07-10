@@ -1,5 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
+.card-container{
+	
+	width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative; 
+}
 #headerLinks1 a {
 	text-decoration: none;
 	color: rgba(146,146,146,1.00);

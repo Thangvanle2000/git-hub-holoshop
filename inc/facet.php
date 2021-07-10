@@ -8,7 +8,7 @@ if ( isset( $_GET[ 'c' ] ) ) {
 switch ( $c ) {
   case 1:
     ?>
-<form action="product.php" method="GET">
+<form action="camera.php" method="GET">
 	<input value="1" name="c" type="hidden">
   <div class="input-group mb-3">
     <div class="input-group-prepend"> </div>
@@ -20,6 +20,8 @@ switch ( $c ) {
       
       <option <?php if($BR=='fujifilm'){ echo "selected"; } ?> value="fujifilm">FUJIFILM</option>
       <option <?php if($BR=='kodak'){ echo "selected"; } ?> value="kodak">KODAK</option>
+		<option <?php if($BR=='fujifilm'){ echo "selected"; } ?> value="nikon">Nikon</option>
+      <option <?php if($BR=='kodak'){ echo "selected"; } ?> value="leica">Leica</option>
     </select>
 	  <?php if (isset($_GET['pr'])) { $PR = $_GET['pr']; } else {$PR="";} ?>
     <select class="custom-select" id="price" name = "pr">
@@ -27,12 +29,13 @@ switch ( $c ) {
       <option <?php if($PR=='500'){ echo "selected"; } ?> value="500">&lt;$500</option>
       <option <?php if($PR=='1000'){ echo "selected"; } ?> value="1000">$500-&gt;$1000</option>
       <option <?php if($PR=='2500'){ echo "selected"; } ?> value="2500">$1000-&gt;$2500</option>
+	  <option <?php if($PR=='2501'){ echo "selected"; } ?> value="2501">&gt;2500</option>
     </select>
 	  <?php if (isset($_GET['sc'])) { $SC = $_GET['sc']; } else {$SC="";} ?>
     <select class="custom-select" id="cpu" name="sc">
       <option disabled selected>Type of Camera</option>
-      <option <?php if($SC=='film'){ echo "selected"; } ?> value="film">Film Camera</option>
-      <option <?php if($SC=='dslr'){ echo "selected"; } ?> value="dslr">DSLR</option>
+      <option <?php if($SC=='film'){ echo "selected"; } ?> value="2">Film Camera</option>
+      <option <?php if($SC=='dslr'){ echo "selected"; } ?> value="1">DSLR</option>
       
       
     </select>
@@ -49,14 +52,14 @@ switch ( $c ) {
 break;
 case 2:
   ?>
-<form action="product.php" method="GET">
+<form action="laptop.php" method="GET">
 	<input value="2" name="c" type="hidden">
   <div class="input-group mb-3">
     <div class="input-group-prepend"> </div>
 	  <?php if (isset($_GET['br'])) { $BR = $_GET['br']; } else {$BR="";} ?>
     <select class="custom-select" id="brand" name ="br">
       <option disabled selected>Brand</option>
-      <option <?php if($BR=='macbook'){ echo "selected"; } ?> value="macbook">Apple</option>
+      <option <?php if($BR=='macbook'){ echo "selected"; } ?> value="apple">Apple</option>
       <option <?php if($BR=='acer'){ echo "selected"; } ?> value="acer">Acer</option>
       <option <?php if($BR=='asus'){ echo "selected"; } ?> value="asus">ASUS</option>
 		<option <?php if($BR=='dell'){ echo "selected"; } ?> value="dell">DELL</option>
@@ -68,16 +71,17 @@ case 2:
       <option <?php if($PR=='500'){ echo "selected"; } ?> value="500">&lt;$500</option>
       <option <?php if($PR=='1000'){ echo "selected"; } ?> value="1000">$500-&gt;$1000</option>
       <option <?php if($PR=='2500'){ echo "selected"; } ?> value="2500">$1000-&gt;$2500</option>
+		<option <?php if($PR=='2501'){ echo "selected"; } ?> value="2501">&gt;2500</option>
     </select>
 	  <?php if (isset($_GET['sc'])) { $SC = $_GET['sc']; } else {$SC="";} ?>
     <select class="custom-select" id="cpu" name="sc">
       <option disabled selected>CPU</option>
       <option <?php if($SC=='i5'){ echo "selected"; } ?> value="i5">i5</option>
       <option <?php if($SC=='i7'){ echo "selected"; } ?> value="i7">i7</option>
-      <option <?php if($SC=='i9'){ echo "selected"; } ?> value="i9">i9</option>
-      <option <?php if($SC=='m1'){ echo "selected"; } ?> value="m1">M1</option>
-      <option <?php if($SC=='r7'){ echo "selected"; } ?> value="r7">Ryzen R7</option>
-	  <option <?php if($SC=='r9'){ echo "selected"; } ?> value="r9">Ryzen R9</option>
+      
+      <option <?php if($SC=='m1'){ echo "selected"; } ?> value="M1">M1</option>
+      <option <?php if($SC=='r7'){ echo "selected"; } ?> value="AMD">AMD</option>
+	  
     </select>
     <?php if (isset($_GET['sort'])) { $S = $_GET['sort']; } else {$S="";} ?>
     <select class="custom-select" id="sort" name="sort">
@@ -94,7 +98,7 @@ break;
 
 case 3:
   ?>
-<form action="product.php" method="GET">
+<form action="device.php" method="GET">
 	<input value="3" name="c" type="hidden">
   <div class="input-group mb-3">
     <div class="input-group-prepend"> </div>
@@ -111,6 +115,7 @@ case 3:
       <option <?php if($PR=='500'){ echo "selected"; } ?> value="500">&lt;$500</option>
       <option <?php if($PR=='1000'){ echo "selected"; } ?> value="1000">$500-&gt;$1000</option>
       <option <?php if($PR=='2500'){ echo "selected"; } ?> value="2500">$1000-&gt;$2500</option>
+		<option <?php if($PR=='2501'){ echo "selected"; } ?> value="2501">&gt;2500</option>
     </select>
 	  <?php if (isset($_GET['sc'])) { $SC = $_GET['sc']; } else {$SC="";} ?>
     <select class="custom-select" id="cpu" name="sc">

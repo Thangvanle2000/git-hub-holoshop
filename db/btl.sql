@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 11, 2021 at 07:06 PM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.8
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th7 11, 2021 lúc 10:25 PM
+-- Phiên bản máy phục vụ: 10.4.13-MariaDB
+-- Phiên bản PHP: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `btl`
+-- Cơ sở dữ liệu: `btl`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `btl_category`
+-- Cấu trúc bảng cho bảng `btl_category`
 --
 
 CREATE TABLE `btl_category` (
@@ -33,7 +33,7 @@ CREATE TABLE `btl_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `btl_category`
+-- Đang đổ dữ liệu cho bảng `btl_category`
 --
 
 INSERT INTO `btl_category` (`category_id`, `category_name`) VALUES
@@ -44,15 +44,14 @@ INSERT INTO `btl_category` (`category_id`, `category_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `btl_product`
+-- Cấu trúc bảng cho bảng `btl_product`
 --
 
 CREATE TABLE `btl_product` (
   `product_id` int(11) NOT NULL,
-  `sub_cataloge` varchar(255) NOT NULL,
   `category_id` int(11) NOT NULL,
   `product_name` varchar(200) NOT NULL,
-  `product_price` int(100) NOT NULL,
+  `product_price` varchar(100) NOT NULL,
   `product_active` int(11) NOT NULL,
   `product_amount` int(11) NOT NULL,
   `product_image` varchar(50) NOT NULL,
@@ -62,36 +61,36 @@ CREATE TABLE `btl_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `btl_product`
+-- Đang đổ dữ liệu cho bảng `btl_product`
 --
 
-INSERT INTO `btl_product` (`product_id`, `sub_cataloge`, `category_id`, `product_name`, `product_price`, `product_active`, `product_amount`, `product_image`, `product_caption`, `product_type`, `product_detail`) VALUES
-(1, 'r9', 2, 'Laptop Asus Gaming ROG Strix G533QM-HQ074T\r\n', 1600, 1, 5, 'Laptop-Asus-ROG-G533QM-HQ074T.jpg', 'AMD Ryzen 9 5900HX RAM/512GB SSD/15.6 FHD 144hz/GTX 1650Ti 4GB/Win10/Black', 'asus', 'CPU: AMD Ryzen 9 5900HX\r\nRAM: 16GB\r\nHard Drive: 1TB SSD\r\nVGA: NVIDIA RTX 3060 6GB\r\nScreen:15.6 inch FHD 1650hz'),
-(2, 'm1', 2, 'Apple Macbook Air 13 (MGN63SA/A)\r\n', 1100, 1, 4, 'macbook-air13.png', 'Apple M1/8GB RAM/256GB SSD/13.3 inch IPS/Mac OS/Gray (NEW)', 'macbook', 'CPU: Apple M1\r\nRAM: 8GB\r\nHard Drive: 256GB SSD\r\nVGA: Onboard\r\nScreen:13.3 inch Retina IPS'),
-(3, 'dslr', 1, 'Camera Sony Alpha ILCE-7RM3/ A7RM3 Body\r\n', 2100, 1, 2, 'sony a7.jpg', 'ISO 100-32000/Exmor CMOS 42.4 megapixels/Speed/30-1/8000/LCD 3.0inch/657g/Black', 'sony', 'ISO 100-32000/Exmor CMOS 42.4 megapixels/Speed/30-1/8000/LCD 3.0inch/657g/Black'),
-(4, 'dslr', 1, 'Camera Canon EOS-80D-kit EF-S18-135mm IS USM\r\n', 1000, 1, 4, 'camera-cannon-efm15-45.png', 'ISO 100-12800/CMOS 24.2 megapixels/LCD 3.0inch/Speed 30- 1/8000s/650g/Black', 'canon', 'ISO 100-12800/CMOS 24.2 megapixels/LCD 3.0inch/Speed 30- 1/8000s/650g/Black'),
-(5, 'i5', 2, 'Laptop Acer Swift 3X SF314-510G-57MR', 900, 1, 6, 'acer-swift 3xsf314.png', 'NX.A10SV.004 I5-1135G7/8GB RAM/512GB SSD/14.0 FHD/Win10/Yellow (2020)', 'acer', 'CPU: Intel Core i5 1135G7\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: Onboard\r\nScreen: 14 inch FHD'),
-(6, 'dslr', 1, 'Camera Fujifilm X - T4 Kit XF16-80MM(Black)\r\n\r\n', 1600, 1, 4, 'cannon-kit-rf24.jpg', 'Sensor: X-Trans C-M-O-S 4 26.1MP. Maximum resolution: 6240 x 4160.Aspect ratio: 1:1 ', 'fujifilm', 'Sensor: X-Trans C-M-O-S 4 26.1MP. Maximum resolution: 6240 x 4160.Aspect ratio: 1:1 '),
-(7, 'i5', 2, 'Laptop Asus ZenBook UX435EA-A5036T\r\n\r\n', 1600, 2, 5, 'asus-zenbook.jpg', 'Get more done, with less effort. Immersive Four Sides Display. Smart touchpad, evolved. More likely, All-round great performance. ZenBook 14\'s sound system is certified by audio experts to ensure crystal-clear, immersive sound', 'asus', 'CPU: Intel Core i5-1135G7 2 	Intel Iris Xe  RAM	8GB LPDDR4X 3200MHz, 	512GB SSD M.2 PCIE G3X2'),
-(8, 'i7', 2, 'Laptop Acer Gaming Predator Helios 300 PH315-53-70U6', 2000, 2, 1, 'acer-helios300.png', 'Laptop Acer is weight only 2.2kg, users can easily carry it anywhere without being too heavy.The laptop is equipped with a chiclet keyboard .A lot of necessary connection ports so that gamers can fight', 'acer', 'CPU: Intel Core i7 10750H RAM: 16GB Hard Drive: 512GB SSD VGA: Nvidia RTX2060 6G Screen: 15.6 inch FHD 240Hz'),
-(9, 'i7', 2, 'Laptop Dell Inspiron 7490 LTDL101- 6RKVN1', 1400, 2, 6, 'dell-7490.jpeg', '7490LTDL101- 6RKVN1 Configuration for office, light game.here size of an old-fashioned 13.3-inch laptop. Dell Inspiron 7490 laptop has a slim, stylish, modern design .It is equipped with Intel\'s 10th generation', 'dell', 'CPU: Intel Core i7 10510U\r\nRAM: 16GB\r\nHard Drive:512GB SSD\r\nVGA: NVIDIA MX250 2GB\r\nScreen: 14\" FHD'),
-(10, 'hp', 3, 'SteelSeries Arctis Pro+GameDAC 61453-Headset', 200, 2, 2, 'headphone-steekseries.jpg', 'At the heart of Arctis Pro + GameDAC is the legendary ESS Saber 9018 audio processor DAC, revered for its outstanding sound quality with 121 dB dynamic range and -115 dB THD + N.This makes for tight bass.', 'ss', 'Neodymium Drivers 40 mm / 1.6 inches  Headphone Frequency Response 10–40,000 Hz  Headphone Sensitivity 102 dB SPL  Headphone Impedance 32 Ohm'),
-(11, 'kb', 3, 'Mechanical Keyboard VA87M Sakura -Mechanical ', 150, 2, 4, 'keyboard-sakura.jpg', 'From the drawings, the alphabet to the colors on the keycap are also made very meticulously and carefully. With the PBT keycap type that offers durability that won\'t be affected by time.A lovely design with pink cherry\r\n', 'sakura', 'Height: 9.17 in (233 mm) Width: 17.95 in (456 mm) Depth: 1.89 in (48 mm) Weight: 40.92 oz (1160 g)'),
-(12, 'kb', 3, 'Mechanical Keyboard Akko Designer Studio-MOD001-Macaw', 400, 2, 5, 'keyboard-akko.jpg', 'With the famous Cherry Switch set meticulously designed in every detail with 3 basic Chery switch options: red, brown and blue switch. The keyboard is designed with a solid aluminum shell.\r\n\r\n', 'akko', '2.4 GHz USB receiver Bluetooth 10 m (33-ft) wireless range'),
-(15, 'r7', 2, 'Asus TUF Gaming F15 FX506LI-HN039T', 1100, 3, 5, 'asus-tuf.jpg', '', 'asus', 'CPU:AMD Ryzen R7 4800H\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: NVIDIA GTX 1660Ti 6GB\r\nScreen: 17.3 FHD 144hz'),
-(16, 'i9', 2, 'APPLE MACBOOK PRO 15 TOUCHBAR (MV912)', 2350, 3, 4, 'macbook-pro15.png', '', 'macbook', 'CPU: Intel Core i9 2.3Ghz RAM: 16GB Hard Drive: 512GB SSD VGA: 560X 4GB Screen: 15.4 inch'),
-(17, 'm1', 2, 'APPLE MACBOOK PRO 15 TOUCHBAR (MV912)', 2350, 3, 4, 'macbook-pro13.png', '', 'macbook', 'CPU: Apple M1\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: Onboard\r\nScreen: 13.3 inch Retina IPS'),
-(18, 'i7', 2, 'LAPTOP DELL INSPIRON 5406 (TYCJN1)', 1250, 3, 4, 'dell-5406.png', '', 'dell', 'CPU:Intel Core i7 1165G7\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: Nvidia MX330 2GB\r\nScreen: 14 inch FHD'),
-(19, 'i7', 2, 'Laptop Dell Workstation Mobile Precision 3550', 1550, 3, 4, 'dell-mobile-precision-3550.png', '', 'dell', 'CPU: Intel Core i7 10810U\r\nRAM: 16GB\r\nHard Drive: 256GB SSD\r\nVGA: Quadro P520 2G\r\nScreen: 15.6 inch FHD'),
-(20, 'i7', 2, 'LAPTOP ACER GAMING NITRO 5 AN515-56-79U2', 1100, 3, 3, 'laptop-acer-gaming.jpg', '', 'acer', 'CPU: Intel core i7 11370H\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: NVIDIA GTX1650 4G\r\nScreen: 15.6 inch FHD 144hz'),
-(21, 'i7', 2, 'LAPTOP HP PROBOOK 430 G8 (2H0P0PA)', 1100, 3, 4, 'laptop-probook-hp430gb.jpg', '', 'hp', 'CPU: Intel Core i7 1165G7\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: Onboard\r\nScreen: 13.3 inch FHD'),
-(22, 'i5', 2, 'LAPTOP HP ENVY 13-BA1030TU (2K0B6PA)', 1580, 3, 1, 'laptop-hp-envy13.png', '', 'hp', 'CPU: Intel® Core i5-1135G7(upto 4.2GHz, 8MB)\r\nRAM: 8GB 8GB(1 x 8GB) DDR4-3200MHz (2 slot)\r\nHard Drive: 256GB PCIe NVMe™ M.2'),
-(23, 'i7', 2, 'LAPTOP HP ENVY 13-BA1030TU (2K0B6PA)', 2350, 3, 2, 'hp-pavilion15.png', '', 'hp', 'CPU: Intel Core i7-10750H\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: NVIDIA GTX 1650Ti 4GB\r\nScreen: NVIDIA GTX 1650Ti 4GB');
+INSERT INTO `btl_product` (`product_id`, `category_id`, `product_name`, `product_price`, `product_active`, `product_amount`, `product_image`, `product_caption`, `product_type`, `product_detail`) VALUES
+(1, 2, 'Laptop Asus Gaming ROG Strix G533QM-HQ074T\r\n', '1600', 1, 5, 'Laptop-Asus-ROG-G533QM-HQ074T.jpg', 'I7-10870H/8GB RAM/512GB SSD/15.6 FHD 144hz/GTX 1650Ti 4GB/Win10/Black', 'asus', 'CPU: AMD Ryzen 9 5900HX\r\nRAM: 16GB\r\nHard Drive: 1TB SSD\r\nVGA: NVIDIA RTX 3060 6GB\r\nScreen:15.6 inch FHD 1650hz'),
+(2, 2, 'Apple Macbook Air 13 (MGN63SA/A)\r\n', '1100', 1, 4, 'macbook-air13.png', 'Apple M1/8GB RAM/256GB SSD/13.3 inch IPS/Mac OS/Gray (NEW)', 'macbook', 'CPU: Apple M1\r\nRAM: 8GB\r\nHard Drive: 256GB SSD\r\nVGA: Onboard\r\nScreen:13.3 inch Retina IPS'),
+(3, 1, 'Camera Sony Alpha ILCE-7RM3/ A7RM3 Body\r\n', '2100', 1, 2, 'sony a7.jpg', 'ISO 100-32000/Exmor CMOS 42.4 megapixels/Speed/30-1/8000/LCD 3.0inch/657g/Black', 'sony', ''),
+(4, 1, 'Camera Canon EOS-80D-kit EF-S18-135mm IS USM\r\n', '1000', 1, 4, 'camera-cannon-efm15-45.png', 'ISO 100-12800/CMOS 24.2 megapixels/LCD 3.0inch/Speed 30- 1/8000s/650g/Black', 'cannon', ''),
+(5, 2, 'Laptop Acer Swift 3X SF314-510G-57MR', '900', 1, 6, 'acer-swift 3xsf314.png', 'NX.A10SV.004 I5-1135G7/8GB RAM/512GB SSD/14.0 FHD/Win10/Yellow (2020)', 'acer', 'CPU: Intel Core i5 1135G7\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: Onboard\r\nScreen: 14 inch FHD'),
+(6, 1, 'Camera Fujifilm X - T4 Kit XF16-80MM(Black)\r\n\r\n', '1600', 1, 4, 'cannon-kit-rf24.jpg', 'Sensor: X-Trans C-M-O-S 4 26.1MP. Maximum resolution: 6240 x 4160.Aspect ratio: 1:1 ', 'fujifilm', ''),
+(7, 2, 'Laptop Asus ZenBook UX435EA-A5036T\r\n\r\n', '1600', 2, 5, 'asus-zenbook.jpg', 'Get more done, with less effort. Immersive Four Sides Display. Smart touchpad, evolved. More likely, All-round great performance. ZenBook 14\'s sound system is certified by audio experts to ensure crystal-clear, immersive sound', 'asus', ''),
+(8, 2, 'Laptop Acer Gaming Predator Helios 300 PH315-53-70U6', '2000', 2, 1, 'acer-helios300.png', 'Laptop Acer is weight only 2.2kg, users can easily carry it anywhere without being too heavy.The laptop is equipped with a chiclet keyboard .A lot of necessary connection ports so that gamers can fight', 'acer', 'CPU: Intel Core i7 10750H RAM: 16GB Hard Drive: 512GB SSD VGA: Nvidia RTX2060 6G Screen: 15.6 inch FHD 240Hz'),
+(9, 2, 'Laptop Dell Inspiron 7490 LTDL101- 6RKVN1', '1400', 2, 6, 'dell-7490.jpeg', '7490LTDL101- 6RKVN1 Configuration for office, light game.here size of an old-fashioned 13.3-inch laptop. Dell Inspiron 7490 laptop has a slim, stylish, modern design .It is equipped with Intel\'s 10th generation', 'dell', 'CPU: Intel Core i7 10510U\r\nRAM: 16GB\r\nHard Drive:512GB SSD\r\nVGA: NVIDIA MX250 2GB\r\nScreen: 14\" FHD'),
+(10, 3, 'SteelSeries Arctis Pro+GameDAC 61453-Headset', '200', 2, 2, 'headphone-steekseries.jpg', 'At the heart of Arctis Pro + GameDAC is the legendary ESS Saber 9018 audio processor DAC, revered for its outstanding sound quality with 121 dB dynamic range and -115 dB THD + N.This makes for tight bass.', 'headphone', ''),
+(11, 3, 'Mechanical Keyboard VA87M Sakura -Mechanical ', '150', 2, 4, 'keyboard-sakura.jpg', 'From the drawings, the alphabet to the colors on the keycap are also made very meticulously and carefully. With the PBT keycap type that offers durability that won\'t be affected by time.A lovely design with pink cherry\r\n', 'keyboard', ''),
+(12, 3, 'Mechanical Keyboard Akko Designer Studio-MOD001-Macaw', '400', 2, 5, 'keyboard-akko.jpg', 'With the famous Cherry Switch set meticulously designed in every detail with 3 basic Chery switch options: red, brown and blue switch. The keyboard is designed with a solid aluminum shell.\r\n\r\n', 'keyboard', ''),
+(15, 2, 'Asus TUF Gaming F15 FX506LI-HN039T', '1100', 3, 5, 'asus-tuf.jpg', '', 'asus', 'CPU:AMD Ryzen R7 4800H\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: NVIDIA GTX 1660Ti 6GB\r\nScreen: 17.3 FHD 144hz'),
+(16, 2, 'APPLE MACBOOK PRO 15 TOUCHBAR (MV912)', '2350', 3, 4, 'macbook-pro15.png', '', 'macbook', 'CPU: Intel Core i9 2.3Ghz RAM: 16GB Hard Drive: 512GB SSD VGA: 560X 4GB Screen: 15.4 inch'),
+(17, 2, 'APPLE MACBOOK PRO 15 TOUCHBAR (MV912)', '2350', 3, 4, 'macbook-pro13.png', '', 'macbook', 'CPU: Apple M1\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: Onboard\r\nScreen: 13.3 inch Retina IPS'),
+(18, 2, 'LAPTOP DELL INSPIRON 5406 (TYCJN1)', '1250', 3, 4, 'dell-5406.png', '', 'dell', 'CPU:Intel Core i7 1165G7\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: Nvidia MX330 2GB\r\nScreen: 14 inch FHD'),
+(19, 2, 'Laptop Dell Workstation Mobile Precision 3550', '1550', 3, 4, 'dell-mobile-precision-3550.png', '', 'dell', 'CPU: Intel Core i7 10810U\r\nRAM: 16GB\r\nHard Drive: 256GB SSD\r\nVGA: Quadro P520 2G\r\nScreen: 15.6 inch FHD'),
+(20, 2, 'LAPTOP ACER GAMING NITRO 5 AN515-56-79U2', '1100', 3, 3, 'laptop-acer-gaming.jpg', '', 'acer', 'CPU: Intel core i7 11370H\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: NVIDIA GTX1650 4G\r\nScreen: 15.6 inch FHD 144hz'),
+(21, 2, 'LAPTOP HP PROBOOK 430 G8 (2H0P0PA)', '1100', 3, 4, 'laptop-probook-hp430gb.jpg', '', 'hp', 'CPU: Intel Core i7 1165G7\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: Onboard\r\nScreen: 13.3 inch FHD'),
+(22, 2, 'LAPTOP HP ENVY 13-BA1030TU (2K0B6PA)', '1580', 3, 1, 'laptop-hp-envy13.png', '', 'hp', 'CPU: Intel® Core i5-1135G7(upto 4.2GHz, 8MB)\r\nRAM: 8GB 8GB(1 x 8GB) DDR4-3200MHz (2 slot)\r\nHard Drive: 256GB PCIe NVMe™ M.2'),
+(23, 2, 'LAPTOP HP ENVY 13-BA1030TU (2K0B6PA)', '2350', 3, 2, 'hp-pavilion15.png', '', 'hp', 'CPU: Intel Core i7-10750H\r\nRAM: 8GB\r\nHard Drive: 512GB SSD\r\nVGA: NVIDIA GTX 1650Ti 4GB\r\nScreen: NVIDIA GTX 1650Ti 4GB');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `btl_slider`
+-- Cấu trúc bảng cho bảng `btl_slider`
 --
 
 CREATE TABLE `btl_slider` (
@@ -102,7 +101,7 @@ CREATE TABLE `btl_slider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `btl_slider`
+-- Đang đổ dữ liệu cho bảng `btl_slider`
 --
 
 INSERT INTO `btl_slider` (`slider_id`, `slider_name`, `slider_caption`, `slider_image`) VALUES
@@ -113,7 +112,35 @@ INSERT INTO `btl_slider` (`slider_id`, `slider_name`, `slider_caption`, `slider_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product1`
+-- Cấu trúc bảng cho bảng `btl_user`
+--
+
+CREATE TABLE `btl_user` (
+  `id` int(11) NOT NULL,
+  `role` enum('user','admin') NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(150) NOT NULL,
+  `name` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `btl_user`
+--
+
+INSERT INTO `btl_user` (`id`, `role`, `username`, `password`, `name`) VALUES
+(1, 'admin', 'admin', '1', 'adminator'),
+(2, 'user', 'kha@gmail.com', 'kha123', 'kha123'),
+(3, 'user', 'dat@gmail.com', 'dat09', 'dat09'),
+(4, 'user', 'peam@gmail.com', '123456', 'peam\r\n'),
+(5, 'user', 'doanngu@gmail.com', '123456789', 'kha'),
+(6, 'user', 'thang@gmail.com', 'Thang123', 'thang'),
+(7, 'user', 'lacda01', 'lacda1', 'lac da'),
+(8, 'user', 'lacda02', 'lacda123', 'lac da');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `product1`
 --
 
 CREATE TABLE `product1` (
@@ -133,12 +160,12 @@ CREATE TABLE `product1` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `product1`
+-- Đang đổ dữ liệu cho bảng `product1`
 --
 
 INSERT INTO `product1` (`id`, `name`, `date`, `maxreso`, `lowreso`, `pixel`, `zwide`, `ztele`, `macro`, `w`, `pr`, `type`, `img`) VALUES
-(1, 'Canon PowerShot A610', 1999, 1024, 512, 0, 28, 70, 17, 290, 149, 1, 'c-4.jpg'),
-(2, 'Kodak DC3200', 2000, 1152, 576, 0, 39, 39, 0, 240, 1296, 1, 'k-5.jpg'),
+(1, 'Canon PowerShot A610', 1999, 1024, 512, 0, 28, 70, 17, 290, 150, 1, 'c-4.jpg'),
+(2, 'Kodak DC3200', 2000, 1152, 576, 1, 39, 39, 0, 240, 129, 1, 'k-5.jpg'),
 (3, 'Fujifilm MX-1200', 1999, 1280, 640, 1, 38, 38, 10, 240, 169, 1, 'f-7.jpg'),
 (4, 'Fujifilm MX-1400', 2000, 1280, 640, 1, 38, 114, 10, 390, 169, 1, 'f-8.jpg'),
 (5, 'Fujifilm MX-1500', 1999, 1280, 640, 1, 38, 38, 10, 250, 169, 1, 'f-9.jpg'),
@@ -149,27 +176,27 @@ INSERT INTO `product1` (`id`, `name`, `date`, `maxreso`, `lowreso`, `pixel`, `zw
 (10, 'Leica D-LUX 3', 2000, 1280, 640, 1, 38, 114, 20, 270, 249, 1, 'le-1.jpg'),
 (11, 'Sony DSC-F505', 1998, 1344, 640, 1, 28, 140, 0, 900, 149, 1, 's-5.jpg'),
 (12, 'Sony DSC-F505V', 1999, 1344, 640, 1, 28, 140, 0, 900, 149, 1, 's-6.jpg'),
-(13, 'Kodak DCS315', 1998, 1520, 0, 1, 0, 0, 0, 1800, 326, 1, 'k-11.jpg'),
+(13, 'Kodak DCS315', 1998, 1520, 0, 1, 0, 0, 0, 1800, 126, 1, 'k-11.jpg'),
 (14, 'Kodak DCS420', 1994, 1524, 0, 1, 0, 0, 0, 1700, 129, 1, 'k-13.jpg'),
-(15, 'Kodak DC260', 1998, 1536, 768, 1, 38, 115, 0, 550, 1299, 1, 'k-1.jpg'),
-(16, 'Kodak DC265', 1999, 1536, 768, 1, 38, 115, 0, 550, 1294, 1, 'k-2.jpg'),
+(15, 'Kodak DC260', 1998, 1536, 768, 1, 38, 115, 0, 550, 129, 1, 'k-1.jpg'),
+(16, 'Kodak DC265', 1999, 1536, 768, 1, 38, 115, 0, 550, 129, 1, 'k-2.jpg'),
 (17, 'Canon PowerShot A620', 2001, 1600, 1024, 1, 35, 105, 5, 315, 139, 1, 'c-5.jpg'),
 (18, 'Sony DSC-F55', 1999, 1600, 1024, 1, 38, 190, 8, 475, 149, 1, 's-7.jpg'),
 (19, 'Kodak DCS520', 1998, 1728, 0, 2, 0, 0, 0, 1650, 129, 1, 'k-15.jpg'),
-(20, 'Kodak DC5000', 2000, 1760, 896, 2, 30, 60, 20, 459, 526, 1, 'k-9.jpg'),
-(21, 'Kodak DC280', 1999, 1760, 896, 2, 30, 60, 25, 420, 1293, 1, 'k-3.jpg'),
-(22, 'Kodak DC3400', 2000, 1760, 896, 2, 38, 76, 25, 420, 629, 1, 'k-6.jpg'),
-(23, 'Kodak DC3800', 2000, 1760, 896, 2, 33, 33, 20, 200, 729, 1, 'k-7.jpg'),
-(24, 'Kodak DC290', 1999, 1792, 1440, 2, 38, 115, 0, 550, 1292, 1, 'k-4.jpg'),
+(20, 'Kodak DC5000', 2000, 1760, 896, 2, 30, 60, 20, 459, 126, 1, 'k-9.jpg'),
+(21, 'Kodak DC280', 1999, 1760, 896, 2, 30, 60, 25, 420, 129, 1, 'k-3.jpg'),
+(22, 'Kodak DC3400', 2000, 1760, 896, 2, 38, 76, 25, 420, 129, 1, 'k-6.jpg'),
+(23, 'Kodak DC3800', 2000, 1760, 896, 2, 33, 33, 20, 200, 129, 1, 'k-7.jpg'),
+(24, 'Kodak DC290', 1999, 1792, 1440, 2, 38, 115, 0, 550, 129, 1, 'k-4.jpg'),
 (25, 'Fujifilm MX-2700', 1999, 1800, 1280, 2, 35, 35, 9, 260, 169, 1, 'f-11.jpg'),
 (26, 'Fujifilm MX-2900 Zoom', 1999, 1800, 1280, 2, 35, 105, 25, 385, 179, 1, 'f-12.jpg'),
-(27, 'Kodak DCS330', 1999, 2008, 0, 3, 0, 0, 0, 1080, 1265, 1, 'k-12.jpg'),
-(28, 'Canon PowerShot A710 IS', 2001, 2048, 1600, 3, 35, 105, 5, 315, 639, 1, 'c-9.jpg'),
-(29, 'Sony Alpha A7', 2000, 2048, 1600, 3, 39, 117, 10, 250, 1429, 1, 's-12.jpg'),
+(27, 'Kodak DCS330', 1999, 2008, 0, 3, 0, 0, 0, 1080, 126, 1, 'k-12.jpg'),
+(28, 'Canon PowerShot A710 IS', 2001, 2048, 1600, 3, 35, 105, 5, 315, 139, 1, 'c-9.jpg'),
+(29, 'Sony DSC-P100', 2000, 2048, 1600, 3, 39, 117, 10, 250, 429, 1, 's-12.jpg'),
 (30, 'Sony Mavica CD400', 2007, 2048, 1600, 3, 34, 102, 4, 620, 1399, 1, 's-1.jpg'),
 (31, 'Sony Mavica CD500', 2007, 2048, 1632, 3, 41, 123, 10, 522, 1399, 1, 's-2.jpg'),
-(32, 'Kodak DC4800', 2000, 2160, 1800, 3, 28, 84, 20, 320, 1295, 1, 'k-8.jpg'),
-(33, 'Nikon Coolpix L6', 2005, 2272, 1600, 3, 38, 114, 4, 165, 996, 1, 'ni-4.jpg'),
+(32, 'Kodak DC4800', 2000, 2160, 1800, 3, 28, 84, 20, 320, 129, 1, 'k-8.jpg'),
+(33, 'Nikon Coolpix L6', 2005, 2272, 1600, 3, 38, 114, 4, 165, 99, 1, 'ni-4.jpg'),
 (34, 'Sony DSC-D700', 2007, 2272, 1600, 3, 34, 102, 4, 640, 1399, 1, 's-3.jpg'),
 (35, 'Fujifilm FinePix 4700 Zoom', 2000, 2400, 1280, 2, 36, 108, 20, 280, 169, 1, 'f-13.jpg'),
 (36, 'Canon PowerShot A630', 2001, 2592, 2592, 5, 35, 140, 1, 285, 139, 1, 'c-6.jpg'),
@@ -180,9 +207,9 @@ INSERT INTO `product1` (`id`, `name`, `date`, `maxreso`, `lowreso`, `pixel`, `zw
 (41, 'Sony DSC-N2', 2007, 2592, 2048, 5, 38, 114, 1, 240, 399, 1, 's-9.jpg'),
 (42, 'Sony DSC-N1', 2007, 2592, 2048, 5, 38, 114, 8, 215, 429, 1, 's-8.jpg'),
 (43, 'Sony DSC-D770', 2007, 2592, 2048, 5, 34, 102, 4, 606, 1399, 1, 's-4.jpg'),
-(44, 'Nikon Coolpix L4', 2005, 2816, 2048, 6, 38, 116, 10, 170, 994, 1, 'ni-3.jpg'),
-(45, 'Nikon Coolpix P2', 2005, 2816, 2048, 6, 38, 116, 10, 175, 991, 1, 'ni-6.jpg'),
-(46, 'Canon PowerShot A720 IS', 2001, 2816, 2272, 6, 35, 210, 1, 250, 1391, 1, 'c-10.jpg'),
+(44, 'Nikon Coolpix L4', 2005, 2816, 2048, 6, 38, 116, 10, 170, 99, 1, 'ni-3.jpg'),
+(45, 'Nikon Coolpix P2', 2005, 2816, 2048, 6, 38, 116, 10, 175, 99, 1, 'ni-6.jpg'),
+(46, 'Canon PowerShot A720 IS', 2001, 2816, 2272, 6, 35, 210, 1, 250, 139, 1, 'c-10.jpg'),
 (47, 'Canon PowerShot SD800 IS', 2002, 2816, 2272, 6, 35, 140, 2, 195, 384, 1, 'c-12.jpg'),
 (48, 'Nikon D50', 2005, 3008, 2256, 6, 0, 0, 0, 522, 549, 1, 'ni-9.jpg'),
 (49, 'Nikon D70s', 2005, 3008, 2256, 6, 0, 0, 0, 620, 1599, 1, 'ni-11.jpg'),
@@ -212,12 +239,12 @@ INSERT INTO `product1` (`id`, `name`, `date`, `maxreso`, `lowreso`, `pixel`, `zw
 (73, 'Fujifilm FinePix S5 Pro', 2006, 4256, 3024, 6, 0, 0, 0, 920, 1699, 1, 'f-4.jpg'),
 (74, 'Nikon D40', 2005, 4256, 3184, 12, 0, 0, 0, 1300, 4999, 1, 'ni-7.jpg'),
 (75, 'Nikon D40X', 2005, 4288, 3216, 12, 0, 0, 0, 925, 1799, 1, 'ni-8.jpg'),
-(76, 'Kodak DCS 14n', 2002, 4536, 3024, 13, 0, 0, 0, 1000, 429, 1, 'k-10.jpg');
+(76, 'Kodak DCS 14n', 2002, 4536, 3024, 13, 0, 0, 0, 1000, 129, 1, 'k-10.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product2`
+-- Cấu trúc bảng cho bảng `product2`
 --
 
 CREATE TABLE `product2` (
@@ -237,11 +264,11 @@ CREATE TABLE `product2` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `product2`
+-- Đang đổ dữ liệu cho bảng `product2`
 --
 
 INSERT INTO `product2` (`id`, `brand`, `name`, `category`, `ss`, `s`, `cpu`, `ram`, `storage`, `gpu`, `w`, `price`, `img`) VALUES
-(1, 'Dell', 'Dell XPS 15 9570', '2 in 1 Convertible', '10.1', 'IPS Panel Touchscreen 1920x1200', 'Intel Atom x5-Z8550 1.44GHz', '4GB', '64GB Flash Storage', 'Intel HD Graphics 400', '0.69kg', 1319, 'dell-6.jpg'),
+(1, 'Dell', 'Dell XPS 15 9570', '2 in 1 Convertible', '10.1', 'IPS Panel Touchscreen 1920x1200', 'Intel Atom x5-Z8550 1.44GHz', '4GB', '64GB Flash Storage', 'Intel HD Graphics 400', '0.69kg', 1320, 'dell-6.jpg'),
 (2, 'Asus', 'Asus VivoBook 15 X510UF', '2 in 1 Convertible', '10.1', 'IPS Panel Touchscreen 1920x1200', 'Intel Atom x5-Z8550 1.44GHz', '4GB', '64GB Flash Storage', 'Intel HD Graphics 400', '0.69kg', 819, 'asus-7.jpg'),
 (3, 'Acer', 'Acer Aspire 1 A114-31', 'Ultrabook', '12.0', 'IPS Panel Retina Display 2304x1440', 'Intel Core M m3 1.2GHz', '8GB', '256GB SSD', 'Intel HD Graphics 615', '0.92kg', 1262, 'acer-6.jpg'),
 (4, 'Acer', 'Acer Aspire 3 A315-33-C6S9', 'Ultrabook', '12.0', 'IPS Panel Retina Display 2304x1440', 'Intel Core i5 1.3GHz', '8GB', '512GB SSD', 'Intel HD Graphics 615', '0.92kg', 1510, 'acer-9.jpg'),
@@ -287,7 +314,7 @@ INSERT INTO `product2` (`id`, `brand`, `name`, `category`, `ss`, `s`, `cpu`, `ra
 (44, 'HP', 'HP ENVY 13-ad101nx', 'Ultrabook', '15.6', 'IPS Panel Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '8GB', '256GB SSD', 'Nvidia GeForce GTX 940MX', '1.83kg', 699, 'hp-8.jpg'),
 (45, 'Acer', 'Acer Swift 5', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i3 6006U 2GHz', '4GB', '500GB HDD', 'Intel HD Graphics 520', '1.86kg', 1344, 'acer-1.jpg'),
 (46, 'Microsoft', 'Microsoft Surface', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i3 6006U 2GHz', '4GB', '500GB HDD', 'Intel HD Graphics 520', '1.86kg', 1344, 'mic-1.jpg'),
-(47, 'Apple', 'Apple MacBook Air (Retina)  (MGK65SA/A)', 'Notebook', '15.6', 'Full HD 1920x1080', 'Apple M1', '8GB', '256GB SSD', 'Intel HD Graphics 620', '1.86kg', 1575, 'mb-3.jpg'),
+(47, 'Apple', 'Apple MacBook Air (Retina)  (MGN65SA/A)', 'Notebook', '15.6', 'Full HD 1920x1080', 'Apple M1', '8GB', '256GB SSD', 'Intel HD Graphics 620', '1.86kg', 1575, 'mb-3.jpg'),
 (48, 'HP', 'HP ENVY 13-ah0002nx', 'Notebook', '15.6', '1366x768', 'AMD E-Series E2-9000e 1.5GHz', '4GB', '500GB HDD', 'AMD Radeon R2', '1.86kg', 258, 'hp-9.jpg'),
 (49, 'Apple', 'Apple MacBook Air (Retina)  (MGN65SF/A)', 'Notebook', '15.6', '1366x768', 'AMD E-Series E2-9000e 1.5GHz', '4GB', '500GB HDD', 'AMD Radeon R2', '1.86kg', 2580, 'mb-2.jpg'),
 (50, 'Acer', 'Acer Aspire 1 A114-31-C6WP', 'Notebook', '15.6', '1366x768', 'Intel Core i5 7200U 2.5GHz', '4GB', '500GB HDD', 'Intel HD Graphics 620', '1.86kg', 693, 'acer-12.jpg'),
@@ -329,7 +356,7 @@ INSERT INTO `product2` (`id`, `brand`, `name`, `category`, `ss`, `s`, `cpu`, `ra
 (86, 'Lenovo', 'Lenovo IdeaPad 320-15IKBRN', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i5 7200U 2.5GHz', '8GB', '2TB HDD', 'Intel HD Graphics 620', '2.2kg', 519, 'l-4.jpg'),
 (87, 'Apple', 'Apple MacBook Pro (Retina + Touch Bar)  (MGN64SA/A)', 'Notebook', '15.6', 'Full HD 1920x1080', 'Apple M1', '4GB', '1TB HDD', 'Nvidia GeForce MX130', '2.2kg', 530, 'mb-2.jpg'),
 (88, 'Apple', 'Apple MacBook Pro (Retina + Touch Bar)  (MGN63SA/B)', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i7 7500U 2.7GHz', '8GB', '1TB HDD', 'AMD Radeon R5 M430', '2.2kg', 599, 'mb-6.jpg'),
-(89, 'Acer', 'Acer Aspire 3 A315-55', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '8GB', '1TB HDD', 'Nvidia GeForce MX150', '2.2kg', 689, 'acer-10.jpg'),
+(89, 'Acer', 'Acer Aspire 3 A315-54', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '8GB', '1TB HDD', 'Nvidia GeForce MX150', '2.2kg', 689, 'acer-10.jpg'),
 (90, 'Asus', 'Asus ZenBook UX430UN ', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '8GB', '1TB HDD', 'Nvidia GeForce MX150', '2.2kg', 689, 'asus-2.jpg'),
 (91, 'Dell', 'Dell Vostro 5481', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '256GB SSD', 'AMD Radeon 530', '2.2kg', 800, 'dell-1.jpg'),
 (92, 'Asus', 'Asus VivoBook 15 X512UF', 'Notebook', '15.6', 'IPS Panel Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '8GB', '256GB SSD', 'Nvidia GeForce MX150', '2.2kg', 841, 'asus-9.jpg'),
@@ -341,7 +368,7 @@ INSERT INTO `product2` (`id`, `brand`, `name`, `category`, `ss`, `s`, `cpu`, `ra
 (98, 'Apple', 'Apple MacBook ', 'Notebook', '15.6', '1366x768', 'Apple M1', '8GB', '1TB HDD', 'Nvidia GeForce 940MX', '2.3kg', 1522, 'mb-12.jpg'),
 (99, 'Dell', 'Dell Inspiron 13 5370', 'Notebook', '15.6', '1366x768', 'Intel Core i3 6006U 2GHz', '4GB', '1TB HDD', 'Intel HD Graphics 520', '2.3kg', 718, 'dell-2.jpg'),
 (100, 'HP', 'HP 15-da1019nx', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i5 7200U 2.5GHz', '4GB', '256GB SSD', 'AMD Radeon R5 M430', '2.3kg', 639, 'hp-4.jpg'),
-(101, 'Acer', 'Acer Aspire 3 A315-56', 'Gaming', '15.6', 'Full HD 1920x1080', 'AMD FX 9830P 3GHz', '8GB', '1TB HDD', 'AMD Radeon RX 560', '2.45kg', 699, 'acer-13.jpg'),
+(101, 'Acer', 'Acer Aspire 3 A315-54', 'Gaming', '15.6', 'Full HD 1920x1080', 'AMD FX 9830P 3GHz', '8GB', '1TB HDD', 'AMD Radeon RX 560', '2.45kg', 699, 'acer-13.jpg'),
 (102, 'Lenovo', 'Lenovo IdeaPad 320-14ISK', 'Gaming', '15.6', 'Full HD 1920x1080', 'AMD FX 9830P 3GHz', '8GB', '1TB HDD', 'AMD Radeon RX 560', '2.45kg', 699, 'l-1.jpg'),
 (103, 'Acer', 'Acer Swift 3 SF314-54G-87HB', 'Notebook', '15.6', '1366x768', 'Intel Core i3 7100U 2.4GHz', '4GB', '1TB HDD', 'Intel HD Graphics 620', '2.4kg', 584, 'acer-3.jpg'),
 (104, 'Dell', 'Dell Inspiron 15 3580N', 'Notebook', '15.6', '1366x768', 'Intel Core i3 7100U 2.4GHz', '4GB', '1TB HDD', 'Intel HD Graphics 620', '2.4kg', 884, 'dell-13.jpg'),
@@ -379,7 +406,7 @@ INSERT INTO `product2` (`id`, `brand`, `name`, `category`, `ss`, `s`, `cpu`, `ra
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product3`
+-- Cấu trúc bảng cho bảng `product3`
 --
 
 CREATE TABLE `product3` (
@@ -393,11 +420,11 @@ CREATE TABLE `product3` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `product3`
+-- Đang đổ dữ liệu cho bảng `product3`
 --
 
 INSERT INTO `product3` (`id`, `sc`, `br`, `name`, `w`, `pr`, `img`) VALUES
-(1, 'hp', 'HyperX', 'HyperX Cloud X', 102, 229, 'hx-15.jpg'),
+(1, 'hp', 'HyperX', 'HyperX Cloud X', 102, 230, 'hx-15.jpg'),
 (2, 'hp', 'HyperX', 'HyperX Cloud PS5', 105, 159, 'hx-16.jpg'),
 (3, 'kb', 'Logitech', 'Logitech G607', 105, 53, 'g-18.png'),
 (4, 'hp', 'SteelSeries', 'SteelSeries Arctis 6', 106, 68, 'ss-16.png'),
@@ -481,66 +508,54 @@ INSERT INTO `product3` (`id`, `sc`, `br`, `name`, `w`, `pr`, `img`) VALUES
 (82, 'kb', 'AKKO', 'AKKO Eren', 246, 127, 'ak-4.jpg');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `btl_category`
+-- Chỉ mục cho bảng `btl_category`
 --
 ALTER TABLE `btl_category`
   ADD PRIMARY KEY (`category_id`);
 
 --
--- Indexes for table `btl_product`
+-- Chỉ mục cho bảng `btl_product`
 --
 ALTER TABLE `btl_product`
   ADD PRIMARY KEY (`product_id`) USING BTREE;
 
 --
--- Indexes for table `btl_slider`
+-- Chỉ mục cho bảng `btl_slider`
 --
 ALTER TABLE `btl_slider`
   ADD PRIMARY KEY (`slider_id`);
 
 --
--- Indexes for table `product1`
+-- Chỉ mục cho bảng `btl_user`
 --
-ALTER TABLE `product1`
+ALTER TABLE `btl_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `product2`
---
-ALTER TABLE `product2`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `product3`
---
-ALTER TABLE `product3`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `btl_category`
---
-ALTER TABLE `btl_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `btl_product`
+-- AUTO_INCREMENT cho bảng `btl_product`
 --
 ALTER TABLE `btl_product`
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT for table `btl_slider`
+-- AUTO_INCREMENT cho bảng `btl_slider`
 --
 ALTER TABLE `btl_slider`
   MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT cho bảng `btl_user`
+--
+ALTER TABLE `btl_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

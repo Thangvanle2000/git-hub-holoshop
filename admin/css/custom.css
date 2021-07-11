@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+#headerLinks1 a {
+	text-decoration: none;
+	color: rgba(146,146,146,1.00);
+	padding-left: 66px;
+	font-size: 14px;
+}
+#headerLinks1 {
+	
+	width: 100%;
+	text-align: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+}
+#left {
+	cursor: url("http://www.rw-designer.com/cursor-extern.php?id=144504"), all-scroll;
+	
+}
+
+#right {
+	background: #EEDFDE;
+	
+}
+#left a {
+	width: 100%;
+}
+.container {
+	text-align: center;
+
+	
+}
+#logo {
+	float: left;
+	padding-left: 10%;
+	height: auto;
+		
+	text-align: center;
+	color: rgba(255,255,255,1.00);
+	
+}
+#logo img{
+	height: 100px ;
+	
+}
+col img{
+	height: auto;
+	width: 100%;
+	margin: 20px;
+}
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}	
+.carousel-caption  {background-color: rgba(0, 0, 0, .7);}

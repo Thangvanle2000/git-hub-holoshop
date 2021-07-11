@@ -1,2 +1,3 @@
 Các thuộc tính của Camera(bảng product1) {ID	Model	Release date	Max resolution	Low resolution	Effective pixels	Zoom wide (W)	Zoom tele (T)	Macro focus range	Weight (inc. batteries)	Price	Type	img}
 Các thuộc tính của Laptop(bảng product2) {ID	brand	brand laptop_name	Category	Screen Size	Screen	CPU	RAM	 Storage	GPU	Weight	Price (Euros)	img}
+Các thuộc tính của Device(bảng product3) {ID    subcategory Brand Name weight price img }

@@ -65,11 +65,7 @@ if ( isset( $_GET[ 'sort' ] ) ) {
         <?php if ( (isset( $_GET[ 'br' ]))&&(($c==1)||($c==2)) )  {?>
         <li class="breadcrumb-item"><a href="laptop.php?c=<?php echo $c ;?>&br=<?php echo $br;?>" style="text-transform: capitalize"><?php echo $br?></a></li>
         <?php }?>
-        <?php if ( (isset( $_GET[ 'sc' ]))&&($c==3 ))  {?>
-        <li class="breadcrumb-item"><a href="laptop.php?br=<?php echo $br;?>" style="text-transform: capitalize">
-          <?php if ($sc=='kb'){ echo "KeyBoard";} if ($sc=='hp'){ echo "Headphone";}; if ($sc=='m'){ echo "Mouse";};?>
-          </a></li>
-        <?php }?>
+        
       </ol>
     </nav>
     <?php

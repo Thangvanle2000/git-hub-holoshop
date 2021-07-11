@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2021 at 01:21 PM
+-- Generation Time: Jul 11, 2021 at 07:06 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -138,7 +138,7 @@ CREATE TABLE `product1` (
 
 INSERT INTO `product1` (`id`, `name`, `date`, `maxreso`, `lowreso`, `pixel`, `zwide`, `ztele`, `macro`, `w`, `pr`, `type`, `img`) VALUES
 (1, 'Canon PowerShot A610', 1999, 1024, 512, 0, 28, 70, 17, 290, 149, 1, 'c-4.jpg'),
-(2, 'Kodak DC3200', 2000, 1152, 576, 0, 39, 39, 0, 240, 129, 1, 'k-5.jpg'),
+(2, 'Kodak DC3200', 2000, 1152, 576, 0, 39, 39, 0, 240, 1296, 1, 'k-5.jpg'),
 (3, 'Fujifilm MX-1200', 1999, 1280, 640, 1, 38, 38, 10, 240, 169, 1, 'f-7.jpg'),
 (4, 'Fujifilm MX-1400', 2000, 1280, 640, 1, 38, 114, 10, 390, 169, 1, 'f-8.jpg'),
 (5, 'Fujifilm MX-1500', 1999, 1280, 640, 1, 38, 38, 10, 250, 169, 1, 'f-9.jpg'),
@@ -149,27 +149,27 @@ INSERT INTO `product1` (`id`, `name`, `date`, `maxreso`, `lowreso`, `pixel`, `zw
 (10, 'Leica D-LUX 3', 2000, 1280, 640, 1, 38, 114, 20, 270, 249, 1, 'le-1.jpg'),
 (11, 'Sony DSC-F505', 1998, 1344, 640, 1, 28, 140, 0, 900, 149, 1, 's-5.jpg'),
 (12, 'Sony DSC-F505V', 1999, 1344, 640, 1, 28, 140, 0, 900, 149, 1, 's-6.jpg'),
-(13, 'Kodak DCS315', 1998, 1520, 0, 1, 0, 0, 0, 1800, 126, 1, 'k-11.jpg'),
+(13, 'Kodak DCS315', 1998, 1520, 0, 1, 0, 0, 0, 1800, 326, 1, 'k-11.jpg'),
 (14, 'Kodak DCS420', 1994, 1524, 0, 1, 0, 0, 0, 1700, 129, 1, 'k-13.jpg'),
-(15, 'Kodak DC260', 1998, 1536, 768, 1, 38, 115, 0, 550, 129, 1, 'k-1.jpg'),
-(16, 'Kodak DC265', 1999, 1536, 768, 1, 38, 115, 0, 550, 129, 1, 'k-2.jpg'),
+(15, 'Kodak DC260', 1998, 1536, 768, 1, 38, 115, 0, 550, 1299, 1, 'k-1.jpg'),
+(16, 'Kodak DC265', 1999, 1536, 768, 1, 38, 115, 0, 550, 1294, 1, 'k-2.jpg'),
 (17, 'Canon PowerShot A620', 2001, 1600, 1024, 1, 35, 105, 5, 315, 139, 1, 'c-5.jpg'),
 (18, 'Sony DSC-F55', 1999, 1600, 1024, 1, 38, 190, 8, 475, 149, 1, 's-7.jpg'),
 (19, 'Kodak DCS520', 1998, 1728, 0, 2, 0, 0, 0, 1650, 129, 1, 'k-15.jpg'),
-(20, 'Kodak DC5000', 2000, 1760, 896, 2, 30, 60, 20, 459, 126, 1, 'k-9.jpg'),
-(21, 'Kodak DC280', 1999, 1760, 896, 2, 30, 60, 25, 420, 129, 1, 'k-3.jpg'),
-(22, 'Kodak DC3400', 2000, 1760, 896, 2, 38, 76, 25, 420, 129, 1, 'k-6.jpg'),
-(23, 'Kodak DC3800', 2000, 1760, 896, 2, 33, 33, 20, 200, 129, 1, 'k-7.jpg'),
-(24, 'Kodak DC290', 1999, 1792, 1440, 2, 38, 115, 0, 550, 129, 1, 'k-4.jpg'),
+(20, 'Kodak DC5000', 2000, 1760, 896, 2, 30, 60, 20, 459, 526, 1, 'k-9.jpg'),
+(21, 'Kodak DC280', 1999, 1760, 896, 2, 30, 60, 25, 420, 1293, 1, 'k-3.jpg'),
+(22, 'Kodak DC3400', 2000, 1760, 896, 2, 38, 76, 25, 420, 629, 1, 'k-6.jpg'),
+(23, 'Kodak DC3800', 2000, 1760, 896, 2, 33, 33, 20, 200, 729, 1, 'k-7.jpg'),
+(24, 'Kodak DC290', 1999, 1792, 1440, 2, 38, 115, 0, 550, 1292, 1, 'k-4.jpg'),
 (25, 'Fujifilm MX-2700', 1999, 1800, 1280, 2, 35, 35, 9, 260, 169, 1, 'f-11.jpg'),
 (26, 'Fujifilm MX-2900 Zoom', 1999, 1800, 1280, 2, 35, 105, 25, 385, 179, 1, 'f-12.jpg'),
-(27, 'Kodak DCS330', 1999, 2008, 0, 3, 0, 0, 0, 1080, 126, 1, 'k-12.jpg'),
-(28, 'Canon PowerShot A710 IS', 2001, 2048, 1600, 3, 35, 105, 5, 315, 139, 1, 'c-9.jpg'),
-(29, 'Sony DSC-P100', 2000, 2048, 1600, 3, 39, 117, 10, 250, 429, 1, 's-12.jpg'),
+(27, 'Kodak DCS330', 1999, 2008, 0, 3, 0, 0, 0, 1080, 1265, 1, 'k-12.jpg'),
+(28, 'Canon PowerShot A710 IS', 2001, 2048, 1600, 3, 35, 105, 5, 315, 639, 1, 'c-9.jpg'),
+(29, 'Sony Alpha A7', 2000, 2048, 1600, 3, 39, 117, 10, 250, 1429, 1, 's-12.jpg'),
 (30, 'Sony Mavica CD400', 2007, 2048, 1600, 3, 34, 102, 4, 620, 1399, 1, 's-1.jpg'),
 (31, 'Sony Mavica CD500', 2007, 2048, 1632, 3, 41, 123, 10, 522, 1399, 1, 's-2.jpg'),
-(32, 'Kodak DC4800', 2000, 2160, 1800, 3, 28, 84, 20, 320, 129, 1, 'k-8.jpg'),
-(33, 'Nikon Coolpix L6', 2005, 2272, 1600, 3, 38, 114, 4, 165, 99, 1, 'ni-4.jpg'),
+(32, 'Kodak DC4800', 2000, 2160, 1800, 3, 28, 84, 20, 320, 1295, 1, 'k-8.jpg'),
+(33, 'Nikon Coolpix L6', 2005, 2272, 1600, 3, 38, 114, 4, 165, 996, 1, 'ni-4.jpg'),
 (34, 'Sony DSC-D700', 2007, 2272, 1600, 3, 34, 102, 4, 640, 1399, 1, 's-3.jpg'),
 (35, 'Fujifilm FinePix 4700 Zoom', 2000, 2400, 1280, 2, 36, 108, 20, 280, 169, 1, 'f-13.jpg'),
 (36, 'Canon PowerShot A630', 2001, 2592, 2592, 5, 35, 140, 1, 285, 139, 1, 'c-6.jpg'),
@@ -180,9 +180,9 @@ INSERT INTO `product1` (`id`, `name`, `date`, `maxreso`, `lowreso`, `pixel`, `zw
 (41, 'Sony DSC-N2', 2007, 2592, 2048, 5, 38, 114, 1, 240, 399, 1, 's-9.jpg'),
 (42, 'Sony DSC-N1', 2007, 2592, 2048, 5, 38, 114, 8, 215, 429, 1, 's-8.jpg'),
 (43, 'Sony DSC-D770', 2007, 2592, 2048, 5, 34, 102, 4, 606, 1399, 1, 's-4.jpg'),
-(44, 'Nikon Coolpix L4', 2005, 2816, 2048, 6, 38, 116, 10, 170, 99, 1, 'ni-3.jpg'),
-(45, 'Nikon Coolpix P2', 2005, 2816, 2048, 6, 38, 116, 10, 175, 99, 1, 'ni-6.jpg'),
-(46, 'Canon PowerShot A720 IS', 2001, 2816, 2272, 6, 35, 210, 1, 250, 139, 1, 'c-10.jpg'),
+(44, 'Nikon Coolpix L4', 2005, 2816, 2048, 6, 38, 116, 10, 170, 994, 1, 'ni-3.jpg'),
+(45, 'Nikon Coolpix P2', 2005, 2816, 2048, 6, 38, 116, 10, 175, 991, 1, 'ni-6.jpg'),
+(46, 'Canon PowerShot A720 IS', 2001, 2816, 2272, 6, 35, 210, 1, 250, 1391, 1, 'c-10.jpg'),
 (47, 'Canon PowerShot SD800 IS', 2002, 2816, 2272, 6, 35, 140, 2, 195, 384, 1, 'c-12.jpg'),
 (48, 'Nikon D50', 2005, 3008, 2256, 6, 0, 0, 0, 522, 549, 1, 'ni-9.jpg'),
 (49, 'Nikon D70s', 2005, 3008, 2256, 6, 0, 0, 0, 620, 1599, 1, 'ni-11.jpg'),
@@ -212,7 +212,7 @@ INSERT INTO `product1` (`id`, `name`, `date`, `maxreso`, `lowreso`, `pixel`, `zw
 (73, 'Fujifilm FinePix S5 Pro', 2006, 4256, 3024, 6, 0, 0, 0, 920, 1699, 1, 'f-4.jpg'),
 (74, 'Nikon D40', 2005, 4256, 3184, 12, 0, 0, 0, 1300, 4999, 1, 'ni-7.jpg'),
 (75, 'Nikon D40X', 2005, 4288, 3216, 12, 0, 0, 0, 925, 1799, 1, 'ni-8.jpg'),
-(76, 'Kodak DCS 14n', 2002, 4536, 3024, 13, 0, 0, 0, 1000, 129, 1, 'k-10.jpg');
+(76, 'Kodak DCS 14n', 2002, 4536, 3024, 13, 0, 0, 0, 1000, 429, 1, 'k-10.jpg');
 
 -- --------------------------------------------------------
 
@@ -287,7 +287,7 @@ INSERT INTO `product2` (`id`, `brand`, `name`, `category`, `ss`, `s`, `cpu`, `ra
 (44, 'HP', 'HP ENVY 13-ad101nx', 'Ultrabook', '15.6', 'IPS Panel Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '8GB', '256GB SSD', 'Nvidia GeForce GTX 940MX', '1.83kg', 699, 'hp-8.jpg'),
 (45, 'Acer', 'Acer Swift 5', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i3 6006U 2GHz', '4GB', '500GB HDD', 'Intel HD Graphics 520', '1.86kg', 1344, 'acer-1.jpg'),
 (46, 'Microsoft', 'Microsoft Surface', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i3 6006U 2GHz', '4GB', '500GB HDD', 'Intel HD Graphics 520', '1.86kg', 1344, 'mic-1.jpg'),
-(47, 'Apple', 'Apple MacBook Air (Retina)  (MGN65SA/A)', 'Notebook', '15.6', 'Full HD 1920x1080', 'Apple M1', '8GB', '256GB SSD', 'Intel HD Graphics 620', '1.86kg', 1575, 'mb-3.jpg'),
+(47, 'Apple', 'Apple MacBook Air (Retina)  (MGK65SA/A)', 'Notebook', '15.6', 'Full HD 1920x1080', 'Apple M1', '8GB', '256GB SSD', 'Intel HD Graphics 620', '1.86kg', 1575, 'mb-3.jpg'),
 (48, 'HP', 'HP ENVY 13-ah0002nx', 'Notebook', '15.6', '1366x768', 'AMD E-Series E2-9000e 1.5GHz', '4GB', '500GB HDD', 'AMD Radeon R2', '1.86kg', 258, 'hp-9.jpg'),
 (49, 'Apple', 'Apple MacBook Air (Retina)  (MGN65SF/A)', 'Notebook', '15.6', '1366x768', 'AMD E-Series E2-9000e 1.5GHz', '4GB', '500GB HDD', 'AMD Radeon R2', '1.86kg', 2580, 'mb-2.jpg'),
 (50, 'Acer', 'Acer Aspire 1 A114-31-C6WP', 'Notebook', '15.6', '1366x768', 'Intel Core i5 7200U 2.5GHz', '4GB', '500GB HDD', 'Intel HD Graphics 620', '1.86kg', 693, 'acer-12.jpg'),
@@ -329,7 +329,7 @@ INSERT INTO `product2` (`id`, `brand`, `name`, `category`, `ss`, `s`, `cpu`, `ra
 (86, 'Lenovo', 'Lenovo IdeaPad 320-15IKBRN', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i5 7200U 2.5GHz', '8GB', '2TB HDD', 'Intel HD Graphics 620', '2.2kg', 519, 'l-4.jpg'),
 (87, 'Apple', 'Apple MacBook Pro (Retina + Touch Bar)  (MGN64SA/A)', 'Notebook', '15.6', 'Full HD 1920x1080', 'Apple M1', '4GB', '1TB HDD', 'Nvidia GeForce MX130', '2.2kg', 530, 'mb-2.jpg'),
 (88, 'Apple', 'Apple MacBook Pro (Retina + Touch Bar)  (MGN63SA/B)', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i7 7500U 2.7GHz', '8GB', '1TB HDD', 'AMD Radeon R5 M430', '2.2kg', 599, 'mb-6.jpg'),
-(89, 'Acer', 'Acer Aspire 3 A315-54', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '8GB', '1TB HDD', 'Nvidia GeForce MX150', '2.2kg', 689, 'acer-10.jpg'),
+(89, 'Acer', 'Acer Aspire 3 A315-55', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '8GB', '1TB HDD', 'Nvidia GeForce MX150', '2.2kg', 689, 'acer-10.jpg'),
 (90, 'Asus', 'Asus ZenBook UX430UN ', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '8GB', '1TB HDD', 'Nvidia GeForce MX150', '2.2kg', 689, 'asus-2.jpg'),
 (91, 'Dell', 'Dell Vostro 5481', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '256GB SSD', 'AMD Radeon 530', '2.2kg', 800, 'dell-1.jpg'),
 (92, 'Asus', 'Asus VivoBook 15 X512UF', 'Notebook', '15.6', 'IPS Panel Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '8GB', '256GB SSD', 'Nvidia GeForce MX150', '2.2kg', 841, 'asus-9.jpg'),
@@ -341,7 +341,7 @@ INSERT INTO `product2` (`id`, `brand`, `name`, `category`, `ss`, `s`, `cpu`, `ra
 (98, 'Apple', 'Apple MacBook ', 'Notebook', '15.6', '1366x768', 'Apple M1', '8GB', '1TB HDD', 'Nvidia GeForce 940MX', '2.3kg', 1522, 'mb-12.jpg'),
 (99, 'Dell', 'Dell Inspiron 13 5370', 'Notebook', '15.6', '1366x768', 'Intel Core i3 6006U 2GHz', '4GB', '1TB HDD', 'Intel HD Graphics 520', '2.3kg', 718, 'dell-2.jpg'),
 (100, 'HP', 'HP 15-da1019nx', 'Notebook', '15.6', 'Full HD 1920x1080', 'Intel Core i5 7200U 2.5GHz', '4GB', '256GB SSD', 'AMD Radeon R5 M430', '2.3kg', 639, 'hp-4.jpg'),
-(101, 'Acer', 'Acer Aspire 3 A315-54', 'Gaming', '15.6', 'Full HD 1920x1080', 'AMD FX 9830P 3GHz', '8GB', '1TB HDD', 'AMD Radeon RX 560', '2.45kg', 699, 'acer-13.jpg'),
+(101, 'Acer', 'Acer Aspire 3 A315-56', 'Gaming', '15.6', 'Full HD 1920x1080', 'AMD FX 9830P 3GHz', '8GB', '1TB HDD', 'AMD Radeon RX 560', '2.45kg', 699, 'acer-13.jpg'),
 (102, 'Lenovo', 'Lenovo IdeaPad 320-14ISK', 'Gaming', '15.6', 'Full HD 1920x1080', 'AMD FX 9830P 3GHz', '8GB', '1TB HDD', 'AMD Radeon RX 560', '2.45kg', 699, 'l-1.jpg'),
 (103, 'Acer', 'Acer Swift 3 SF314-54G-87HB', 'Notebook', '15.6', '1366x768', 'Intel Core i3 7100U 2.4GHz', '4GB', '1TB HDD', 'Intel HD Graphics 620', '2.4kg', 584, 'acer-3.jpg'),
 (104, 'Dell', 'Dell Inspiron 15 3580N', 'Notebook', '15.6', '1366x768', 'Intel Core i3 7100U 2.4GHz', '4GB', '1TB HDD', 'Intel HD Graphics 620', '2.4kg', 884, 'dell-13.jpg'),
@@ -376,6 +376,110 @@ INSERT INTO `product2` (`id`, `brand`, `name`, `category`, `ss`, `s`, `cpu`, `ra
 (133, 'HP', 'HP ENVY 13-ad002nx', 'Gaming', '17.3', 'Full HD 1920x1080', 'AMD Ryzen 1700 3GHz', '8GB', '256GB SSD +  1TB HDD', 'AMD Radeon RX 580', '3.2kg', 1299, 'hp-7.jpg'),
 (134, 'Dell', 'Dell Inspiron 15 3581', 'Gaming', '17.3', 'Full HD 1920x1080', 'Intel Core i7 7700HQ 2.8GHz', '12GB', '1TB HDD', 'Nvidia GeForce GTX 1050 Ti', '3kg', 949, 'dell-14.jpg');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product3`
+--
+
+CREATE TABLE `product3` (
+  `id` int(11) NOT NULL,
+  `sc` varchar(255) NOT NULL,
+  `br` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `w` int(11) NOT NULL,
+  `pr` int(11) NOT NULL,
+  `img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `product3`
+--
+
+INSERT INTO `product3` (`id`, `sc`, `br`, `name`, `w`, `pr`, `img`) VALUES
+(1, 'hp', 'HyperX', 'HyperX Cloud X', 102, 229, 'hx-15.jpg'),
+(2, 'hp', 'HyperX', 'HyperX Cloud PS5', 105, 159, 'hx-16.jpg'),
+(3, 'kb', 'Logitech', 'Logitech G607', 105, 53, 'g-18.png'),
+(4, 'hp', 'SteelSeries', 'SteelSeries Arctis 6', 106, 68, 'ss-16.png'),
+(5, 'm', 'SteelSeries', 'SteelSeries Rival 650', 110, 79, 'ss-8.png'),
+(6, 'kb', 'HyperX', 'HyperX Aba', 112, 163, 'hx-19.jpg'),
+(7, 'm', 'SteelSeries', 'SteelSeries Rival 150', 117, 220, 'ss-10.png'),
+(8, 'm', 'SteelSeries', 'SteelSeries Sensei 430', 119, 110, 'ss-3.png'),
+(9, 'm', 'Logitech', 'Logitech G903', 120, 102, 'g903.png'),
+(10, 'hp', 'SteelSeries', 'SteelSeries Arctis Pro', 121, 243, 'ss-18.png'),
+(11, 'm', 'SteelSeries', 'SteelSeries Sensei 435', 123, 157, 'ss-1.png'),
+(12, 'kb', 'AKKO', 'AKKO Sakura', 124, 200, 'ak-2.jpg'),
+(13, 'm', 'HyperX', 'HyperX PulseFire 550', 125, 56, 'hx-5.jpg'),
+(14, 'kb', 'HyperX', 'HyperX H8', 128, 136, 'hx-24.jpg'),
+(15, 'hp', 'HyperX', 'HyperX Cloud JoJo', 129, 93, 'hx-17.jpg'),
+(16, 'hp', 'SteelSeries', 'SteelSeries Arctis X', 130, 250, 'ss-19.png'),
+(17, 'm', 'Logitech', 'Logitech G502', 134, 231, 'g502.png'),
+(18, 'kb', 'AKKO', 'AKKO Obaka', 138, 190, 'ak-10.jpg'),
+(19, 'hp', 'Logitech', 'Logitech G PRO X', 139, 82, 'g-3.png'),
+(20, 'kb', 'Logitech', 'Logitech G605', 139, 223, 'g-16.png'),
+(21, 'hp', 'Logitech', 'Logitech G PRO X Ninja', 141, 149, 'g-9.png'),
+(22, 'hp', 'HyperX', 'HyperX Cloud Alpha X', 141, 94, 'hx-13.jpg'),
+(23, 'kb', 'Logitech', 'Logitech G609', 141, 67, 'g-20.png'),
+(24, 'kb', 'AKKO', 'AKKO Mikasa', 143, 142, 'ak-5.jpg'),
+(25, 'm', 'SteelSeries', 'SteelSeries Rival 750', 144, 204, 'ss-7.jpg'),
+(26, 'kb', 'Logitech', 'Logitech G608', 145, 223, 'g-19.png'),
+(27, 'kb', 'HyperX', 'HyperX CL', 150, 92, 'hx-21.jpg'),
+(28, 'hp', 'HyperX', 'HyperX Cloud Core', 151, 152, 'hx-14.jpg'),
+(29, 'hp', 'HyperX', 'HyperX Cloud 5', 157, 247, 'hx-9.jpg'),
+(30, 'm', 'HyperX', 'HyperX PulseFire 3', 158, 211, 'hx-1.jpg'),
+(31, 'm', 'SteelSeries', 'SteelSeries Sensei 650', 161, 54, 'ss-4.png'),
+(32, 'kb', 'Logitech', 'Logitech G513', 162, 133, 'g-11.png'),
+(33, 'm', 'HyperX', 'HyperX PulseFire Z', 164, 199, 'hx-4.jpg'),
+(34, 'hp', 'HyperX', 'HyperX Cloud 2', 166, 72, 'hx-8.jpg'),
+(35, 'm', 'Logitech', 'Logitech G502 Hero', 167, 157, 'g502-hero.png'),
+(36, 'hp', 'Logitech', 'Logitech G633 Spectrum', 173, 163, 'g-6.png'),
+(37, 'kb', 'AKKO', 'AKKO Kawaii', 174, 214, 'ak-8.jpg'),
+(38, 'm', 'HyperX', 'HyperX PulseFire 650', 175, 65, 'hx-6.jpg'),
+(39, 'hp', 'SteelSeries', 'SteelSeries Arctis 9X', 178, 120, 'ss-20.png'),
+(40, 'm', 'SteelSeries', 'SteelSeries Rival 450', 179, 114, 'ss-9.png'),
+(41, 'kb', 'HyperX', 'HyperX Hurricanger', 179, 233, 'hx-18.jpg'),
+(42, 'm', 'SteelSeries', 'SteelSeries Rival 310', 186, 216, 'ss-5.jpg'),
+(43, 'm', 'Logitech', 'Logitech G703', 187, 72, 'g703.png'),
+(44, 'hp', 'Logitech', 'Logitech G PRO X Oculus', 188, 187, 'g-8.png'),
+(45, 'hp', 'HyperX', 'HyperX Cloud Air', 189, 241, 'hx-11.jpg'),
+(46, 'kb', 'AKKO', 'AKKO Boom', 191, 98, 'ak-9.jpg'),
+(47, 'kb', 'AKKO', 'AKKO Pladis', 196, 89, 'ak-3.jpg'),
+(48, 'kb', 'HyperX', 'HyperX HK', 196, 129, 'hx-22.jpg'),
+(49, 'hp', 'SteelSeries', 'SteelSeries Arctis 1', 199, 140, 'ss-11.png'),
+(50, 'm', 'Logitech', 'Logitech G303 CTG Orange', 201, 132, 'g303.jpg'),
+(51, 'm', 'Logitech', 'Logitech Pro Wireless Carbon', 201, 78, 'gpro.png'),
+(52, 'm', 'Logitech', 'Logitech G203', 204, 153, 'g203.jpg'),
+(53, 'hp', 'Logitech', 'Logitech G532', 204, 140, 'g-5.png'),
+(54, 'kb', 'Logitech', 'Logitech G606', 204, 135, 'g-17.png'),
+(55, 'hp', 'Logitech', 'Logitech G933 Artemis', 206, 204, 'g-7.png'),
+(56, 'hp', 'SteelSeries', 'SteelSeries Arctis 5', 206, 245, 'ss-15.png'),
+(57, 'kb', 'Logitech', 'Logitech G603', 207, 125, 'g-14.png'),
+(58, 'kb', 'AKKO', 'AKKO Ocean', 210, 60, 'ak-1.jpg'),
+(59, 'kb', 'Logitech', 'Logitech G713', 211, 235, 'g-13.png'),
+(60, 'kb', 'HyperX', 'HyperX TF 10', 212, 221, 'hx-23.jpg'),
+(61, 'm', 'Logitech', 'Logitech Promouse', 214, 183, 'gpro2.png'),
+(62, 'hp', 'SteelSeries', 'SteelSeries Arctis 2', 217, 78, 'ss-12.png'),
+(63, 'kb', 'Logitech', 'Logitech G613', 222, 107, 'g-12.png'),
+(64, 'hp', 'SteelSeries', 'SteelSeries Arctis 3', 223, 124, 'ss-13.png'),
+(65, 'kb', 'AKKO', 'AKKO Baka Sussy', 224, 207, 'ak-7.jpg'),
+(66, 'hp', 'SteelSeries', 'SteelSeries Arctis 4', 226, 80, 'ss-14.png'),
+(67, 'hp', 'SteelSeries', 'SteelSeries Arctis 7', 226, 87, 'ss-17.png'),
+(68, 'kb', 'HyperX', 'HyperX Supermatic', 226, 89, 'hx-20.jpg'),
+(69, 'hp', 'Logitech', 'Logitech G432', 227, 187, 'g-1.png'),
+(70, 'hp', 'Logitech', 'Logitech G PRO', 227, 108, 'g-2.png'),
+(71, 'm', 'SteelSeries', 'SteelSeries Rival 550', 231, 222, 'ss-6.jpg'),
+(72, 'm', 'SteelSeries', 'SteelSeries Sensei Fnatic', 231, 105, 'ss-2.jpg'),
+(73, 'm', 'HyperX', 'HyperX PulseFire Pro', 232, 163, 'hx-3.jpg'),
+(74, 'hp', 'Logitech', 'Logitech G654', 232, 69, 'g-10.png'),
+(75, 'hp', 'Logitech', 'Logitech G433', 233, 84, 'g-4.png'),
+(76, 'hp', 'HyperX', 'HyperX Cloud 8', 235, 103, 'hx-10.jpg'),
+(77, 'm', 'HyperX', 'HyperX PulseFire 4', 236, 160, 'hx-2.jpg'),
+(78, 'kb', 'AKKO', 'AKKO MIkochi', 240, 177, 'ak-6.jpg'),
+(79, 'm', 'Logitech', 'Logitech G403', 242, 145, 'g403.png'),
+(80, 'kb', 'Logitech', 'Logitech G604', 243, 106, 'g-15.png'),
+(81, 'hp', 'HyperX', 'HyperX Cloud Sussy Baka', 246, 250, 'hx-12.jpg'),
+(82, 'kb', 'AKKO', 'AKKO Eren', 246, 127, 'ak-4.jpg');
+
 --
 -- Indexes for dumped tables
 --
@@ -408,6 +512,12 @@ ALTER TABLE `product1`
 -- Indexes for table `product2`
 --
 ALTER TABLE `product2`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `product3`
+--
+ALTER TABLE `product3`
   ADD PRIMARY KEY (`id`);
 
 --

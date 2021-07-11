@@ -39,7 +39,7 @@ session_start();
 					  <a class="nav-link dropdown-toggle" onclick="location.href='laptop.php?c=2';"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Computer</a>
 					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="laptop.php?c=2&br=asus">ASUS</a>
-						<a class="dropdown-item" href="laptop.php?c=2&br=macbook">Macbook</a>
+						<a class="dropdown-item" href="laptop.php?c=2&br=apple">Apple</a>
 						<a class="dropdown-item" href="laptop.php?c=2&br=dell">DELL</a>
 						<a class="dropdown-item" href="laptop.php?c=2&br=hp">HP</a>
 						<a class="dropdown-item" href="laptop.php?c=2&br=acer">Acer</a>
@@ -87,6 +87,18 @@ session_start();
 					  			<?php }}?>
 						<?php
 						  $sql = "SELECT * FROM `product2` WHERE 1 GROUP BY `name` ";
+
+
+						  $result = mysqli_query( $con, $sql );
+
+						  if ( mysqli_num_rows( $result ) > 0 ) {
+							// output data of each row
+							while ( $row_product = mysqli_fetch_assoc( $result ) ) {
+							  ?>
+					  <option value="<?php echo $row_product['name']; ?>"></option>
+					  			<?php }}?>
+						<?php
+						  $sql = "SELECT * FROM `product3` WHERE 1 GROUP BY `name` ";
 
 
 						  $result = mysqli_query( $con, $sql );

@@ -27,7 +27,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <a href="dproduct.php?c=3&id=29" ><img class="d-block w-100" src="images/banner-logitech.jpg" alt="Third slide"></a>
+                <a href="dproduct.php?c=3&id=21" ><img class="d-block w-100" src="images/banner-logitech.jpg" alt="Third slide"></a>
                 <div class="carousel-caption d-block">
                   <h5>Logitech gaming headphone</h5>
                   <p>Best Experient</p>

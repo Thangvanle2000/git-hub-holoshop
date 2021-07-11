@@ -100,17 +100,19 @@ case 3:
     <?php if (isset($_GET['br'])) { $BR = $_GET['br']; } else {$BR="";} ?>
     <select class="custom-select" id="brand" name ="br">
       <option disabled selected>Brand</option>
-      <option <?php if($BR=='ss'){ echo "selected"; } ?> value="ss">SteelSeries</option>
-      <option <?php if($BR=='sakura'){ echo "selected"; } ?> value="sakura">Sakura</option>
-      <option <?php if($BR=='akko'){ echo "selected"; } ?> value="akko">AKKO</option>
+		<option <?php if($BR=='akko'){ echo "selected"; } ?> value="Logitech">Logitech</option>
+      <option <?php if($BR=='ss'){ echo "selected"; } ?> value="SteelSerie">SteelSeries</option>
+      <option <?php if($BR=='sakura'){ echo "selected"; } ?> value="HyperX">HyperX</option>
+      <option <?php if($BR=='akko'){ echo "selected"; } ?> value="Akko">AKKO</option>
     </select>
     <?php if (isset($_GET['pr'])) { $PR = $_GET['pr']; } else {$PR="";} ?>
     <select class="custom-select" id="price" name = "pr">
       <option disabled selected>Price range</option>
-      <option <?php if($PR=='500'){ echo "selected"; } ?> value="500">&lt;$500</option>
-      <option <?php if($PR=='1000'){ echo "selected"; } ?> value="1000">$500-&gt;$1000</option>
-      <option <?php if($PR=='2500'){ echo "selected"; } ?> value="2500">$1000-&gt;$2500</option>
-      <option <?php if($PR=='2501'){ echo "selected"; } ?> value="2501">&gt;2500</option>
+      <option <?php if($PR=='100'){ echo "selected"; } ?> value="100">&lt;$100</option>
+      <option <?php if($PR=='200'){ echo "selected"; } ?> value="200">$100-&gt;$200</option>
+      
+      <option <?php if($PR=='201'){ echo "selected"; } ?> value="201">&gt;200</option>
+      
     </select>
     <?php if (isset($_GET['sc'])) { $SC = $_GET['sc']; } else {$SC="";} ?>
     <select class="custom-select" id="cpu" name="sc">

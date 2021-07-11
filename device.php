@@ -12,32 +12,32 @@ if ( isset( $_GET[ 'c' ] ) ) {
 }
 if ( isset( $_GET[ 'br' ] ) ) {
   $br = $_GET[ 'br' ];
-  $sqlbr = "`brand` LIKE '%$br%' ";
+  $sqlbr = "`br` LIKE '%$br%' ";
 
 } else {
   $sqlbr = "1";
 }
-if ( isset( $_GET[ 'cpu' ] ) ) {
-  $sc = $_GET[ 'cpu' ];
+if ( isset( $_GET[ 'sc' ] ) ) {
+  $sc = $_GET[ 'sc' ];
 
-  $sqlsc = " and `cpu` LIKE '%$sc%' ";
+  $sqlsc = " and `sc` LIKE '%$sc%' ";
 
 } else {
   $sqlsc = "";
 }
 if ( isset( $_GET[ 'pr' ] ) ) {
   $pr = $_GET[ 'pr' ];
-  if($pr==500){$sqlpr = " and `price`<='$pr' ";};
-  if($pr==1000){$sqlpr = " and `price`<='$pr' and  `price`>=500 ";};
-  if($pr==2500){$sqlpr = " and `price`<='$pr' and  `price`>=1000 ";};
-  if($pr==2501){$sqlpr = " and  `price`>=2051 ";};
+  if($pr==100){$sqlpr = " and `pr`<='$pr' ";};
+  
+  if($pr==200){$sqlpr = " and `pr`<='$pr' and  `pr`>=100 ";};
+  if($pr==201){$sqlpr = " and  `pr`>=200 ";};
 
 } else {
   $sqlpr = "";
 }
 if ( isset( $_GET[ 'sort' ] ) ) {
   $sort = $_GET[ 'sort' ];
-  $sqlsort = "  ORDER BY price $sort ";
+  $sqlsort = "  ORDER BY pr $sort ";
 
 } else {
   $sqlsort = "";
@@ -49,9 +49,9 @@ if ( isset( $_GET[ 'sort' ] ) ) {
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <?php if ( isset( $_GET[ 'c' ] ) ) {?><li class="breadcrumb-item"><a href="product.php?c=<?php echo $c;?>"><?php if ($c==1){ echo "Camera";} if ($c==2){ echo "Computer";}; if ($c==3){ echo "Device";};?></a></li><?php }?>
-        <?php if ( (isset( $_GET[ 'br' ]))&&(($c==1)||($c==2)) )  {?><li class="breadcrumb-item"><a href="product.php?c=<?php echo $c ;?>&br=<?php echo $br;?>" style="text-transform: capitalize"><?php echo $br?></a></li><?php }?>
-		<?php if ( (isset( $_GET[ 'sc' ]))&&($c==3 ))  {?><li class="breadcrumb-item"><a href="product.php?br=<?php echo $br;?>" style="text-transform: capitalize"><?php if ($sc=='kb'){ echo "KeyBoard";} if ($sc=='hp'){ echo "Headphone";}; if ($sc=='m'){ echo "Mouse";};?></a></li><?php }?>  
+        <?php if ( isset( $_GET[ 'c' ] ) ) {?><li class="breadcrumb-item"><a href="device.php?c=<?php echo $c;?>"><?php if ($c==1){ echo "Camera";} if ($c==2){ echo "Computer";}; if ($c==3){ echo "Device";};?></a></li><?php }?>
+        
+		<?php if ( (isset( $_GET[ 'sc' ]))&&($c==3 ))  {?><li class="breadcrumb-item"><a href="device.php?br=<?php echo $br;?>" style="text-transform: capitalize"><?php if ($sc=='kb'){ echo "KeyBoard";} if ($sc=='hp'){ echo "Headphone";}; if ($sc=='m'){ echo "Mouse";};?></a></li><?php }?>  
 		 
       </ol>
     </nav>
@@ -64,7 +64,7 @@ if ( isset( $_GET[ 'sort' ] ) ) {
 				  padding: 5px;
 						grid-gap: 5px;">
       <?php
-      $sql = "SELECT * FROM $sqlc WHERE  ".$sqlbr.$sqlpr.$sqlsort.$sqlsc." ;";
+      $sql = "SELECT * FROM $sqlc WHERE  ".$sqlbr.$sqlpr.$sqlsc.$sqlsort." ;";
 
 
       $result = mysqli_query( $con, $sql );
@@ -75,7 +75,7 @@ if ( isset( $_GET[ 'sort' ] ) ) {
           ?>
       <div class="grid-item">
         <div class="card">
-          <a href="dproduct.php?id=<?php echo $row_product['id']?>" style="    
+          <a href="dproduct.php?c=3&id=<?php echo $row_product['id']?>" style="    
 										width: 100%;
 										height: 0;
 										padding-bottom: 100%;
@@ -83,7 +83,7 @@ if ( isset( $_GET[ 'sort' ] ) ) {
     									align-content: center;								   "> 
           <img class="card-img-top" src="images/<?php echo $row_product['img'] ?>" alt="<?php echo $row_product['name'];?>" style=" display: inline-block;
   margin-bottom: auto ;
-  margin-top:  15%;																									
+  																									
   width: 100%;">
         </a>
           <div class="card-body">
@@ -92,10 +92,10 @@ if ( isset( $_GET[ 'sort' ] ) ) {
             </h5>
             <p class="card-text">
             <ul class="detail-text">
-              <li> <?php echo "CPU: ".$row_product['cpu']."\n  RAM: ".$row_product['ram']."\n Hard Drive: ".$row_product['storage']."\n VGA: ".$row_product['gpu']."\n Screen:  ".$row_product['ss']." ".$row_product['s']; ?> </li>
+              <li style="text-align:center;"><?php echo " \t         Brand: ".$row_product['br']."\n   \t       Weight: ".$row_product['w']."g  Type : ";  if ($row_product['sc']=='kb'){ echo "KeyBoard";} if ($row_product['sc']=='hp'){ echo "Headphone";}; if ($row_product['sc']=='m'){ echo "Mouse";};?> </li>
             </ul>
             </p>
-            <span class="price-product"><?php echo number_format($row_product['price']).'$'?></span><br>
+            <span class="price-product"><?php echo number_format($row_product['pr']).'$'?></span><br>
             <a href="#" class="btn btn-info">Add to Cart</a> </div>
         </div>
       </div>

@@ -37,7 +37,7 @@ if ( isset( $_GET[ 'pr' ] ) ) {
 }
 if ( isset( $_GET[ 'sort' ] ) ) {
   $sort = $_GET[ 'sort' ];
-  $sqlsort = "  ORDER BY price $sort ";
+  $sqlsort = "  ORDER BY pr $sort ";
 
 } else {
   $sqlsort = "";
@@ -51,7 +51,7 @@ if ( isset( $_GET[ 'sort' ] ) ) {
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
         <?php if ( isset( $_GET[ 'c' ] ) ) {?><li class="breadcrumb-item"><a href="camera.php?c=<?php echo $c;?>"><?php if ($c==1){ echo "Camera";} if ($c==2){ echo "Computer";}; if ($c==3){ echo "Device";};?></a></li><?php }?>
         <?php if ( (isset( $_GET[ 'br' ]))&&(($c==1)||($c==2)) )  {?><li class="breadcrumb-item"><a href=camera.php?c=<?php echo $c ;?>&br=<?php echo $br;?> style="text-transform: capitalize"><?php echo $br?></a></li><?php }?>
-		<?php if ( (isset( $_GET[ 'sc' ]))&&($c==3 ))  {?><li class="breadcrumb-item"><a href="camera.php?br=<?php echo $br;?>" style="text-transform: capitalize"><?php if ($sc=='kb'){ echo "KeyBoard";} if ($sc=='hp'){ echo "Headphone";}; if ($sc=='m'){ echo "Mouse";};?></a></li><?php }?>  
+		  
 		 
       </ol>
     </nav>

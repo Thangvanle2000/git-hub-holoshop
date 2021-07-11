@@ -33,8 +33,8 @@ switch ( $c ) {
     <?php if (isset($_GET['sc'])) { $SC = $_GET['sc']; } else {$SC="";} ?>
     <select class="custom-select" id="cpu" name="sc">
       <option disabled selected>Type of Camera</option>
-      <option <?php if($SC=='film'){ echo "selected"; } ?> value="2">Film Camera</option>
-      <option <?php if($SC=='dslr'){ echo "selected"; } ?> value="1">DSLR</option>
+      <option <?php if($SC=='2'){ echo "selected"; } ?> value="2">Film Camera</option>
+      <option <?php if($SC=='1'){ echo "selected"; } ?> value="1">DSLR</option>
     </select>
     <?php if (isset($_GET['sort'])) { $S = $_GET['sort']; } else {$S="";} ?>
     <select class="custom-select" id="sort" name="sort">

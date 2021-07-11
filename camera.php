@@ -12,7 +12,7 @@ if ( isset( $_GET[ 'c' ] ) ) {
 }
 if ( isset( $_GET[ 'sc' ] ) ) {
   $sc = $_GET[ 'sc' ];
-  $sqlsc = " `type` = $sc ";
+  $sqlsc = " `type` LIKE '%$sc%' ";
 
 } else {
   $sqlsc = "1";

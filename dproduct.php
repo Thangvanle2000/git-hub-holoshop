@@ -38,7 +38,12 @@ $row = mysqli_fetch_assoc( $result );
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
         <?php if ( isset( $_GET[ 'c' ] ) ) {?><li class="breadcrumb-item"><a href="camera.php?c=<?php echo $c;?>"><?php if ($c==1){ echo "Camera";} if ($c==2){ echo "Computer";}; if ($c==3){ echo "Device";};?></a></li><?php }?>
-        <li class="breadcrumb-item"><a href="camera.php?c=1&br=<?php echo $row['br']; ?>" style="text-transform: capitalize"><?php echo $row['br'];  ?></a></li>  
+        <li class="breadcrumb-item"><a href="camera.php?c=1&br=<?php $string = $row['name'];
+$newString = substr($string, 0, strpos($string, " "));
+echo $newString;  ?>" style="text-transform: capitalize"> <?php
+$string = $row['name'];
+$newString = substr($string, 0, strpos($string, " "));
+echo $newString;  ?></a></li>  
 		 
 		 <li class="breadcrumb-item"><a ><?php echo $row['name']; ?></a></li>
 		  

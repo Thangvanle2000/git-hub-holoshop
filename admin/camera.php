@@ -126,7 +126,7 @@
 							<td><?php echo  $row['id'];?></td>
 							<td><?php echo  $row['name'];?></td>
 							<td><?php echo  $row['date'];?></td>
-							<td><img src="img/<?php echo $row['img'];?>" width="100" height="50"></td>
+							<td><img src="../images/<?php echo $row['img'];?>" width="100" height="50"></td>
 							<td><?php echo  $row['maxreso'];?></td>
 							<td><?php echo  $row['lowreso'];?></td>
 							<td><?php echo  $row['pixel'];?></td>

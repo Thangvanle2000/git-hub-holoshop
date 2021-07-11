@@ -121,7 +121,7 @@
 							<td><?php echo  $row['sc'];?></td>
 							<td><?php echo  $row['br'];?></td>
 							<td><?php echo  $row['name'];?></td>
-							<td><img src="img/<?php echo $row['img'];?>" width="100" height="60"></td>
+							<td><img src="../images/<?php echo $row['img'];?>" width="100" height="60"></td>
 							<td><?php echo  $row['w'];?></td>
 							<td><?php echo  $row['pr'];?></td>
 							<td>

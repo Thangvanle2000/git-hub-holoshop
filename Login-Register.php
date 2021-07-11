@@ -15,7 +15,7 @@
     <div class="row d-flex">
       <div class="col-lg-6">
         <div class="card1 pb-5">
-          <div id ="logo"> <a href="test.html"><img src="images/main logo.png" alt="sample logo" > </a></div>
+          <div id ="logo"> <a href="index.php"><img src="images/main logo.png" alt="sample logo" > </a></div>
           <div class="img-login"> <img src="images/img-login.jpg" width="500" height="410"> </div>
         </div>
       </div>

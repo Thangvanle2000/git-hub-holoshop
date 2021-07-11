@@ -169,6 +169,44 @@
           </div>
         </div>
         <?php  }}?>
+		
+	<?php
+      $sql = "SELECT * FROM `product3` WHERE  1 LIMIT 6 ;";
+
+
+      $result = mysqli_query( $con, $sql );
+
+      if ( mysqli_num_rows( $result ) > 0 ) {
+        // output data of each row
+        while ( $row_product = mysqli_fetch_assoc( $result ) ) {
+          ?>
+      <div class="grid-item">
+        <div class="card">
+          <a href="dproduct.php?c=3&id=<?php echo $row_product['id']?>" style="    
+										width: 100%;
+										height: 0;
+										padding-bottom: 100%;
+										display: flex;
+    									align-content: center;								   "> 
+          <img class="card-img-top" src="images/<?php echo $row_product['img'] ?>" alt="<?php echo $row_product['name'];?>" style=" display: inline-block;
+  margin-bottom: auto ;
+  																									
+  width: 100%;">
+        </a>
+          <div class="card-body">
+            <h5 class="card-title">
+              <?php  echo $row_product['name']?>
+            </h5>
+            <p class="card-text">
+            <ul class="detail-text">
+              <li style="text-align:center;"><?php echo " \t         Brand: ".$row_product['br']."\n   \t       Weight: ".$row_product['w']."g  Type : ";  if ($row_product['sc']=='kb'){ echo "KeyBoard";} if ($row_product['sc']=='hp'){ echo "Headphone";}; if ($row_product['sc']=='m'){ echo "Mouse";};?> </li>
+            </ul>
+            </p>
+            <span class="price-product"><?php echo number_format($row_product['pr']).'$'?></span><br>
+            <a href="#" class="btn btn-info">Add to Cart</a> </div>
+        </div>
+      </div>
+      <?php  }}?>
         </div>
     </div>
   <hr>

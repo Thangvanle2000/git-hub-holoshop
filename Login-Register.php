@@ -53,15 +53,17 @@
         	<input type="password" name="password" id="password" placeholder="Enter password" checked>
         	<div class="row px-3 mb-4">
          	<div class="custom-control custom-checkbox custom-control-inline">
-				<select name="role" aria-label="#" style="width: 100px; height: 30px;margin-left: -15px;margin-top: 10px">
-					<option selected value="user">User</option>
-					<option value="admin">Admin</option>
-				</select>
+				<select class="form-control" name="role" aria-label="#" style="width: 50%; margin-left: -15px;margin-top: 10px">
+					<option selected value="user">Login as: Normal user</option>
+					<option value="admin">Login as: Site admin</option>
+				</select> 
 			</label>
+				
           </div>
         </div>
         <div class="row mb-3 px-3">
           <button type="submit" class="btn btn-info text-center">Login</button>
+			<p>Need an account?<a href="register.php"> Sign up</a></p>
         </div>
        
     </div>

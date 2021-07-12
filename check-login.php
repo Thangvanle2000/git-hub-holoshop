@@ -29,10 +29,11 @@
 		if ($row['password'] === $password && $row['role'] == $role) {
 			$_SESSION['name'] = $row['name'];
 			$_SESSION['id'] = $row['id'];
-			$_SESSION['admin'] = $row['admin'];
+			
 			$_SESSION['username'] = $row['username'];
          
 			if($row['role'] == 'admin'){
+			$_SESSION['admin'] = 'admin';		
 			header("Location: admin/index.php");
 			}
 			else{

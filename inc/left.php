@@ -1,4 +1,5 @@
 <div class="row">
+	
   <div name ="left" id="left" class="col-2 text-center ml-3" >
 	  
 	  			<a target="_blank" href="https://genshin.mihoyo.com/en/download">

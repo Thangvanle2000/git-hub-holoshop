@@ -110,7 +110,7 @@
 							<label>Category:</label>
 						<input type="text" name="edit_category" value="<?php echo $row['category'] ?>">
 						</div>
-						<img src="img/<?php echo $row['img']?>" width="80" height="50">
+						<img src="../images/<?php echo $row['img']?>" width="80" height="50">
 						<div class="form-group">
 							<label>Image:</label>
 						<input type="text" name="edit_img" value="<?php echo $row['img'] ?>">

@@ -21,15 +21,20 @@ session_start();
 <div name="header-LOGO" style ="height: 100px; width: 100%">
   <div id ="logo"><a href="index.php" ><img src="images/main logo.png" alt="sample logo" ></a></div>
   <div id ="headerLinks">
-	  <?php
 	  
-	  if(isset($_SESSION['name'])){
-		  echo '<form method="post"> <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-success" disabled >'.$_SESSION['name'].'</button>
+	 
+		<?php 
+	  
+	  if(isset($_SESSION['name'])){ ?>
+	<form method="post"> <div class="btn-group" role="group" aria-label="Basic example">
+		<?php if(isset($_SESSION['admin'])) { ?>
+		<button type="button" onclick="location.href='/admin/index.php';" class="btn btn-info"  >Go to Editing Mode</button>
+		<?php }?>
+  <button type="button" class="btn btn-success" disabled ><?php echo $_SESSION['name'];?></button>
   <button name="logout" type="submit" class="btn btn-secondary" value="yes"><object data="images/icons/logout.svg" width="12px" height="12px"> </object> logout</button></div><a href="#" title="Cart">Cart</a></div></form>
   
 ';
-	  } else{
+	  <?php }else{
 	  
 	  echo '<a href="Login-Register.php" title="Register-login">Register/Login</a><a href="#" title="Cart">Cart</a></div>';}
 	  if(isset($_POST['logout'])) {

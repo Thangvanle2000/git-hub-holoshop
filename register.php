@@ -1,3 +1,6 @@
+<?php 
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -15,7 +18,7 @@
 </head>
 <body>
 <div class="main">
-  <form method="post" class="" action="dulieu.php">
+  <form method="post" class="" action="">
     <div class="head"> <a href="index.php"><img src="images/main logo.png" alt=""  height="100px" width="auto"></a>
       <h3>Create your Holoshop account</h3>
     </div>
@@ -53,6 +56,26 @@
 	
 	?>	
   </form>
+	<?php 
+//Add User
+	  $con= mysqli_connect("localhost","root","","btl");
+  if(isset($_POST['pass1'])){
+	  $username = $_POST['fname'].$_POST['lname'];
+	  $password = $_POST['pass1'];
+	  $name = $_POST['userID'];
+	  
+      $query = "INSERT INTO btl_user (username,role,password,name) VALUES ('$username','user','$password','$name')";
+	  $query_run= mysqli_query($con,$query);
+	  if($query_run)
+	  {
+		header('Location: index.php');
+	  }
+	  
+			
+			$_SESSION['name'] = $name;
+	  		
+  }
+ ?>
   <div class="side-image">
       <img src="images/img-login.jpg" alt="" class="side-logo">
     </div>

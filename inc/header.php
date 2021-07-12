@@ -28,7 +28,7 @@ session_start();
 	  if(isset($_SESSION['name'])){ ?>
 	<form method="post"> <div class="btn-group" role="group" aria-label="Basic example">
 		<?php if(isset($_SESSION['admin'])) { ?>
-		<button type="button" onclick="location.href='/admin/index.php';" class="btn btn-info"  >Go to Editing Mode</button>
+		<button type="button" onclick="location.href='./admin/index.php';" class="btn btn-info"  >Go to Editing Mode</button>
 		<?php }?>
   <button type="button" class="btn btn-success" disabled ><?php echo $_SESSION['name'];?></button>
   <button name="logout" type="submit" class="btn btn-secondary" value="yes"><object data="images/icons/logout.svg" width="12px" height="12px"> </object> logout</button></div><a href="#" title="Cart">Cart</a></div></form>

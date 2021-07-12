@@ -17,7 +17,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-			<a class="navbar-brand ps-3" href="index.php">Admin Holoshop <img src="img/favicon.png" width="30" height="30"></a>
+			<a class="navbar-brand ps-3" href="index.php">Admin Holoshop <img src="../images/favicon.png" width="30" height="30"></a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -104,7 +104,7 @@
 										}
 										?>
                                         <a class="stretched-link" href="user.php" style="text-decoration: none;color: black;">
-										<?php echo $row['id']?> User Registered <img src="img/user.png" width="20" height="20"></a>
+										<?php echo $row['id']?> User Registered <img src="../images/user.png" width="20" height="20"></a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -122,7 +122,7 @@
 										}
 										?>
                                         <a class="stretched-link" href="admin.php" style="text-decoration: none;color: black;">
-										<?php echo $row['id']?> Admin availble <img src="img/admin.png" width="20" height="20"></a>
+										<?php echo $row['id']?> Admin availble <img src="../images/admin.png" width="20" height="20"></a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -140,7 +140,7 @@
 										}
 										?>
 									<a class=" stretched-link" href="camera.php" style="text-decoration: none;color: black;">
-									<?php echo $row['id']?> Camera available <img src="img/camera.png" width="20" height="20"></a>
+									<?php echo $row['id']?> Camera available <img src="../images/camera.png" width="20" height="20"></a>
 										</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
@@ -159,7 +159,7 @@
 										}
 										?>
 									<a class="stretched-link" href="computer.php" style="text-decoration: none;color: black;">
-									<?php echo $row['id']?> Computer available<img src="img/laptop-screen.png" width="20" height="20"></a>
+									<?php echo $row['id']?> Computer available<img src="../images/laptop-screen.png" width="20" height="20"></a>
 										</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
@@ -178,7 +178,7 @@
 										}
 										?>
 									<a class="stretched-link" href="device.php" style="text-decoration: none;color: black;">
-									<?php echo $row['id']?> Device available <img src="img/bot.png" width="20" height="20"></a>
+									<?php echo $row['id']?> Device available <img src="../images/bot.png" width="20" height="20"></a>
 										</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>

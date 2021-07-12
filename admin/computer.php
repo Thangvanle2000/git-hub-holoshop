@@ -127,7 +127,7 @@
 							<td><?php echo  $row['brand'];?></td>
 							<td><?php echo  $row['name'];?></td>
 							<td><?php echo  $row['category'];?></td>
-							<td><img src="img/<?php echo $row['img'];?>" width="100" height="50"></td>
+							<td><img src="../images/<?php echo $row['img'];?>" width="100" height="50"></td>
 							<td><?php echo  $row['ss'];?></td>
 							<td><?php echo  $row['s'];?></td>
 							<td><?php echo  $row['cpu'];?></td>

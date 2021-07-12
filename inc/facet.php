@@ -73,7 +73,8 @@ case 2:
     <?php if (isset($_GET['sc'])) { $SC = $_GET['sc']; } else {$SC="";} ?>
     <select class="custom-select" id="cpu" name="sc">
       <option disabled selected>CPU</option>
-      <option <?php if($SC=='i5'){ echo "selected"; } ?> value="i5">i5</option>
+      <option <?php if($SC=='i5'){ echo "selected"; } ?> value="i3">i3</option>
+		<option <?php if($SC=='i5'){ echo "selected"; } ?> value="i5">i5</option>
       <option <?php if($SC=='i7'){ echo "selected"; } ?> value="i7">i7</option>
       <option <?php if($SC=='M1'){ echo "selected"; } ?> value="M1">M1</option>
       <option <?php if($SC=='AMD'){ echo "selected"; } ?> value="AMD">AMD</option>

@@ -86,6 +86,7 @@
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
+						<div class="edit-user" style="width: 20%;">
 						<h5>Edit User</h5>
 						<?php 
                       if(isset($_POST['edit_btn'])){
@@ -100,19 +101,20 @@
 						<form action="admin-index.php" method="POST">
 						<input type="hidden" name="edit_id" value="<?php echo $row['id']?>">
                         <div class="form-group">
-							<label> Username</label>
-						<input type="text" name="edit_username" value="<?php echo $row['username'] ?>" placeholder="Enter Username">
+							<label> Username:</label>
+						<input type="text" name="edit_username" value="<?php echo $row['username'] ?>" class="form-control">
 						</div>
 						<div class="form-group">
-							<label> Password</label>
-						<input type="text" name="edit_password" value="<?php echo $row['password'] ?>" placeholder="Enter Password">
+							<label> Password:</label>
+						<input type="text" name="edit_password" value="<?php echo $row['password'] ?>" class="form-control">
 						</div>
 						<div class="form-group">
-							<label> Name</label>
-						<input type="text" name="edit_name" value="<?php echo $row['name'] ?>" placeholder="Enter Name">
+							<label> Name:</label>
+						<input type="text" name="edit_name" value="<?php echo $row['name'] ?>" class="form-control">
 						</div>
 						<button type="submit" name="update_btn" class="btn btn-primary">Update</button>
 						</form>
+						</div>
 						<?php }?>
                         </div>
                     </div>

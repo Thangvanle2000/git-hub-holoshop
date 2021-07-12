@@ -86,6 +86,7 @@
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
+						<div class="Edit-product" style="width: 20%;">
 						<h5>Edit Camera</h5>
 						<?php 
                       if(isset($_POST['edit_btn'])){
@@ -101,33 +102,34 @@
 						<input type="hidden" name="id_device" value="<?php echo $row['id']?>">
                         <div class="form-group">
 							<label> Subcategory</label>
-						<input type="text" name="edit_sc" value="<?php echo $row['sc'] ?>" placeholder="Enter Username">
+						<input type="text" name="edit_sc" value="<?php echo $row['sc'] ?>"class="form-control">
 						</div>
 						<div class="form-group">
 							<label> Brand</label>
-						<input type="text" name="edit_brand" value="<?php echo $row['br'] ?>" placeholder="Enter Password">
+						<input type="text" name="edit_brand" value="<?php echo $row['br'] ?>" class="form-control">
 						</div>
 						<img src="../images/<?php echo $row['img']?>" width="80" height="50">
 						<div class="form-group">
 							<label>Image:</label>
-						<input type="text" name="edit_img" value="<?php echo $row['img'] ?>" placeholder="Enter Name">
+						<input type="text" name="edit_img" value="<?php echo $row['img'] ?>" class="form-control">
 						</div>
 						<div class="form-group">
 							<label>Name:</label>
-						<input type="text" name="edit_name" value="<?php echo $row['name'] ?>" placeholder="Enter Name">
+						<input type="text" name="edit_name" value="<?php echo $row['name'] ?>" class="form-control">
 						</div>
 						
 						<div class="form-group">
 							<label>Weight:</label>
-						<input type="text" name="edit_w" value="<?php echo $row['w'] ?>" placeholder="Enter Name">
+						<input type="text" name="edit_w" value="<?php echo $row['w'] ?>" class="form-control">
 						</div>
 						<div class="form-group">
 							<label>Price:</label>
-						<input type="text" name="edit_price" value="<?php echo $row['pr'] ?>" placeholder="Enter Name">
+						<input type="text" name="edit_price" value="<?php echo $row['pr'] ?>" class="form-control">
 						</div>
 						<a href="device.php" class="btn btn-danger">Cancel</a>
 						<button type="submit" name="update_device" class="btn btn-primary">Update</button>
 						</form>
+						</div>
 						<?php }?>
                         </div>
                     </div>

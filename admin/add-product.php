@@ -105,7 +105,7 @@
 						</div>
 						<div class="form-group">
 							<label>Image:</label>
-						<input type="text" name="add_img" placeholder="Enter Image">
+						<input type="file" name="add_img" placeholder="Enter Image">
 						</div>
 						<div class="form-group">
 							<label>Maxreso:</label>
@@ -146,7 +146,8 @@
 						</div>
 						<button type="submit" name="add_camera" class="btn btn-primary" style="margin-left: 50px;">Add Camera</button>
 						</form>
-
+                        
+                        
 						<h5>Add Computer</h5>
 						<?php 
 						$con = new mysqli('localhost','root','','btl');
@@ -165,7 +166,7 @@
 						</div>
 						<div class="form-group">
 							<label>Image:</label>
-						<input type="text" name="add_img" placeholder="Enter Image">
+						<input type="file" name="add_img" placeholder="Enter Image">
 						</div>
 						<div class="form-group">
 							<label>Category:</label>
@@ -207,7 +208,11 @@
 						<button type="submit" name="add_computer" class="btn btn-primary" style="margin-left: 50px;">Add Computer</button>
 						</form>
 
-						<h5>Add Computer</h5>
+						<?php 
+						$con = new mysqli('localhost','root','','btl');
+						$result =$con->query("SELECT * FROM product3");
+						?>
+						<h5>Add Device</h5>
 						<form action="computer-index.php" method="POST">
 						<input type="hidden" name="add_id">
                         <div class="form-group">
@@ -221,7 +226,7 @@
 						</div>
 						<div class="form-group">
 							<label>Image:</label>
-						<input type="text" name="add_img" placeholder="Enter Image">
+						<input type="file" name="add_img">
 						</div>
 						<div class="form-group">
 							<label>Name :</label>

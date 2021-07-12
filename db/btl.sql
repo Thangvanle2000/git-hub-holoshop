@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 11, 2021 lúc 10:25 PM
+-- Thời gian đã tạo: Th7 12, 2021 lúc 12:33 PM
 -- Phiên bản máy phục vụ: 10.4.13-MariaDB
 -- Phiên bản PHP: 7.4.8
 
@@ -239,7 +239,8 @@ INSERT INTO `product1` (`id`, `name`, `date`, `maxreso`, `lowreso`, `pixel`, `zw
 (73, 'Fujifilm FinePix S5 Pro', 2006, 4256, 3024, 6, 0, 0, 0, 920, 1699, 1, 'f-4.jpg'),
 (74, 'Nikon D40', 2005, 4256, 3184, 12, 0, 0, 0, 1300, 4999, 1, 'ni-7.jpg'),
 (75, 'Nikon D40X', 2005, 4288, 3216, 12, 0, 0, 0, 925, 1799, 1, 'ni-8.jpg'),
-(76, 'Kodak DCS 14n', 2002, 4536, 3024, 13, 0, 0, 0, 1000, 129, 1, 'k-10.jpg');
+(76, 'Kodak DCS 14n', 2002, 4536, 3024, 13, 0, 0, 0, 1000, 129, 1, 'k-10.jpg'),
+(77, 'sony-test', 2003, 1024, 512, 1, 29, 30, 1222, 300, 1000, 1, 's-5.jpg');
 
 -- --------------------------------------------------------
 
@@ -536,6 +537,24 @@ ALTER TABLE `btl_user`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `product1`
+--
+ALTER TABLE `product1`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `product2`
+--
+ALTER TABLE `product2`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `product3`
+--
+ALTER TABLE `product3`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
@@ -556,6 +575,24 @@ ALTER TABLE `btl_slider`
 --
 ALTER TABLE `btl_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT cho bảng `product1`
+--
+ALTER TABLE `product1`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+
+--
+-- AUTO_INCREMENT cho bảng `product2`
+--
+ALTER TABLE `product2`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+
+--
+-- AUTO_INCREMENT cho bảng `product3`
+--
+ALTER TABLE `product3`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

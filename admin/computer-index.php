@@ -101,6 +101,7 @@ $con = mysqli_connect("localhost","root","","btl");
 // ADD Device
    $con = mysqli_connect("localhost","root","","btl");
    if(isset($_POST['add_device'])){
+	  $id = $_POST['add_id'];
 	  $name= $_POST['add_name'];
 	  $sc = $_POST['add_sc'];
 	  $weight = $_POST['add_w'];

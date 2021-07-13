@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="row mb-3 px-3">
-          <button type="submit" class="btn btn-info text-center">Login</button>
+          <button type="submit" onclick="swal('Good Job','Login Successful','success')"class="btn btn-info text-center" >Login</button>
 			<p>Need an account?<a href="register.php"> Sign up</a></p>
         </div>
        
@@ -76,5 +76,6 @@
   </div>
   <div class="backto-home"><a href="index.php"> >>>Back to home </a></div>
 </div>
+<script src="js/sweetalert.min.js"></script>
 </body>
 </html>

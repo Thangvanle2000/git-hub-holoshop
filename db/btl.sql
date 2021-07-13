@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 12, 2021 lúc 12:33 PM
+-- Thời gian đã tạo: Th7 13, 2021 lúc 09:13 AM
 -- Phiên bản máy phục vụ: 10.4.13-MariaDB
 -- Phiên bản PHP: 7.4.8
 
@@ -129,7 +129,7 @@ CREATE TABLE `btl_user` (
 
 INSERT INTO `btl_user` (`id`, `role`, `username`, `password`, `name`) VALUES
 (1, 'admin', 'admin', '1', 'adminator'),
-(2, 'user', 'kha@gmail.com', 'kha123', 'kha123'),
+(2, 'user', 'kha@gmail.com', 'kha1234', 'kha123'),
 (3, 'user', 'dat@gmail.com', 'dat09', 'dat09'),
 (4, 'user', 'peam@gmail.com', '123456', 'peam\r\n'),
 (5, 'user', 'doanngu@gmail.com', '123456789', 'kha'),
@@ -164,7 +164,7 @@ CREATE TABLE `product1` (
 --
 
 INSERT INTO `product1` (`id`, `name`, `date`, `maxreso`, `lowreso`, `pixel`, `zwide`, `ztele`, `macro`, `w`, `pr`, `type`, `img`) VALUES
-(1, 'Canon PowerShot A610', 1999, 1024, 512, 0, 28, 70, 17, 290, 150, 1, 'c-4.jpg'),
+(1, 'Canon PowerShot A610', 1999, 1024, 512, 0, 28, 70, 17, 290, 149, 1, 'c-4.jpg'),
 (2, 'Kodak DC3200', 2000, 1152, 576, 1, 39, 39, 0, 240, 129, 1, 'k-5.jpg'),
 (3, 'Fujifilm MX-1200', 1999, 1280, 640, 1, 38, 38, 10, 240, 169, 1, 'f-7.jpg'),
 (4, 'Fujifilm MX-1400', 2000, 1280, 640, 1, 38, 114, 10, 390, 169, 1, 'f-8.jpg'),
@@ -543,12 +543,6 @@ ALTER TABLE `product1`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `product2`
---
-ALTER TABLE `product2`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Chỉ mục cho bảng `product3`
 --
 ALTER TABLE `product3`
@@ -581,12 +575,6 @@ ALTER TABLE `btl_user`
 --
 ALTER TABLE `product1`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
-
---
--- AUTO_INCREMENT cho bảng `product2`
---
-ALTER TABLE `product2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 
 --
 -- AUTO_INCREMENT cho bảng `product3`

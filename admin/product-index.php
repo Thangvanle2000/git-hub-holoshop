@@ -19,7 +19,7 @@ $con = mysqli_connect("localhost","root","","btl");
    cpu='$cpu',storage='$storage',ram='$ram',gpu='$gpu,w='$weight',price='$price',ss='$ss' WHERE id= '$id'";
    $query_run = mysqli_query($con,$query);
    if($query_run)
-   {
+   { 
 	 header('Location:computer.php');
    }
    else

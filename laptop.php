@@ -105,8 +105,8 @@ if ( isset( $_GET[ 'sort' ] ) ) {
               <li> <?php echo "CPU: ".$row_product['cpu']."\n  RAM: ".$row_product['ram']."\n Hard Drive: ".$row_product['storage']."\n VGA: ".$row_product['gpu']."\n Screen:  ".$row_product['ss']." ".$row_product['s']; ?> </li>
             </ul>
             </p>
-            <span class="price-product"><?php echo number_format($row_product['price']).'$'?></span><br>
-            <a href="#" class="btn btn-info">Add to Cart</a> </div>
+            <span class="price-product"><?php echo '$'.number_format($row_product['price']); ?></span><br>
+            </div>
         </div>
       </div>
       <?php  }}?>

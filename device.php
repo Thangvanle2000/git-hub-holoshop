@@ -95,8 +95,8 @@ if ( isset( $_GET[ 'sort' ] ) ) {
               <li style="text-align:center;"><?php echo " \t         Brand: ".$row_product['br']."\n   \t       Weight: ".$row_product['w']."g  Type : ";  if ($row_product['sc']=='kb'){ echo "KeyBoard";} if ($row_product['sc']=='hp'){ echo "Headphone";}; if ($row_product['sc']=='m'){ echo "Mouse";};?> </li>
             </ul>
             </p>
-            <span class="price-product"><?php echo number_format($row_product['pr']).'$'?></span><br>
-            <a href="#" class="btn btn-info">Add to Cart</a> </div>
+            <span class="price-product"><?php echo '$'.number_format($row_product['pr'])?></span><br>
+            </div>
         </div>
       </div>
       <?php  }}?>

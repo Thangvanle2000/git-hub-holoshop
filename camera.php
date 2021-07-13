@@ -95,8 +95,8 @@ if ( isset( $_GET[ 'sort' ] ) ) {
               <li> <?php echo "Max resolusion: ".$row_product['maxreso']." pixel \n  Low resolusion: ".$row_product['lowreso']." pixel \n Weight: ".$row_product['w']."g. \n Zoom wide : ".$row_product['zwide']."mm \n Zoom tele: ".$row_product['ztele'] ?> </li>
             </ul>
             </p>
-            <span class="price-product"><?php echo number_format($row_product['pr']).'$'?></span><br>
-            <a href="#" class="btn btn-info">Add to Cart</a> </div>
+            <span class="price-product"><?php echo '$'.number_format($row_product['pr'])?></span><br>
+            </div>
         </div>
       </div>
       <?php  }}?>

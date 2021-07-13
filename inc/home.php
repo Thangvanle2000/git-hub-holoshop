@@ -115,7 +115,7 @@
               </ul>
               </p>
               <span class="price-product"><?php echo number_format($row_product['price']).'$'?></span><br>
-              <a href="#" class="btn btn-info">Add to Cart</a> </div>
+              </div>
           </div>
         </div>
         <?php  }}?>
@@ -165,7 +165,7 @@
               </ul>
               </p>
               <span class="price-product"><?php echo number_format($row_product['pr']).'$'?></span><br>
-              <a href="#" class="btn btn-info">Add to Cart</a> </div>
+               </div>
           </div>
         </div>
         <?php  }}?>
@@ -203,7 +203,7 @@
             </ul>
             </p>
             <span class="price-product"><?php echo number_format($row_product['pr']).'$'?></span><br>
-            <a href="#" class="btn btn-info">Add to Cart</a> </div>
+             </div>
         </div>
       </div>
       <?php  }}?>

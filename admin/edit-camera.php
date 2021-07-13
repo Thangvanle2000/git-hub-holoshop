@@ -2,7 +2,6 @@
   include('include/header.php');
   include('include/left.php');
 ?>
-       
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
@@ -22,7 +21,7 @@
 
                      }
                         ?>
-						<form action="product-index.php" method="POST">
+						<form action="product-index.php" method="POST"  enctype="multipart/form-data">
 						<input type="hidden" name="edit_id" value="<?php echo $row['id']?>">
                         <div class="form-group">
 							<label> Name</label>
@@ -35,7 +34,7 @@
 						<img src="../images/<?php echo $row['img']?>" width="80" height="60">
 						<div class="form-group">
 							<label>Image:</label>
-						<input type="text" name="edit_img" value="<?php echo $row['img'] ?>"class="form-control">
+						<input type="file" name="edit_img" value="<?php echo $row['img'] ?>"class="form-control">
 						</div>
 						<div class="form-group">
 							<label>Maxreso:</label>

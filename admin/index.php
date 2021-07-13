@@ -1,7 +1,11 @@
 <?php 
    session_start();
    ?>
-<?php 
+<?php
+    if(!isset($_SESSION['admin'])){
+        header('Location:../index.php');
+
+    }else{
     include('include/header.php');
 	include('include/left.php');  
 	include('include/home.php');   
@@ -16,5 +20,5 @@
     </body>
 </html>
  
-       
+   <?php }?>    
             

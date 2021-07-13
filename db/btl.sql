@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 13, 2021 lúc 09:13 AM
+-- Thời gian đã tạo: Th7 13, 2021 lúc 09:49 PM
 -- Phiên bản máy phục vụ: 10.4.13-MariaDB
 -- Phiên bản PHP: 7.4.8
 
@@ -129,7 +129,7 @@ CREATE TABLE `btl_user` (
 
 INSERT INTO `btl_user` (`id`, `role`, `username`, `password`, `name`) VALUES
 (1, 'admin', 'admin', '1', 'adminator'),
-(2, 'user', 'kha@gmail.com', 'kha1234', 'kha123'),
+(2, 'user', 'kha@gmail.com', 'kha123', 'kha1234'),
 (3, 'user', 'dat@gmail.com', 'dat09', 'dat09'),
 (4, 'user', 'peam@gmail.com', '123456', 'peam\r\n'),
 (5, 'user', 'doanngu@gmail.com', '123456789', 'kha'),
@@ -543,6 +543,12 @@ ALTER TABLE `product1`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `product2`
+--
+ALTER TABLE `product2`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `product3`
 --
 ALTER TABLE `product3`
@@ -575,6 +581,12 @@ ALTER TABLE `btl_user`
 --
 ALTER TABLE `product1`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+
+--
+-- AUTO_INCREMENT cho bảng `product2`
+--
+ALTER TABLE `product2`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 
 --
 -- AUTO_INCREMENT cho bảng `product3`

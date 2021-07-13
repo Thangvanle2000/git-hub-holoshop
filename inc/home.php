@@ -22,7 +22,7 @@
               <div class="carousel-item">
                 <a href="dproduct.php?c=1&id=29"><img class="d-block w-100" src="images/banner-camera.jpg" alt="Second slide"></a>
                 <div class="carousel-caption d-block">
-                  <h5>Sony Alpha A7 Kit 28-70mm</h5>
+                  <h5>Sony DSC-P100</h5>
                   <p>Removable Lens</p>
                 </div>
               </div>

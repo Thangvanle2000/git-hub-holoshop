@@ -31,23 +31,26 @@ $row = mysqli_fetch_assoc( $result );
 
 ?>
 <?php if ($c==1) { ?>
-
 <div name = "content" class="col-9 ">
   <div class="container mt-3">
-	  <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <?php if ( isset( $_GET[ 'c' ] ) ) {?><li class="breadcrumb-item"><a href="camera.php?c=<?php echo $c;?>"><?php if ($c==1){ echo "Camera";} if ($c==2){ echo "Computer";}; if ($c==3){ echo "Device";};?></a></li><?php }?>
+        <?php if ( isset( $_GET[ 'c' ] ) ) {?>
+        <li class="breadcrumb-item"><a href="camera.php?c=<?php echo $c;?>">
+          <?php if ($c==1){ echo "Camera";} if ($c==2){ echo "Computer";}; if ($c==3){ echo "Device";};?>
+          </a></li>
+        <?php }?>
         <li class="breadcrumb-item"><a href="camera.php?c=1&br=<?php $string = $row['name'];
 $newString = substr($string, 0, strpos($string, " "));
-echo $newString;  ?>" style="text-transform: capitalize"> <?php
-$string = $row['name'];
-$newString = substr($string, 0, strpos($string, " "));
-echo $newString;  ?></a></li>  
-		 
-		 <li class="breadcrumb-item"><a ><?php echo $row['name']; ?></a></li>
-		  
-		 
+echo $newString;  ?>" style="text-transform: capitalize">
+          <?php
+          $string = $row[ 'name' ];
+          $newString = substr( $string, 0, strpos( $string, " " ) );
+          echo $newString;
+          ?>
+          </a></li>
+        <li class="breadcrumb-item"><a ><?php echo $row['name']; ?></a></li>
       </ol>
     </nav>
     <h3><?php echo $row['name'];?></h3>
@@ -65,6 +68,7 @@ echo $newString;  ?></a></li>
       <!-- Modal -->
       
       <div class="col-lg-7 col-md-12">
+		<h2>Price: $<?php echo $row['pr'];?><sup>.00</sup> </h2>
         <div class="lp-catalog-header-info">
           <ul class="cat-opti-list">
             <li class="display"><span>Max Resolution:</span> <?php echo $row['maxreso'];?>px</li>
@@ -77,7 +81,15 @@ echo $newString;  ?></a></li>
             <li class="weight"><span>Weight:</span> <?php echo $row['w'];?>g</li>
           </ul>
         </div>
-        <button >$<?php echo $row['pr'];?><sup>.00</sup> </button>
+        <form method="post">
+			<input type="hidden" name="name" value="<?php echo $row['name']; ?>">
+			<input type="hidden" name="img" value="<?php echo $row['img']; ?>">
+			<input type="hidden" name="pr" value="<?php echo $row['pr']; ?>">
+          <button class="btn btn-info btn-lg btn-block btn-leading-ficon add-to-cart-button" type="submit"  style="padding: 0px 8px;" name="addtocart">
+          <object data="images/icons/cart.png" width="15px" height="15px">
+          </object>
+          &nbsp;&nbsp;&nbsp;Add to Cart</button>
+        </form>
         </ul>
       </div>
       
@@ -89,19 +101,16 @@ echo $newString;  ?></a></li>
 <?php if ($c==2) { ?>
 <div name = "content" class="col-9 ">
   <div class="container mt-3">
-	  <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
         <?php if ( isset( $_GET[ 'c' ] ) ) {?>
         <li class="breadcrumb-item"><a href="laptop.php?c=<?php echo $c;?>">
           <?php if ($c==1){ echo "Camera";} if ($c==2){ echo "Computer";}; if ($c==3){ echo "Device";};?>
-			
           </a></li>
         <?php }?>
-        <li class="breadcrumb-item"><a href="laptop.php?c=2&br=<?php echo $row['brand']; ?>" style="text-transform: capitalize"><?php echo $row['brand'];  ?></a></li>  
-		 
-		 <li class="breadcrumb-item"><a ><?php echo $row['name']; ?></a></li>
-        
+        <li class="breadcrumb-item"><a href="laptop.php?c=2&br=<?php echo $row['brand']; ?>" style="text-transform: capitalize"><?php echo $row['brand'];  ?></a></li>
+        <li class="breadcrumb-item"><a ><?php echo $row['name']; ?></a></li>
       </ol>
     </nav>
     <h3><?php echo $row['name'];?></h3>
@@ -130,6 +139,10 @@ echo $newString;  ?></a></li>
           </ul>
         </div>
         <button >$<?php echo $row['price'];?><sup>.00</sup> </button>
+        <button class="btn btn-info btn-lg btn-block btn-leading-ficon add-to-cart-button" type="button" data-sku-id="6444516" data-button-state="ADD_TO_PACKAGE_MOBILE" style="padding: 0px 8px;">
+        <object data="images/icons/cart.png" width="12px" height="12px">
+        </object>
+        &nbsp;&nbsp;&nbsp;Add to Cart</button>
         </ul>
       </div>
       
@@ -141,16 +154,20 @@ echo $newString;  ?></a></li>
 <?php if ($c==3) { ?>
 <div name = "content" class="col-9 ">
   <div class="container mt-3">
-	<nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <?php if ( isset( $_GET[ 'c' ] ) ) {?><li class="breadcrumb-item"><a href="device.php?c=<?php echo $c;?>"><?php if ($c==1){ echo "Camera";} if ($c==2){ echo "Computer";}; if ($c==3){ echo "Device";};?></a></li><?php }?>
-        
-		<li class="breadcrumb-item"><a href="device.php?c=3&sc=<?php $sc=$row['sc']; echo $sc;?>" style="text-transform: capitalize"><?php if ($sc=='kb'){ echo "KeyBoard";} if ($sc=='hp'){ echo "Headphone";}; if ($sc=='m'){ echo "Mouse";};?></a></li>  
-		 
-		 <li class="breadcrumb-item"><a ><?php echo $row['name']; ?></a></li> 
+        <?php if ( isset( $_GET[ 'c' ] ) ) {?>
+        <li class="breadcrumb-item"><a href="device.php?c=<?php echo $c;?>">
+          <?php if ($c==1){ echo "Camera";} if ($c==2){ echo "Computer";}; if ($c==3){ echo "Device";};?>
+          </a></li>
+        <?php }?>
+        <li class="breadcrumb-item"><a href="device.php?c=3&sc=<?php $sc=$row['sc']; echo $sc;?>" style="text-transform: capitalize">
+          <?php if ($sc=='kb'){ echo "KeyBoard";} if ($sc=='hp'){ echo "Headphone";}; if ($sc=='m'){ echo "Mouse";};?>
+          </a></li>
+        <li class="breadcrumb-item"><a ><?php echo $row['name']; ?></a></li>
       </ol>
-    </nav>  
+    </nav>
     <h3><?php echo $row['name'];?></h3>
     <div class="row lp-margin-bottom-10">
       <div class="col-lg-5 col-md-12">
@@ -169,7 +186,6 @@ echo $newString;  ?></a></li>
         <div class="lp-catalog-header-info">
           <ul class="cat-opti-list">
             <li class="display"><span>Manufacture:</span> <?php echo $row['br'];?></li>
-            
             <li class="ram"><span>Type:</span>
               <?php if($row['sc']=="kb"){ echo "Keyboard";} if($row['sc']=="hp"){ echo "Headphone";} if($row['sc']=="m"){ echo "Mouse";}?>
             </li>
@@ -177,6 +193,10 @@ echo $newString;  ?></a></li>
           </ul>
         </div>
         <button >$<?php echo $row['pr'];?><sup>.00</sup> </button>
+        <button class="btn btn-info btn-lg btn-block btn-leading-ficon add-to-cart-button" type="button" data-sku-id="6444516" data-button-state="ADD_TO_PACKAGE_MOBILE" style="padding: 0px 8px;">
+        <object data="images/icons/cart.png" width="12px" height="12px">
+        </object>
+        &nbsp;&nbsp;&nbsp;Add to Cart</button>
         </ul>
       </div>
       
@@ -186,5 +206,16 @@ echo $newString;  ?></a></li>
 </div>
 <?php } ?>
 <?php
+if(array_key_exists('addtocart', $_POST)) {
+            addtocart();
+        }
+        
+        
+        function addtocart() {
+            
+array_push($_SESSION['cart'],[$_POST['name'],$_POST['img'],$_POST['pr']]);
+print_r($_SESSION['cart']);
+		}
+
 include( 'inc/footer.php' )
 ?>

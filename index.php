@@ -11,6 +11,10 @@ if (isset($_GET['page'])) {
 			$page = 'menu';
 		}
 		switch ($page) {
+			case 'cart':
+				include("inc/cart.php");
+				
+				break;
 			case 'aboutus':
 				include("page/aboutus.php");
 				

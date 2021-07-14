@@ -15,37 +15,36 @@
    $weight = $_POST['edit_w'];
    $price = $_POST['edit_pr'];
    $type = $_POST['edit_type'];
-     
-   //Index Image
-   $target= "../images/" .basename($_FILES['edit_img'] ['name']);
+    
+  //Index Image
    $image = $_FILES['edit_img']['name'];
+   $target= "../images/" .basename($_FILES['edit_img'] ['name']);
    if(move_uploaded_file ($_FILES['edit_img']['tmp_name'],$target)){
    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 	 && $imageFileType != "gif" ) {
 	echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-     }
+   }
    else if ($_FILES["edit_img"]["size"] > 500000) {
 	echo "Sorry, your file is too large.";
-     }
+   }
    else{
-	echo "Failed Update Image";
-     }       
-     }
+	echo "Error";
+    }       
+    $image = $_FILES['edit_img']['name'];
+    }
    else{
-	echo "Fail image update";
-  }
-
-   $image = $_FILES['edit_img']['name'];  
-   $query = "UPDATE product1 SET name = '$name',date = '$date', maxreso='$max',lowreso='$low',img ='$image',
-   pixel='$pixel',zwide='$zwide',ztele='$ztele',macro='$macro',w='$weight',pr='$price',type='$type' WHERE id= '$id'";
-   $query_run = mysqli_query($con,$query);
-   if($query_run)
+	$image = $_POST['available_img'];
+    }
+    $query = "UPDATE product1 SET name = '$name',date = '$date', maxreso='$max',lowreso='$low',img ='$image',
+    pixel='$pixel',zwide='$zwide',ztele='$ztele',macro='$macro',w='$weight',pr='$price',type='$type' WHERE id= '$id'";
+    $query_run = mysqli_query($con,$query);
+    if($query_run)
    {
 	 header('Location:camera.php');
    }
-   else
+    else
    {
-	header('Location:camera.php');
+	 header('Location:camera.php');
    }
  }
 ?>
@@ -66,27 +65,26 @@
    $ram = $_POST['edit_ram'];
    $weight = $_POST['edit_w'];
    $price = $_POST['edit_price'];
-  
-   //Index Image
-   $target= "../images/" .basename($_FILES['edit_img'] ['name']);
-   $image = $_FILES['edit_img']['name'];
-   if(move_uploaded_file ($_FILES['edit_img']['tmp_name'],$target)){
-   if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+   
+    //Index Image
+  $image = $_FILES['edit_img']['name'];
+  $target= "../images/" .basename($_FILES['edit_img'] ['name']);
+  if(move_uploaded_file ($_FILES['edit_img']['tmp_name'],$target)){
+  if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 	 && $imageFileType != "gif" ) {
 	echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    }
-   else if ($_FILES["edit_img"]["size"] > 500000) {
-	echo "Sorry, your file is too large.";
-    }
-   else{
-	echo "Failed Update Image";
-    }       
-    }
-   else{
-	echo "Fail image update";
   }
-
-   $image = $_FILES['edit_img']['name'];
+  else if ($_FILES["edit_img"]["size"] > 500000) {
+	echo "Sorry, your file is too large.";
+  }
+  else{
+	echo "Update Image error";
+  }       
+  $image = $_FILES['edit_img']['name'];
+  }
+   else{
+	$image = $_POST['available_img'];
+  }
    $ss = $_POST['edit_ss'];
    $gpu = $_POST['edit_gpu'];
    $query = "UPDATE product2 SET name = '$name',brand = '$brand', category='$category',ss='$ss',img ='$image',
@@ -106,7 +104,7 @@
 
 
 <?php 
-//Delete button camera
+//Delete Button Camera
    $con = mysqli_connect("localhost","root","","btl");
    if(isset($_POST['delete_camera'])){
    $id = $_POST['delete_id'];
@@ -139,8 +137,8 @@
   $weight = $_POST['edit_w'];
   
   //Index Image
-  $target= "../images/" .basename($_FILES['edit_img'] ['name']);
   $image = $_FILES['edit_img']['name'];
+  $target= "../images/" .basename($_FILES['edit_img'] ['name']);
   if(move_uploaded_file ($_FILES['edit_img']['tmp_name'],$target)){
   if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 	 && $imageFileType != "gif" ) {
@@ -150,14 +148,13 @@
 	echo "Sorry, your file is too large.";
    }
   else{
-	echo "Failed Update Image";
+	echo "Error";
   }       
-  }
-   else{
-	echo "Fail image update";
-  }
-
   $image = $_FILES['edit_img']['name'];
+}
+  else{
+	$image = $_POST['available_img'];
+  }
   $query = "UPDATE product3 SET name = '$name',br= '$brand',img ='$image',pr='$price',w='$weight',sc='$Subcategory' WHERE id='$id'";
   $query_run = mysqli_query($con,$query);
   if($query_run)
@@ -168,6 +165,6 @@
   {
    header('Location:device.php');
   }
-}
+  }
 ?>
 

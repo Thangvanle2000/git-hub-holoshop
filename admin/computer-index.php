@@ -15,7 +15,7 @@
 	$weight = $_POST['add_w'];
 	$price = $_POST['add_price'];
 	
-	//Upload File Image
+	//Update file Image
 	$target= "../images/" .basename($_FILES['add_img'] ['name']);
     $image = $_FILES['add_img']['name'];
 	if(move_uploaded_file ($_FILES['add_img']['tmp_name'],$target)){
@@ -32,8 +32,7 @@
 	  }
 	else{
 		  $smg ="Fail image update";
-	  }
-
+	}
     $image = $_FILES['add_img']['name'];
 	$ss = $_POST['add_ss'];
 	$gpu = $_POST['add_gpu'];

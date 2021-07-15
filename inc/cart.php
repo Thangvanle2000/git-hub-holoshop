@@ -1,56 +1,82 @@
 <div name = "content" class="col-9 ">
-    <table width="80%" border="1" cellspacing="5" cellpadding="5" style="text-align: center">
-      <tbody>
-        <tr>
-          <th width="5%" scope="col">&nbsp;</th>
-          <th width="20%" scope="col">Image</th>
-          <th width="50%" scope="col"> Name</th>
-          <th width="20%" scope="col">Price</th>
-        </tr>
-        <?php
-        $total = 0;
-        for ( $i = 1; $i < count( $_SESSION[ 'cart' ] ); $i++ ) {
-          ?>
-        <tr>
-          <td><?php echo $i ?></td>
-          <td><img  src="images/<?php echo $_SESSION['cart'][$i][1]?>" alt=""/></td>
-          <td><?php echo $_SESSION['cart'][$i][0]?></td>
-          <td>$
-            <?php $total = $total +$_SESSION['cart'][$i][2]; echo $_SESSION['cart'][$i][2]?></td>
-        </tr>
-        <?php }?>
-        <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td></td>
-          <td>Total:&nbsp;&nbsp;<b style="color: #FF0004" >$<?php echo $total?></b></td>
-        </tr>
-      </tbody>
-    </table>
+  <table width="80%" border="1" cellspacing="5" cellpadding="5" style="text-align: center;
+																empty-cells: hide;	   ">
+    <tbody>
+      <tr>
+        <th width="5%" scope="col">&nbsp;</th>
+        <th width="20%" scope="col">Image</th>
+        <th width="50%" scope="col"> Name</th>
+        <th width="20%" scope="col">Price</th>
+      </tr>
+      <?php
+      if ( array_key_exists( 'clearcart', $_POST ) ) {
+        addtocart();
+      }
+
+
+      function addtocart() {
+
+        $_SESSION[ 'cart' ]= array(array());
+        echo '<script type="text/javascript">
+    window.open("index.php?page=cart","_self");
+</script>';
+		  ;
+      }
+      $total = 0;
+      for ( $i = 1; $i < count( $_SESSION[ 'cart' ] ); $i++ ) {
+        ?>
+      <tr>
+        <td><?php echo $i ?></td>
+        <td><img  src="images/<?php echo $_SESSION['cart'][$i][1]?>" alt=""/></td>
+        <td><?php echo $_SESSION['cart'][$i][0]?></td>
+        <td>$
+          <?php $total = $total +$_SESSION['cart'][$i][2]; echo $_SESSION['cart'][$i][2]?></td>
+      </tr>
+      <?php }?>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Total:&nbsp;&nbsp;<b style="color: #FF0004" >$<?php echo $total?></b></td>
+    </tbody>
+  </table>
+  <form action=""  method="post">
     <div class="row">
-      <div class="col-7">
+      <div class="col-10"></div>
+      <div class="col-2">
+        <button name="clearcart" class="btn btn-danger pl-sm" >Clear Cart</button>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row  border border-dark">
+      <div class="col-1"></div>
+      <div class="col-6">
         <div class="">
           <div class="row">
-            
-			 <div class="col-4"></div> 
-            <div class="col-6" >
-                <img src="https://img.icons8.com/color/48/000000/visa.png" />
-				<img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /> 
-				<img src="https://img.icons8.com/color/48/000000/maestro.png" /> </div>
+            <div class="col-4"></div>
+            <div class="col-6" > <img src="https://img.icons8.com/color/48/000000/visa.png" /> <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /> <img src="https://img.icons8.com/color/48/000000/maestro.png" /> </div>
           </div>
-          <form>
-            <input type="text">
-          </form>
+          <input placeholder="Name" maxlength="50" class="capitalize untouched pristine required">
+          <input placeholder="Address" maxlength="50" class="capitalize untouched pristine required">
+          <input placeholder="Telephone number" maxlength="50" class="capitalize untouched pristine required">
+          <br>
+          <select>
+            <option value="volvo">Debit card</option>
+            <option value="saab">Credit card</option>
+            <option value="mercedes" selected>Pay at Receive(COD)</option>
+            <option value="audi">VNPay(QR code)</option>
+          </select>
         </div>
       </div>
-      <div class="col-5">
-        <div class="right border">
-          <di class="header">
-          Order Summary</div>
+      <div class="col-4">
+        <div class="row lower">
+          <h3 class="text-center">Order Summary</h3>
+        </div>
         <hr>
         <div class="row lower">
           <div class="col text-left">Subtotal</div>
-          <div class="col text-right">$ 46.98</div>
+          <div class="col text-right">$ <?php echo $total ;?></div>
         </div>
         <div class="row lower">
           <div class="col text-left">Delivery</div>
@@ -58,14 +84,17 @@
         </div>
         <div class="row lower">
           <div class="col text-left"><b>Total to pay</b></div>
-          <div class="col text-right"><b>$ 46.98</b></div>
+          <div class="col text-right"><b>$ <?php echo $total ;?></b></div>
         </div>
-        <div class="row lower">
-          <div class="col text-left"><a href="#"><u>Add promo code</u></a></div>
-        </div>
-        <button class="btn-success">Place order</button>
-        <p class="text-muted text-center">Complimentary Shipping & Returns</p>
-      </div>
+        <button class="btn btn-info btn-lg btn-block btn-leading-ficon add-to-cart-button">Place order</button>
+        <br>
+        <a  href= "index.php?page=shipping">
+        <p class="text-center">Shipping & Return Policy</p>
+        </a> </div>
+      <div class="col-1"></div>
     </div>
-    <div> </div>
-  </div>
+    <br>
+  </form>
+  <br>
+  <div> </div>
+</div>

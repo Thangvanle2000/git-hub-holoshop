@@ -1,6 +1,19 @@
 <?php
 include_once( 'inc/connect.php' );
 include( 'inc/header.php' );
+if(array_key_exists('addtocart', $_POST)) {
+            addtocart();
+        }
+        
+        
+        function addtocart() {
+            
+array_push($_SESSION['cart'],[$_POST['name'],$_POST['img'],$_POST['pr']]);
+echo '<script type="text/javascript">
+    window.open("index.php?page=cart","_self");
+</script>';
+		}
+
 include( 'inc/left.php' );
 if ( isset( $_GET[ 'name' ] ) ) {
   $name = $_GET[ 'name' ];
@@ -129,6 +142,7 @@ echo $newString;  ?>" style="text-transform: capitalize">
       
       <div class="col-lg-7 col-md-12">
         <div class="lp-catalog-header-info">
+			<h2>Price: $<?php echo $row['price'];?><sup>.00</sup> </h2>
           <ul class="cat-opti-list">
             <li class="cpu"><span>CPU:</span> <?php echo $row['cpu'];?></li>
             <li class="gpu"><span>GPU:</span> <?php echo $row['gpu'];?> </li>
@@ -138,11 +152,16 @@ echo $newString;  ?>" style="text-transform: capitalize">
             <li class="weight"><span>Weight:</span> <?php echo $row['w'];?>)</li>
           </ul>
         </div>
-        <button >$<?php echo $row['price'];?><sup>.00</sup> </button>
-        <button class="btn btn-info btn-lg btn-block btn-leading-ficon add-to-cart-button" type="button" data-sku-id="6444516" data-button-state="ADD_TO_PACKAGE_MOBILE" style="padding: 0px 8px;">
-        <object data="images/icons/cart.png" width="12px" height="12px">
-        </object>
-        &nbsp;&nbsp;&nbsp;Add to Cart</button>
+        
+        <form method="post">
+			<input type="hidden" name="name" value="<?php echo $row['name']; ?>">
+			<input type="hidden" name="img" value="<?php echo $row['img']; ?>">
+			<input type="hidden" name="pr" value="<?php echo $row['price']; ?>">
+          <button class="btn btn-info btn-lg btn-block btn-leading-ficon add-to-cart-button" type="submit"  style="padding: 0px 8px;" name="addtocart">
+          <object data="images/icons/cart.png" width="15px" height="15px">
+          </object>
+          &nbsp;&nbsp;&nbsp;Add to Cart</button>
+        </form>
         </ul>
       </div>
       
@@ -183,6 +202,7 @@ echo $newString;  ?>" style="text-transform: capitalize">
       <!-- Modal -->
       
       <div class="col-lg-7 col-md-12">
+		  <h2>Price: $<?php echo $row['pr'];?><sup>.00</sup> </h2>
         <div class="lp-catalog-header-info">
           <ul class="cat-opti-list">
             <li class="display"><span>Manufacture:</span> <?php echo $row['br'];?></li>
@@ -192,12 +212,16 @@ echo $newString;  ?>" style="text-transform: capitalize">
             <li class="weight"><span>Weight:</span> <?php echo $row['w'];?>g</li>
           </ul>
         </div>
-        <button >$<?php echo $row['pr'];?><sup>.00</sup> </button>
-        <button class="btn btn-info btn-lg btn-block btn-leading-ficon add-to-cart-button" type="button" data-sku-id="6444516" data-button-state="ADD_TO_PACKAGE_MOBILE" style="padding: 0px 8px;">
-        <object data="images/icons/cart.png" width="12px" height="12px">
-        </object>
-        &nbsp;&nbsp;&nbsp;Add to Cart</button>
-        </ul>
+        
+       <form method="post">
+			<input type="hidden" name="name" value="<?php echo $row['name']; ?>">
+			<input type="hidden" name="img" value="<?php echo $row['img']; ?>">
+			<input type="hidden" name="pr" value="<?php echo $row['pr']; ?>">
+          <button class="btn btn-info btn-lg btn-block btn-leading-ficon add-to-cart-button" type="submit"  style="padding: 0px 8px;" name="addtocart">
+          <object data="images/icons/cart.png" width="15px" height="15px">
+          </object>
+          &nbsp;&nbsp;&nbsp;Add to Cart</button>
+        </form>
       </div>
       
       <!-- end col-md-6 --> 
@@ -206,16 +230,7 @@ echo $newString;  ?>" style="text-transform: capitalize">
 </div>
 <?php } ?>
 <?php
-if(array_key_exists('addtocart', $_POST)) {
-            addtocart();
-        }
-        
-        
-        function addtocart() {
-            
-array_push($_SESSION['cart'],[$_POST['name'],$_POST['img'],$_POST['pr']]);
-print_r($_SESSION['cart']);
-		}
+
 
 include( 'inc/footer.php' )
 ?>

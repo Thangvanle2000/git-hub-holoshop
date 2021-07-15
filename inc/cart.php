@@ -47,8 +47,10 @@
         <button name="clearcart" class="btn btn-danger pl-sm" >Clear Cart</button>
       </div>
     </div>
+	  </form>
     <br>
     <br>
+	<form action="index.php?page=confirm"  method="post" class="p-4">
     <div class="row  border border-dark p-4 ">
       <div class="col-1"></div>
       <div class="col-6">
@@ -57,9 +59,10 @@
             <div class="col-4"></div>
             <div class="col-6" > <img src="https://img.icons8.com/color/48/000000/visa.png" /> <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /> <img src="https://img.icons8.com/color/48/000000/maestro.png" /> </div>
           </div>
-          <input placeholder="Name" maxlength="50" class="capitalize untouched pristine required">
-          <input placeholder="Address" maxlength="50" class="capitalize untouched pristine required">
-          <input placeholder="Telephone number" maxlength="50" class="capitalize untouched pristine required">
+          <input name="name" placeholder="Name" maxlength="50" class="capitalize untouched pristine required">
+          <input name="add" placeholder="Address" maxlength="50" class="capitalize untouched pristine required">
+          <input name="tel" placeholder="Telephone number" maxlength="50" class="capitalize untouched pristine required">
+			<input name="total" type="hidden" value="<?php echo $total?>">
           <br>
           <select>
             <option value="volvo">Debit card</option>
@@ -86,7 +89,7 @@
           <div class="col text-left"><b>Total to pay</b></div>
           <div class="col text-right"><b>$ <?php echo $total ;?></b></div>
         </div>
-        <button class="btn btn-info btn-lg btn-block btn-leading-ficon add-to-cart-button">Place order</button>
+        <button type="submit" class="btn btn-info btn-lg btn-block btn-leading-ficon add-to-cart-button">Place order</button>
         <br>
         <a  href= "index.php?page=shipping">
         <p class="text-center">Shipping & Return Policy</p>

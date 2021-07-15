@@ -15,10 +15,14 @@ if (isset($_GET['page'])) {
 				include("inc/cart.php");
 				
 				break;
-			case 'aboutus':
-				include("page/aboutus.php");
-				
-				break;
+				case 'aboutus':
+					include("page/aboutus.php");
+					
+					break;
+					case 'confirm':
+						include("page/confirm.php");
+						
+						break;
 			case 'contactus':
 				include("page/contactus.php");
 				

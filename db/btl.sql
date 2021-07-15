@@ -6,7 +6,7 @@
 -- Thời gian đã tạo: Th7 13, 2021 lúc 09:49 PM
 -- Phiên bản máy phục vụ: 10.4.13-MariaDB
 -- Phiên bản PHP: 7.4.8
-
+CREATE DATABASE `btl`;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";

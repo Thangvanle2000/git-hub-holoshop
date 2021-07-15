@@ -59,9 +59,9 @@
             <div class="col-4"></div>
             <div class="col-6" > <img src="https://img.icons8.com/color/48/000000/visa.png" /> <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /> <img src="https://img.icons8.com/color/48/000000/maestro.png" /> </div>
           </div>
-          <input name="name" placeholder="Name" maxlength="50" class="capitalize untouched pristine required">
-          <input name="add" placeholder="Address" maxlength="50" class="capitalize untouched pristine required">
-          <input name="tel" placeholder="Telephone number" maxlength="50" class="capitalize untouched pristine required">
+          <input name="name" placeholder="Name" maxlength="50" class="capitalize untouched pristine required" required>
+          <input name="add" placeholder="Address" maxlength="50" class="capitalize untouched pristine required" required>
+          <input name="tel" placeholder="Telephone number" maxlength="50" class="capitalize untouched pristine required" required>
 			<input name="total" type="hidden" value="<?php echo $total?>">
           <br>
           <select>

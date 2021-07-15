@@ -4,6 +4,7 @@
 //Add Computer
  $con = mysqli_connect("localhost","root","","btl");
  if(isset($_POST['add_computer'])){
+	$id = $_POST['add_id'];
 	$name= $_POST['add_name'];
 	$category = $_POST['add_category'];
 	$brand= $_POST['add_brand'];
@@ -13,7 +14,26 @@
 	$ram = $_POST['add_ram'];
 	$weight = $_POST['add_w'];
 	$price = $_POST['add_price'];
-	$image = $_POST['add_img'];
+	
+	//Update file Image
+	$target= "../images/" .basename($_FILES['add_img'] ['name']);
+    $image = $_FILES['add_img']['name'];
+	if(move_uploaded_file ($_FILES['add_img']['tmp_name'],$target)){
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+         && $imageFileType != "gif" ) {
+        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+       }
+	else if ($_FILES["add_img"]["size"] > 500000) {
+		echo "Sorry, your file is too large.";
+	   }
+	else{
+		echo "Failed Update Image";
+	  }       
+	  }
+	else{
+		  $smg ="Fail image update";
+	}
+    $image = $_FILES['add_img']['name'];
 	$ss = $_POST['add_ss'];
 	$gpu = $_POST['add_gpu'];
 	$query ="INSERT INTO product2 (name,category,brand,s,cpu,storage,gpu,ram,w,price,img,ss) VALUES(
@@ -44,7 +64,26 @@
 	$ztele = $_POST['add_ztele'];
 	$weight = $_POST['add_w'];
 	$price = $_POST['add_pr'];
-	$image = $_POST['add_img'];
+	
+	//Update file Image
+	$target= "../images/" .basename($_FILES['add_img'] ['name']);
+    $image = $_FILES['add_img']['name'];
+	if(move_uploaded_file ($_FILES['add_img']['tmp_name'],$target)){
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+         && $imageFileType != "gif" ) {
+        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+       }
+	else if ($_FILES["add_img"]["size"] > 500000) {
+		echo "Sorry, your file is too large.";
+	   }
+	else{
+		echo "Failed Update Image";
+	  }       
+	  }
+	else{
+		  $smg ="Fail image update";
+	  }
+    $image = $_FILES['add_img']['name'];
 	$macro = $_POST['add_macro'];
 	$type = $_POST['add_type'];
 	$query ="INSERT INTO product1 (id,name,date,maxreso,lowreso,pixel,zwide,ztele,macro,w,pr,img,type) VALUES(
@@ -58,6 +97,8 @@
 	}
  }
 ?>
+
+
 
 <?php 
 //Delete button Computer
@@ -97,6 +138,8 @@ $con = mysqli_connect("localhost","root","","btl");
  }
 ?>
 
+
+
 <?php 
 // ADD Device
    $con = mysqli_connect("localhost","root","","btl");
@@ -105,9 +148,29 @@ $con = mysqli_connect("localhost","root","","btl");
 	  $name= $_POST['add_name'];
 	  $sc = $_POST['add_sc'];
 	  $weight = $_POST['add_w'];
-	  $price = $_POST['add_pr'];
-	  $image = $_POST['add_img'];
+	  $price = $_POST['add_price'];
 	  $brand = $_POST['add_brand'];
+
+	    // Update File Image
+	  $target= "../images/" .basename($_FILES['add_img'] ['name']);
+	  $image = $_FILES['add_img']['name'];
+	  if(move_uploaded_file ($_FILES['add_img']['tmp_name'],$target)){
+      if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+         && $imageFileType != "gif" ) {
+        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+       }
+	  else if ($_FILES["add_img"]["size"] > 500000) {
+		echo "Sorry, your file is too large.";
+	   }
+	  else{
+		echo "Failed Update Image";
+	  }       
+	  }
+  	 else{
+		echo "Fail image update";
+	  }
+
+      $image = $_FILES['add_img']['name'];
 	  $query ="INSERT INTO product3 (name,sc,br,w,pr,img) VALUES('$name','$sc','$brand','$weight','$price','$image')";
 	  $query_run= mysqli_query($con,$query);
 	  if($query_run){

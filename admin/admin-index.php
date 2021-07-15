@@ -1,8 +1,8 @@
 
 <?php
 //Edit Admin 
-$con = mysqli_connect("localhost","root","","btl");
- if(isset($_POST['update_btn'])){
+   $con = mysqli_connect("localhost","root","","btl");
+   if(isset($_POST['update_btn'])){
    $id = $_POST['edit_id'];
    $username = $_POST['edit_username'];
    $password= $_POST['edit_password'];
@@ -15,24 +15,25 @@ $con = mysqli_connect("localhost","root","","btl");
    }
    else
    {
-	header('Location:admin.php');
+	 header('Location:admin.php');
    }
  }
 ?>
 
 
+
 <?php
 //Delte User 
-$con = mysqli_connect("localhost","root","","btl");
- if(isset($_POST['delete_btn'])){
+   $con = mysqli_connect("localhost","root","","btl");
+   if(isset($_POST['delete_btn'])){
    $id = $_POST['delete_id'];
    $query= "DELETE FROM btl_user WHERE id ='$id'";
    $query_run= mysqli_query($con,$query);
    if($query_run)
    {  
-	 $success= "Your Data is Updated";
-     echo "<script type='text/javascript'>alert($success)</script>";
-	 header('Location:user.php');
+	$success= "Your Data is Updated";
+    echo "<script type='text/javascript'>alert($success)</script>";
+	header('Location:user.php');
    }
    else
    {
@@ -44,10 +45,11 @@ $con = mysqli_connect("localhost","root","","btl");
 ?>
 
 
+
 <?php 
 //Add User
 	  $con= mysqli_connect("localhost","root","","btl");
-  if(isset($_POST['save_user'])){
+      if(isset($_POST['save_user'])){
 	  $username = $_POST['add_username'];
 	  $password = $_POST['add_password'];
 	  $name = $_POST['add_name'];
@@ -56,7 +58,7 @@ $con = mysqli_connect("localhost","root","","btl");
 	  $query_run= mysqli_query($con,$query);
 	  if($query_run)
 	  {
-		header('Location:user.php');
+	   header('Location:user.php');
 	  }
 	  else
 	  {

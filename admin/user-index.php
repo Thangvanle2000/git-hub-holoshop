@@ -1,7 +1,7 @@
 <?php 
 //Edit User
-$con = mysqli_connect("localhost","root","","btl");
- if(isset($_POST['update_btn'])){
+   $con = mysqli_connect("localhost","root","","btl");
+   if(isset($_POST['update_btn'])){
    $id = $_POST['edit_id'];
    $username = $_POST['edit_username'];
    $password= $_POST['edit_password'];
@@ -16,20 +16,22 @@ $con = mysqli_connect("localhost","root","","btl");
    }
    else
    {
-	header('Location:user.php');
+	 header('Location:user.php');
    }
-}  else{
-	header('Location:user.php');
-}
+   }
+   else{
+	 header('Location:user.php');
+   }
 
  }
 ?>
 
 
+
 <?php 
 //Delete button User
-$con = mysqli_connect("localhost","root","","btl");
- if(isset($_POST['delete_btn'])){
+   $con = mysqli_connect("localhost","root","","btl");
+   if(isset($_POST['delete_btn'])){
    $id = $_POST['delete_id'];
    $query= "DELETE FROM btl_user WHERE id ='$id'";
    $query_run= mysqli_query($con,$query);
@@ -41,17 +43,19 @@ $con = mysqli_connect("localhost","root","","btl");
    }
    else
    {
-	$fail= "Your Data is not Updated";
-	echo "<script type='text/javascript'>alert($fail)</script>";
-	header('Location:user.php');
+	 $fail= "Your Data is not Updated";
+	 echo "<script type='text/javascript'>alert($fail)</script>";
+	 header('Location:user.php');
    }
  }
 ?>
 
+
+
 <?php 
-//ADD User
- $con = mysqli_connect("localhost","root","","btl");
- if(isset($_POST['add_user'])){
+//Add User
+    $con = mysqli_connect("localhost","root","","btl");
+    if(isset($_POST['add_user'])){
 	$id = $_POST['add_id'];
 	$username = $_POST['add_username'];
 	$password= $_POST['add_password'];
@@ -66,9 +70,9 @@ $con = mysqli_connect("localhost","root","","btl");
 	}
 	else
 	{
-	 $fail= "Your Data is not Updated";
-	 echo "<script type='text/javascript'>alert($fail)</script>";
-	 header('Location:user.php');
+	  $fail= "Your Data is not Updated";
+	  echo "<script type='text/javascript'>alert($fail)</script>";
+	  header('Location:user.php');
 	}
   }
 ?>

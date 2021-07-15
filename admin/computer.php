@@ -29,14 +29,14 @@
 						<th>Name</th>
 						<th>Category</th>
 						<th>Image</th>
-						<th>IPS</th>
+						<th>Screen size</th>
+						<th>Screen</th>
 						<th>CPU</th>
 						<th>Storage</th>
 						<th>Ram</th>
 						<th>GPU</th>
 						<th>Weight</th>
 						<th>Price</th>
-						<th>Resolution</th>
 						<th>Edit</th>
 						<th>Computer</th>
 					</tr>

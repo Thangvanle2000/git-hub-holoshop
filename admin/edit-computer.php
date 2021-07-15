@@ -42,7 +42,7 @@
 						<input type="file" name="edit_img" value="<?php echo $row['img'] ?>" class="form-control">
 					</div>
 					<div class="form-group">
-						<label>IPS:</label>
+						<label>Screen</label>
 						<input type="text" name="edit_s" value="<?php echo $row['s'] ?>" class="form-control">
 					</div>
 					<div class="form-group">
@@ -71,7 +71,7 @@
 						<input type="text" name="edit_price" value="<?php echo $row['price'] ?>" class="form-control">
 					</div>
 					<div class="form-group">
-						<label>Resolution:</label>
+						<label>Screen size</label>
 						<input type="text" name="edit_ss" value="<?php echo $row['ss'] ?>" class="form-control">
 					</div>
 					<a href="computer.php" class="btn btn-danger">Cancel</a>

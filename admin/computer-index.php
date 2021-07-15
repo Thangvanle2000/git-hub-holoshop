@@ -40,6 +40,7 @@
     '$name','$category','$brand','$s','$cpu','$storage','$gpu','$ram','$weight','$price','$image','$ss')";
 	$query_run= mysqli_query($con,$query);
 	if($query_run){
+		echo"alert('Add complete!')";
 		header('Location:computer.php');
 	}
 	else{
@@ -90,10 +91,11 @@
     '$id','$name','$date','$max','$low','$px','$zwide','$ztele','$macro','$weight','$price','$image','$type')";
 	$query_run= mysqli_query($con,$query);
 	if($query_run){
+		echo"alert('Add complete!')";
 		header('Location:camera.php');
 	}
 	else{
-		echo"OOPS";
+		echo "alert('error')";
 	}
  }
 ?>
@@ -174,6 +176,7 @@ $con = mysqli_connect("localhost","root","","btl");
 	  $query ="INSERT INTO product3 (name,sc,br,w,pr,img) VALUES('$name','$sc','$brand','$weight','$price','$image')";
 	  $query_run= mysqli_query($con,$query);
 	  if($query_run){
+          echo"alert('Add complete!')";
 		  header('Location:device.php');
 	  }
 	  else{
@@ -181,3 +184,5 @@ $con = mysqli_connect("localhost","root","","btl");
 	  }
    }
 ?>
+
+<script src="js/sweetalert.min.js"></script>

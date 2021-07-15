@@ -70,7 +70,7 @@
 							<label>Type:</label>
 							<input type="text" name="add_type" class="form-control" placeholder="Enter Type" required>
 						</div>
-						<button type="submit" name="add_camera" class="btn btn-primary" onclick="addproduct()" style="margin-left: 100px;">Add
+						<button type="submit" name="add_camera" class="btn btn-primary" style="margin-left: 100px;">Add
 							Camera</button>
 					</form>
 				</div>
@@ -86,39 +86,39 @@
 						<input type="hidden" name="add_id">
 						<div class="form-group">
 							<label> Brand:</label>
-							<input type="text" name="add_brand" class="form-control" placeholder="Enter Brand" required>
+							<input type="text" name="add_brand" class="form-control" placeholder="Enter Brand" checked>
 						</div>
 						<div class="form-group">
 							<label> Name:</label>
-							<input type="text" name="add_name" class="form-control" placeholder="Enter Name" required>
+							<input type="text" name="add_name" class="form-control" placeholder="Enter Name" checked>
 						</div>
 						<div class="form-group">
 							<label>Image:</label>
-							<input type="file" name="add_img" class="form-control" placeholder="Enter Image" required>
+							<input type="file" name="add_img" class="form-control" placeholder="Enter Image" checked>
 						</div>
 						<div class="form-group">
 							<label>Category:</label>
 							<input type="text" name="add_category" class="form-control" placeholder="Enter Category"
-								required>
+								checked>
 						</div>
 
 						<div class="form-group">
-							<label>Resolution:</label>
-							<input type="text" name="add_ss" class="form-control" placeholder="Enter Resolution"
-								required>
+							<label>Screen size:</label>
+							<input type="text" name="add_ss" class="form-control" placeholder="Enter Screen Size"
+								 checked>
 						</div>
 						<div class="form-group">
-							<label>IPS:</label>
-							<input type="text" name="add_s" class="form-control" placeholder="Enter IPS" required>
+							<label>Screen:</label>
+							<input type="text" name="add_s" class="form-control" placeholder="Enter Screen" checked>
 						</div>
 						<div class="form-group">
 							<label>CPU:</label>
-							<input type="text" name="add_cpu" class="form-control" placeholder="Enter CPU" required>
+							<input type="text" name="add_cpu" class="form-control" placeholder="Enter CPU" checked>
 						</div>
 						<div class="form-group">
 							<label>Storage:</label>
 							<input type="text" name="add_storage" class="form-control" placeholder="Enter Storage"
-								required>
+								checked>
 						</div>
 						<div class="form-group">
 							<label>RAM:</label>
@@ -136,7 +136,7 @@
 							<label>GPU:</label>
 							<input type="text" name="add_gpu" class="form-control" placeholder="Enter GPU" required>
 						</div>
-						<button type="submit" name="add_computer" onclick="addproduct()" class="btn btn-primary" style="margin-left:100px;">Add
+						<button type="submit" name="add_computer"class="btn btn-primary" style="margin-left:100px;">Add
 							Computer</button>
 					</form>
 				</div>
@@ -149,7 +149,7 @@
 					<form action="computer-index.php" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="add_id">
 						<div class="form-group">
-							<label> Subcate:</label>
+							<label> Subcategory:</label>
 							<input type="text" name="add_sc" class="form-control" placeholder="Enter Subcategory"
 								required>
 						</div>
@@ -173,23 +173,12 @@
 							<label>Price :</label>
 							<input type="text" name="add_price" placeholder="Enter Price" class="form-control" required>
 						</div>
-						<button type="submit" name="add_device" class="btn btn-primary" style="margin-left: 100px;"
-						onclick="addproduct()">Add
+						<button type="submit" name="add_device" class="btn btn-primary" style="margin-left: 100px;">Add
 							Device</button>
 					</form>
 				</div>
 			</div>
 		</div>
-		<script>
-           function addproduct(){
-			swal({
-           title: "Add Successful!",
-           text: "Product is saved to data",
-           icon: "success",
-           button: "Aww yiss!",
-})
-		   }
-		</script>
 </div>
 </main>
 </div>

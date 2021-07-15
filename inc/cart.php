@@ -40,7 +40,7 @@
         <td>Total:&nbsp;&nbsp;<b style="color: #FF0004" >$<?php echo $total?></b></td>
     </tbody>
   </table>
-  <form action=""  method="post">
+  <form action=""  method="post" class="p-4">
     <div class="row">
       <div class="col-10"></div>
       <div class="col-2">
@@ -49,7 +49,7 @@
     </div>
     <br>
     <br>
-    <div class="row  border border-dark">
+    <div class="row  border border-dark p-4 ">
       <div class="col-1"></div>
       <div class="col-6">
         <div class="">
@@ -91,7 +91,9 @@
         <a  href= "index.php?page=shipping">
         <p class="text-center">Shipping & Return Policy</p>
         </a> </div>
+		
       <div class="col-1"></div>
+		<br>
     </div>
     <br>
   </form>
